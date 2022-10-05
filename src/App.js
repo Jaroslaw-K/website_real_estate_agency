@@ -1,14 +1,17 @@
 import React, { Fragment } from "react";
-import { useMediaQuery } from "react-responsive";
-import HeaderDesktop from "./Components/HeaderDesktop";
-import HeaderMobile from "./Components/HeaderMobile";
-import FooterDesktop from "./Components/FooterDesktop";
-import FooterMobile from "./Components/FooterMobile";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Header from "./Components/Header/Header";
+
+import Offer from "./Pages/Offer";
 
 const App = () => {
   return (
     <Fragment>
-      <HeaderDesktop />
+      <Header />
+      <Routes>
+        <Route path="/*" element={<Navigate to="/offer" />} />
+        <Route path="/offer" element={<Offer />} />
+      </Routes>
     </Fragment>
   );
 };
