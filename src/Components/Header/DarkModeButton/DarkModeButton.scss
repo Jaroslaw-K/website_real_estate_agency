@@ -1,0 +1,26 @@
+.optionsContainer__darkModeButton--bright {
+    background: rgba(255, 255, 255, 0.4);
+  }
+  .optionsContainer__darkModeButton--dark {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  .optionsContainer__darkModeButton {
+    position: absolute;
+    left: -73px;
+    top: -29px;
+    height: 45px;
+    width: 45px;
+    border: none;
+    clip-path: polygon(50% 30%, 0% 100%, 100% 100%);
+    .darkModeBtn__icon--bright {
+      color: rgba(0, 0, 0, 0.7);
+    }
+    .darkModeButton__icon--dark {
+      color: rgba(255, 255, 255, 0.7);
+    }
+    .darkModeButton__icon {
+      position: absolute;
+      top: 25px;
+      left: 15px;
+    }
+  }
