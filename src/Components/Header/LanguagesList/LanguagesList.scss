@@ -1,0 +1,125 @@
+@import "../../../scss/variables/variables.scss";
+
+.optionsContainer__languagesList {
+  overflow: hidden;
+  height: 0;
+  position: absolute;
+  top: 10px;
+  right: -52px;
+  background: transparent;
+  .languagesList__country:first-of-type {
+    border-radius: 5px 5px 0 0;
+  }
+  .languagesList__country--bright:first-of-type {
+    border-bottom: 1px solid black;
+  }
+  .languagesList__country--dark:first-of-type {
+    border-bottom: 1px solid white;
+  }
+  .languagesList__country:last-of-type {
+    border-radius: 0 0 5px 5px;
+  }
+  .languagesList__country--bright {
+    background: rgba(255, 255, 255, 0.8);
+  }
+  .languagesList__country--dark {
+    background: rgba(0, 0, 0, 0.8);
+    color: $color2;
+  }
+  .languagesList__country {
+    overflow: hidden;
+    height: 0;
+    cursor: pointer;
+    text-align: left;
+    width: 85px;
+    display: inline-block;
+    font-size: 12px;
+    list-style-type: none;
+    .activeLanguage {
+      font-weight: 700;
+    }
+  }
+  .languagesList__country--show {
+    animation-name: showLanguagesCountry;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    transition: ease-in-out;
+  }
+  .languagesList__country--show:first-of-type {
+    animation-delay: 0s;
+  }
+  .languagesList__country--show:last-of-type {
+    animation-delay: 0.2s;
+  }
+  .languagesList__country--hide {
+    animation-name: hideLanguagesCountry;
+    animation-duration: 0.2s;
+    animation-fill-mode: backwards;
+    transition: ease-in-out;
+  }
+  .languagesList__country--hide:first-of-type {
+    animation-delay: 0.2s;
+  }
+  .languagesList__country--hide:last-of-type {
+    animation-delay: 0;
+  }
+}
+.optionsContainer__languagesList--show {
+  animation-name: showLanguagesList;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+.optionsContainer__languagesList--hide {
+  animation-name: hideLanguagesList;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showLanguagesList {
+  from {
+    height: 0;
+    overflow: hidden;
+  }
+  to {
+    height: 70px;
+    overflow: visible;
+  }
+}
+
+@keyframes hideLanguagesList {
+  from {
+    height: 70px;
+    overflow: visible;
+  }
+  to {
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+@keyframes showLanguagesCountry {
+  from {
+    height: auto;
+    overflow: hidden;
+    padding: 0 5px 0 15px;
+  }
+  to {
+    height: auto;
+    overflow: visible;
+
+    padding: 12px 5px 12px 15px;
+  }
+}
+
+@keyframes hideLanguagesCountry {
+  from {
+    height: auto;
+    overflow: visible;
+    padding: 12px 5px 12px 15px;
+  }
+  to {
+    height: auto;
+    overflow: hidden;
+    padding: 0 5px 0 15px;
+  }
+}
