@@ -35,6 +35,7 @@
     display: inline-block;
     font-size: 12px;
     list-style-type: none;
+    -webkit-tap-highlight-color: transparent;
     .activeLanguage {
       font-weight: 700;
     }

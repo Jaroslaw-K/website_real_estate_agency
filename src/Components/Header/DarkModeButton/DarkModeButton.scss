@@ -12,6 +12,7 @@
     width: 45px;
     border: none;
     clip-path: polygon(50% 30%, 0% 100%, 100% 100%);
+    -webkit-tap-highlight-color: transparent;
     .darkModeBtn__icon--bright {
       color: rgba(0, 0, 0, 0.7);
     }

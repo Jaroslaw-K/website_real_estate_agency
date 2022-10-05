@@ -13,6 +13,7 @@
   border: none;
   cursor: pointer;
   clip-path: polygon(50% 70%, 0 0, 100% 0);
+  -webkit-tap-highlight-color: transparent;
   .languageButton__countryTxt--bright {
     color: rgba(0, 0, 0, 0.7);
   }
