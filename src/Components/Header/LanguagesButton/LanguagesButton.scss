@@ -1,0 +1,29 @@
+.optionsContainer__languageButton--bright {
+  background: rgba(255, 255, 255, 0.4);
+}
+.optionsContainer__languageButton--dark {
+  background: rgba(0, 0, 0, 0.4);
+}
+.optionsContainer__languageButton {
+  position: absolute;
+  right: -2px;
+  bottom: -29px;
+  height: 45px;
+  width: 45px;
+  border: none;
+  cursor: pointer;
+  clip-path: polygon(50% 70%, 0 0, 100% 0);
+  .languageButton__countryTxt--bright {
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .languageButton__countryTxt--dark {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .languageButton__countryTxt {
+    position: absolute;
+    top: 6px;
+    left: 14px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+}
