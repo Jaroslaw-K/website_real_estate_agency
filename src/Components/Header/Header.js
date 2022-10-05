@@ -6,8 +6,7 @@ import NavigationButton from "./NavigationButton/NavigationButton";
 import LanguagesButton from "./LanguagesButton/LanguagesButton";
 import DarkModeButton from "./DarkModeButton/DarkModeButton";
 import LanguagesList from "./LanguagesList/LanguagesList";
-import WindowNavigationMobile from "./WIndowNavigationMobile/WindowNavigatonMobile";
-
+import WindowNavigationMobile from "./WindowNavigationMobile/WindowNavigationMobile";
 
 const Header = () => {
   const [showNav, setShowNav] = useState(false);
@@ -30,7 +29,7 @@ const Header = () => {
         </div>
         <NavigationButton onToggleNavHandler={toggleNavHandler} showNav={showNav}/>
       </nav>
-    <WindowNavigationMobile/>
+    <WindowNavigationMobile showNav={showNav}/>
     </header>
   );
 };
