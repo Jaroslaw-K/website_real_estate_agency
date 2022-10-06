@@ -1,11 +1,10 @@
 @import "../../../scss/variables/variables.scss";
 
-.optionsContainer__languagesList {
+.languagesList {
+  position: absolute;
   overflow: hidden;
   height: 0;
-  position: absolute;
-  top: 10px;
-  right: -52px;
+  width: 150px;
   background: transparent;
   .languagesList__country:first-of-type {
     border-radius: 5px 5px 0 0;
@@ -65,12 +64,12 @@
     animation-delay: 0;
   }
 }
-.optionsContainer__languagesList--show {
+.languagesList--show {
   animation-name: showLanguagesList;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
 }
-.optionsContainer__languagesList--hide {
+.languagesList--hide {
   animation-name: hideLanguagesList;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;

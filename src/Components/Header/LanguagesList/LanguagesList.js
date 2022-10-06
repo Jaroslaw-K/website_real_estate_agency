@@ -27,18 +27,18 @@ const LanguagesList = (props) => {
       return;
     }
     if (props.showLanguagesList === true) {
-      languagesList.current.classList.remove("optionsContainer__languagesList--hide")
+      languagesList.current.classList.remove("languagesList--hide")
       firstLanguageLi.current.classList.remove("languagesList__country--hide");
       secondLanguageLi.current.classList.remove("languagesList__country--hide");
-      languagesList.current.classList.add("optionsContainer__languagesList--show")
+      languagesList.current.classList.add("languagesList--show")
       firstLanguageLi.current.classList.add("languagesList__country--show");
       secondLanguageLi.current.classList.add("languagesList__country--show");
     }
     if (props.showLanguagesList === false) {
-      languagesList.current.classList.remove("optionsContainer__languagesList--show")
+      languagesList.current.classList.remove("languagesList--show")
       firstLanguageLi.current.classList.remove("languagesList__country--show");
       secondLanguageLi.current.classList.remove("languagesList__country--show");
-      languagesList.current.classList.add("optionsContainer__languagesList--hide")
+      languagesList.current.classList.add("languagesList--hide")
       firstLanguageLi.current.classList.add("languagesList__country--hide");
       secondLanguageLi.current.classList.add("languagesList__country--hide");
     }
@@ -59,7 +59,7 @@ const LanguagesList = (props) => {
     }
   }, [darkMode]);
   return (
-    <ul ref={languagesList} className="optionsContainer__languagesList">
+    <ul ref={languagesList} className="languagesList">
       <li ref={firstLanguageLi} className="languagesList__country" onClick={toggleLanguage1}>
         <span className="fi fi-pl country__flag"></span>
         <span className={languagePrimary ? "activeLanguage" : ""}>&nbsp;{languagePrimary ? "POLSKI" : "POLISH"}</span>

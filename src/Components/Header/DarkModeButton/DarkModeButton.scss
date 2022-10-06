@@ -1,27 +1,24 @@
-.optionsContainer__darkModeButton--bright {
-    background: rgba(255, 255, 255, 0.4);
+.darkModeButton--bright {
+  background: rgba(255, 255, 255, 0.4);
+}
+.darkModeButton--dark {
+  background: rgba(0, 0, 0, 0.4);
+}
+.darkModeButton {
+  height: 45px;
+  width: 45px;
+  border: none;
+  clip-path: polygon(50% 30%, 0% 100%, 100% 100%);
+  -webkit-tap-highlight-color: transparent;
+  .darkModeBtn__icon--bright {
+    color: rgba(0, 0, 0, 0.7);
   }
-  .optionsContainer__darkModeButton--dark {
-    background: rgba(0, 0, 0, 0.4);
+  .darkModeButton__icon--dark {
+    color: rgba(255, 255, 255, 0.7);
   }
-  .optionsContainer__darkModeButton {
-    position: absolute;
-    left: -73px;
-    top: -29px;
-    height: 45px;
-    width: 45px;
-    border: none;
-    clip-path: polygon(50% 30%, 0% 100%, 100% 100%);
-    -webkit-tap-highlight-color: transparent;
-    .darkModeBtn__icon--bright {
-      color: rgba(0, 0, 0, 0.7);
-    }
-    .darkModeButton__icon--dark {
-      color: rgba(255, 255, 255, 0.7);
-    }
-    .darkModeButton__icon {
-      position: absolute;
-      top: 25px;
-      left: 15px;
-    }
+  .darkModeButton__icon {
+    position: relative;
+    top: 13px;
+    left: 0px;
   }
+}
