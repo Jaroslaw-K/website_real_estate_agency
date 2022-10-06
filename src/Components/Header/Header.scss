@@ -22,6 +22,163 @@
       justify-content: center;
       align-items: center;
       position: relative;
+      .darkModeButton {
+        position: absolute;
+        left: -73px;
+        top: -29px;
+      }
+      .languageButton {
+        position: absolute;
+        right: -2px;
+        bottom: -29px;
+      }
+      .languagesList {
+        top: 10px;
+        right: -75px;
+      }
+    }
+  }
+}
+
+.headerDesktop {
+  position: fixed;
+  .headerDesktop__containerTop {
+    width: 100vw;
+    height: 50px;
+    background: $color3;
+    display: flex;
+    .containerTop__left {
+      height: 100%;
+      width: 20%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-end;
+      position: relative;
+      .left__emailContainer {
+        margin-bottom: 5px;
+        color: white;
+        font-size: 10px;
+      }
+      .left__phoneContainer {
+        margin-bottom: 5px;
+        color: white;
+        font-size: 10px;
+      }
+      .left__line {
+        height: 100%;
+        width: 40px;
+        background: white;
+        clip-path: polygon(95% 0, 100% 0, 5% 100%, 0 100%);
+        position: absolute;
+        z-index: 2;
+      }
+      .left__line--1 {
+        right: -30px;
+      }
+      .left__line--2 {
+        right: -40px;
+      }
+      .left__line--3 {
+        right: -50px;
+      }
+    }
+    .containerTop__central {
+      height: 100%;
+      width: 60%;
+    }
+    .containerTop__right--bright {
+      background: $color5;
+    }
+    .containerTop__right--dark {
+      background: $color1;
+    }
+    .containerTop__right {
+      height: 100%;
+      width: 20%;
+      position: relative;
+      .right__line {
+        height: 100%;
+        width: 40px;
+        background: white;
+        clip-path: polygon(0 0, 5% 0, 100% 100%, 95% 100%);
+        position: absolute;
+        z-index: 2;
+      }
+      .right__line--1 {
+        left: -30px;
+      }
+      .right__line--2 {
+        left: -40px;
+      }
+      .right__line--3 {
+        left: -50px;
+      }
+      .right__backgroundBox--bright {
+        background: $color5;
+      }
+      .right__backgroundBox--dark {
+        background: $color1;
+      }
+      .right__backgroundBox {
+        position: absolute;
+        height: 100%;
+        width: 70px;
+        left: -50px;
+        clip-path: polygon(0 0, 55% 100%, 100% 100%, 100% 0);
+      }
+      .right__optionsContainer {
+        position: relative;
+        .darkModeButton {
+          position: absolute;
+          top: -5px;
+          left: 50px;
+        }
+        .darkModeButton--dark {
+          background: $color2;
+          .darkModeButton__icon--dark {
+            color: $color1;
+          }
+        }
+        .languageButton {
+          position: absolute;
+          top: 8px;
+          left: 20px;
+        }
+        .languageButton--dark {
+          background: $color2;
+          .languageButton__countryTxt--dark {
+            color: $color1;
+          }
+        }
+        .languagesList {
+          position: absolute;
+          top: 30px;
+          left: -50px;
+        }
+      }
+    }
+  }
+  .headerDesktop__containerBottom--bright {
+    background: rgba(255, 255, 255, 0.9);
+  }
+  .headerDesktop__containerBottom--dark {
+    background: rgba(0, 0, 0, 0.9);
+  }
+  .headerDesktop__containerBottom {
+    width: 100vw;
+    height: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 12px;
+    .containerBottom__link--bright {
+      color: black;
+    }
+    .containerBottom__link--dark {
+      color: white;
+    }
+    .containerBottom__link {
+      text-decoration: none;
     }
   }
 }
