@@ -6,6 +6,7 @@ import Contact from "./Pages/Contact";
 import Offer from "./Pages/Offer";
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import SellRent from "./Pages/SellRent";
+import Footer from "./Components/Footer/Footer";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </Fragment>
   );
 };
