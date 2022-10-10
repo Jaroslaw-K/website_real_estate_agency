@@ -30,13 +30,13 @@
     }
   }
   .windowNavigationMobile__leftContainer {
+    overflow: hidden;
     position: relative;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     background-image: url(../../../assets/images/259588.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -96,6 +96,7 @@
     background: $color3;
   }
   .windowNavigationMobile__rightContainer {
+    overflow: hidden;
     position: relative;
     height: 100%;
     display: flex;
@@ -188,6 +189,6 @@
   }
   to {
     left: 140%;
-    width: 40%;
+    width: 0%;
   }
 }
