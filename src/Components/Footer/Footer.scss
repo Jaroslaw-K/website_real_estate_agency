@@ -79,6 +79,7 @@
         font-size: 24px;
         text-align: center;
         -webkit-tap-highlight-color: transparent;
+        cursor: pointer;
       }
     }
   }
@@ -149,25 +150,39 @@
       }
     }
   }
+  .footerMobile__copyright--bright {
+    background: rgba(198, 218, 233, 1);
+  }
+  .footerMobile__copyright--dark {
+    background: $color4;
+  }
   .footerMobile__copyright {
     height: 25px;
     display: flex;
-    background: rgba(198, 218, 233, 1);
     position: relative;
+    .copyright__text--bright {
+      color: $color1;
+    }
+    .copyright__text--dark {
+      color: $color2;
+    }
     .copyright__text {
       position: absolute;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
       font-size: 10px;
-      color: $color1;
       z-index: 1;
+    }
+    .copyright__leftContainer--bright {
+      background: rgba(198, 218, 233, 1);
+    }
+    .copyright__leftContainer--dark {
+      background: $color4;
     }
     .copyright__leftContainer {
       height: 100%;
       width: 60%;
-      background: rgba(198, 218, 233, 1);
-   
     }
     .copyright__rightContainer {
       height: 100%;
@@ -199,3 +214,294 @@
     width: 0%;
   }
 }
+
+.footerDesktop {
+  position: relative;
+  .footerDesktop__topContainer {
+    // top: 0;
+    // left: -50%;
+    // transform: translate(0.08%, 0);
+    // height: 0;
+    // width: 98.85vw;
+    // position: absolute;
+    // visibility: hidden;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    height: 0;
+    width: 99.81%;
+    position: absolute;
+ 
+  }
+  .footerDesktop__topContainer--show {
+    animation-name: desktopShowMap;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    transition: ease-in;
+  }
+  .footerDesktop__topContainer--hide {
+    animation-name: desktopHideMap;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    transition: ease-in;
+  }
+
+  .footerDesktop__middleContainer {
+    width: 100%;
+    height: 250px;
+    background-image: url(../../assets/images/1438834.jpg);
+    background-position: 20% 35%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    .middleContainer__leftContainer--bright {
+      background: rgba(255, 255, 255, 0.7);
+    }
+    .middleContainer__leftContainer--dark {
+      background: rgba(0, 0, 0, 0.7);
+    }
+    .middleContainer__leftContainer {
+      height: 100%;
+      width: 60%;
+      display: flex;
+      position: relative;
+      .leftContainer__logoContainer {
+        position: absolute;
+        width: 30%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        .logoContainer__logo--dark {
+          filter: $logoFilter;
+        }
+        .logoContainer__logo {
+          width: 180px;
+        }
+      }
+      .leftContainer__dataContainer {
+        height: 100%;
+        width: 100%;
+        background: $color3;
+        clip-path: polygon(70% 0, 100% 0, 100% 100%, 0% 100%);
+        display: flex;
+        .dataContainer__left {
+          width: 40%;
+        }
+        .dataContainer__right {
+          width: 60%;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          .right__addressContainer {
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            .addressContainer__element:first-child {
+              font-size: 20px;
+              align-self: center;
+              margin-bottom: 10px;
+            }
+            .addressContainer__element {
+              font-size: 14px;
+              margin: 0 0 15px 0;
+              color: $color2;
+            }
+          }
+          .right__infoContainer {
+            margin-top: 43px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            .infoContainer__element {
+              font-size: 14px;
+              margin: 0 0 15px 0;
+              color: $color2;
+            }
+          }
+        }
+      }
+    }
+    .topContainer__rightContainer {
+      height: 100%;
+      width: 40%;
+      display: flex;
+      .rightContainer__leftContainer {
+        width: 60%;
+        height: 100%;
+        background-image: url(../../assets/images/186077.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .leftContainer__backgroundContainer--bright {
+          background: rgba(255, 255, 255, 0.7);
+        }
+        .leftContainer__backgroundContainer--dark {
+          background: rgba(0, 0, 0, 0.7);
+        }
+        .leftContainer__backgroundContainer {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .backgroundContainer__textContainer--bright {
+            color: $color1;
+          }
+          .backgroundContainer__textContainer--dark {
+            color: $color2;
+          }
+          .backgroundContainer__textContainer {
+            font-size: 24px;
+            text-align: center;
+            .textContainer__icon--bright {
+              color: $color3;
+            }
+            .textContainer__icon--dark {
+              color: $color2;
+            }
+          }
+        }
+      }
+      .rightContainer__rightContainer {
+        width: 40%;
+        height: 100%;
+        background-image: url(../../assets/images/34753.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        .rightContainer__background--bright {
+          background: rgba(255, 255, 255, 0.4);
+        }
+        .rightContainer__background--dark {
+          background: rgba(0, 0, 0, 0.7);
+        }
+        .rightContainer__background {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .background__textContainer--bright {
+            color: $color1;
+          }
+          .background__textContainer--dark {
+            color: $color2;
+          }
+          .background__textContainer {
+            cursor: pointer;
+            font-size: 24px;
+            text-align: center;
+            -webkit-tap-highlight-color: transparent;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .footerDesktop__bottomContainer--bright {
+    background: rgba(198, 218, 233, 1);
+  }
+  .footerDesktop__bottomContainer--dark {
+    background: $color4;
+  }
+  .footerDesktop__bottomContainer {
+    width: 100%;
+    height: 25px;
+    position: relative;
+    display: flex;
+    .bottomContainer__text {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 12px;
+      z-index: 1;
+      color: white;
+    }
+    .bottomContainer__leftContainer--bright {
+      background: rgba(198, 218, 233, 1);
+    }
+    .bottomContainer__leftContainer--dark {
+      background: $color4;
+    }
+    .bottomContainer__leftContainer {
+      height: 100%;
+      width: 30%;
+    }
+    .bottomContainer__rightContainer {
+      height: 100%;
+      width: 70%;
+      background: $color3;
+      clip-path: polygon(0% -10%, 100% -10%, 100% 100%, 10% 100%);
+    }
+  }
+}
+
+
+// @keyframes desktopShowMap {
+//   0% {
+//     height: 60vh;
+//     position: absolute;
+//     visibility: visible;
+//   }
+  
+//   100% {
+//     height: 60vh;
+//     position: static;
+//     visibility: visible;
+//   }
+// }
+
+
+// @keyframes desktopHideMap {
+//   0% {
+//     height: 60vh;
+//     position: static;
+//     visibility: visible;
+//   }
+  
+//   100% {
+//     height: 0;
+//     position: absolute;
+//     visibility: hidden;
+//   }
+// }
+
+
+
+@keyframes desktopShowMap {
+  0% {
+    height: 0;
+    position: absolute;
+    visibility: visible;
+    top: 589px;
+  }
+  
+  100% {
+    height: 585px;
+    position: absolute;
+    top: -589px;
+  }
+}
+
+
+@keyframes desktopHideMap {
+  0% {
+    height: 585px;
+    position: absolute;
+    top: -589px;
+  }
+  
+  100% {
+    height: 0;
+    position: absolute;
+    visibility: hidden;
+    top: 0px;
+ 
+  }
+}
+
