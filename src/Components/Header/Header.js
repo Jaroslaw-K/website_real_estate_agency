@@ -44,10 +44,10 @@ const Header = () => {
           <div className="headerDesktop__containerTop">
             <div className="containerTop__left">
               <div className="left__emailContainer">
-                <i className="bi bi-envelope-fill"></i>&nbsp;&nbsp;Email;&nbsp;Address
+                <i className="bi bi-envelope-fill"></i>&nbsp;&nbsp;Email&nbsp;Address
               </div>
               <div className="left__phoneContainer">
-                <i className="bi bi-telephone-forward-fill"></i>&nbsp;&nbsp;Phone;&nbsp;Number
+                <i className="bi bi-telephone-forward-fill"></i>&nbsp;&nbsp;Phone&nbsp;Number
               </div>
               <div className="left__line left__line--1"></div>
               <div className="left__line left__line--2"></div>
