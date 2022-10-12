@@ -43,6 +43,7 @@
 
 .headerDesktop {
   position: fixed;
+  z-index: 2;
   .headerDesktop__containerTop {
     width: 100vw;
     height: 50px;
@@ -58,12 +59,12 @@
       .left__emailContainer {
         margin-bottom: 5px;
         color: white;
-        font-size: 10px;
+        font-size: 12px;
       }
       .left__phoneContainer {
         margin-bottom: 5px;
         color: white;
-        font-size: 10px;
+        font-size: 12px;
       }
       .left__line {
         height: 100%;
@@ -208,7 +209,6 @@
         width: 100px;
         filter: $logoFilter;
         overflow: hidden;
-        scale: 2;
         background: url(../../assets/logo.svg);
       }
     }
@@ -292,11 +292,11 @@
   }
   .headerDesktop__containerBottom {
     width: 100vw;
-    height: 20px;
+    height: 25px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    font-size: 12px;
+    font-size: 14px;
     .containerBottom__link--bright {
       color: black;
     }
