@@ -14,11 +14,11 @@ const LanguagesList = (props) => {
 
   const toggleLanguage1 = () => {
     dispatch({ type: "switchLanguage", languagePrimary: true });
-    props.onToggleLanguageList();
+    props.onToggleLanguagesList();
   };
   const toggleLanguage2 = () => {
     dispatch({ type: "switchLanguage", languagePrimary: false });
-    props.onToggleLanguageList();
+    props.onToggleLanguagesList();
   };
 
   useEffect(() => {
