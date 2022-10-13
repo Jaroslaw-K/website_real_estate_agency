@@ -1,0 +1,239 @@
+@import "../../../../scss/variables/variables.scss";
+
+.navigationButton {
+  height: 18px;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 5px;
+  margin-left: 5px;
+  position: relative;
+  z-index: 3;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  .navigationButton__line--bright {
+    background: $color1;
+  }
+  .navigationButton__line--dark {
+    background: $color2;
+  }
+  .navigationButton__line {
+    height: 2px;
+    width: 40px;
+  }
+
+  .navigationButton__line--top {
+    margin-left: 12px;
+    transform: translate(0, -50%);
+  }
+  .navigationButton__line--middle {
+  }
+  .navigationButton__line--bottom {
+    margin-right: 12px;
+    transform: translate(0, 50%);
+  }
+  .navigationButton__line--topTransformOpen {
+    animation-name: buttonLineTopOpen;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    transition: ease;
+  }
+  .navigationButton__line--middleTransformOpen {
+    animation-name: buttonLineMiddleOpen;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+    transition: ease;
+  }
+  .navigationButton__line--bottomTransformOpen {
+    animation-name: buttonLineBottomOpen;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    transition: ease;
+  }
+
+  .navigationButton__line--topTransformClose {
+    animation-name: buttonLineTopClose;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    transition: ease;
+  }
+  .navigationButton__line--middleTransformClose {
+    animation-name: buttonLineMiddleClose;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    transition: ease;
+  }
+  .navigationButton__line--bottomTransformClose {
+    animation-name: buttonLineBottomClose;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    transition: ease;
+  }
+}
+
+@keyframes buttonLineTopOpen {
+  0% {
+  }
+  40% {
+    margin-left: 0;
+  }
+  50% {
+    top: 10%;
+  }
+  60% {
+    top: 20%;
+  }
+  70% {
+    top: 30%;
+  }
+  80% {
+    top: 40%;
+  }
+  90% {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  100% {
+    position: relative;
+    margin-left: 0;
+    top: 50%;
+    transform: translate(0, -50%) rotate(-45deg);
+    background: $color2;
+  }
+}
+
+@keyframes buttonLineTopClose {
+  0% {
+    position: relative;
+    margin-left: 0;
+    top: 50%;
+    transform: translate(0, -50%) rotate(-45deg);
+  }
+  40% {
+    transform: translate(0, -50%) rotate(0);
+    top: 50%;
+    margin-left: 0;
+  }
+  50% {
+    transform: translate(0, -50%) rotate(0);
+    margin-left: 0;
+    top: 40%;
+  }
+  60% {
+    transform: translate(0, -50%) rotate(0);
+    margin-left: 0;
+    top: 30%;
+  }
+  70% {
+    transform: translate(0, -50%) rotate(0);
+    margin-left: 0;
+    top: 20%;
+  }
+  80% {
+    transform: translate(0, -50%) rotate(0);
+    margin-left: 0;
+    top: 10%;
+  }
+  90% {
+    transform: translate(0, -50%) rotate(0);
+    margin-left: 0;
+    top: 0;
+  }
+  100% {
+    transform: translate(0, -50%) rotate(0);
+    margin-left: 12px;
+  }
+}
+
+@keyframes buttonLineMiddleOpen {
+  from {
+  }
+  to {
+    visibility: hidden;
+  }
+}
+
+@keyframes buttonLineMiddleClose {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}
+
+@keyframes buttonLineBottomOpen {
+  0% {
+  }
+  40% {
+    margin-right: 0;
+  }
+  50% {
+    bottom: 10%;
+  }
+  60% {
+    bottom: 20%;
+  }
+  70% {
+    bottom: 30%;
+  }
+  80% {
+    bottom: 40%;
+  }
+  90% {
+    bottom: 50%;
+    transform: translate(0, 50%);
+  }
+  100% {
+    position: relative;
+    margin-right: 0;
+    bottom: 50%;
+    transform: translate(0, 50%) rotate(45deg);
+    background: $color2;
+  }
+}
+
+@keyframes buttonLineBottomClose {
+  0% {
+    position: relative;
+    margin-right: 0;
+    bottom: 50%;
+    transform: translate(0, 50%) rotate(45deg);
+  }
+  40% {
+    transform: translate(0, 50%) rotate(0);
+    bottom: 50%;
+    margin-right: 0;
+  }
+  50% {
+    transform: translate(0, 50%) rotate(0);
+    margin-left: 0;
+    bottom: 40%;
+  }
+  60% {
+    transform: translate(0, 50%) rotate(0);
+    margin-right: 0;
+    bottom: 30%;
+  }
+  70% {
+    transform: translate(0, 50%) rotate(0);
+    margin-right: 0;
+    bottom: 20%;
+  }
+  80% {
+    transform: translate(0, 50%) rotate(0);
+    margin-right: 0;
+    bottom: 10%;
+  }
+  90% {
+    transform: translate(0, 50%) rotate(0);
+    margin-right: 0;
+    bottom: 0;
+  }
+  100% {
+    transform: translate(0, 50%) rotate(0);
+    margin-right: 12px;
+  }
+}

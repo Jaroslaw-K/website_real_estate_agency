@@ -1,0 +1,194 @@
+@import "../../../../scss/variables/variables.scss";
+
+.windowNavigationMobile {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  height: 0;
+  width: 0;
+  .windowNavigationMobile__leftContainer--show {
+    animation-name: windowNavigationMobileLeftContainerShow;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    transition: ease-out;
+  }
+  .windowNavigationMobile__leftContainer--hide {
+    animation-name: windowNavigationMobileLeftContainerHide;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    transition: ease-in;
+    .container__navLinksContainer {
+      display: none;
+    }
+    .container__navLinksContainer {
+      display: none;
+      .navLinksContainer__link {
+        display: none;
+      }
+    }
+  }
+  .windowNavigationMobile__leftContainer {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../../../assets/images/259588.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .leftContainer__container {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .container__navLinksContainer {
+        width: 90%;
+        height: 200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-direction: column;
+        .navLinksContainer__link {
+          text-decoration: none;
+        }
+        .navLinksContainer__link--bright {
+          color: black;
+          -webkit-tap-highlight-color: transparent;
+        }
+        .navLinksContainer__link--dark {
+          color: white;
+          -webkit-tap-highlight-color: transparent;
+        }
+      }
+    }
+    .leftContainer__container--bright {
+      background: rgba(255, 255, 255, 0.7);
+    }
+    .leftContainer__container--dark {
+      background: rgba(0, 0, 0, 0.7);
+    }
+  }
+  .windowNavigationMobile__rightContainer--show {
+    animation-name: windowNavigationMobileRightContainerShow;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    transition: ease-out;
+  }
+  .windowNavigationMobile__rightContainer--hide {
+    animation-name: windowNavigationMobileRightContainerHide;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    transition: ease-in;
+    .decorationContainer__line {
+      display: none;
+    }
+  }
+  .windowNavigationMobile__rightContainer--bright {
+    background: $color3;
+  }
+  .windowNavigationMobile__rightContainer--dark {
+    background: $color3;
+  }
+  .windowNavigationMobile__rightContainer {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .rightContainer__decorationContainer {
+      width: 95%;
+      height: 200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-direction: column;
+      .decorationContainer__line::before {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        background: white;
+        top: -2.5px;
+        left: -3px;
+        transform: rotate(45deg);
+      }
+      .decorationContainer__line {
+        width: 90%;
+        position: relative;
+        background: white;
+      }
+    }
+  }
+}
+.windowNavigationMobile--show {
+  width: 100vw;
+  height: 100vh;
+}
+.windowNavigationMobile--hide {
+  animation-name: windowNavigationMobileHide;
+  animation-delay: 0.3s;
+  animation-duration: 0s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes windowNavigationMobileHide {
+  0% {
+    height: 100vh;
+    width: 100vw;
+  }
+  100% {
+    height: 0;
+    width: 0;
+  }
+}
+
+@keyframes windowNavigationMobileLeftContainerShow {
+  from {
+    right: 60%;
+    width: 60%;
+  }
+  to {
+    right: 0%;
+    width: 60%;
+  }
+}
+
+@keyframes windowNavigationMobileLeftContainerHide {
+  from {
+    right: 0%;
+    width: 60%;
+  }
+  to {
+    right: 60%;
+    width: 0%;
+  }
+}
+
+@keyframes windowNavigationMobileRightContainerShow {
+  from {
+    left: 40%;
+    width: 40%;
+  }
+  to {
+    left: 0%;
+    width: 40%;
+  }
+}
+
+@keyframes windowNavigationMobileRightContainerHide {
+  from {
+    left: 0%;
+    width: 40%;
+  }
+  to {
+    left: 140%;
+    width: 0%;
+  }
+}
