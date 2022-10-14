@@ -11,7 +11,7 @@ const DarkModeButton = (props) => {
 
   return (
     <button className={darkMode ? "darkModeButton darkModeButton--dark" : "darkModeButton darkModeButton--bright"} onClick={darkModeHandler}>
-      <i className={darkMode ? "bi bi-brightness-high-fill darkModeButton__icon darkModeButton__icon--dark" : "bi bi-moon-stars-fill darkModeButton__icon darkModeButton__icon--bright"}></i>
+      <i className={darkMode ? "bi bi-brightness-high-fill darkModeButton__icon" : "bi bi-moon-stars-fill darkModeButton__icon"}></i>
     </button>
   );
 };

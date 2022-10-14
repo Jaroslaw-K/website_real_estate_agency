@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, Fragment } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 import "./FooterDesktop.scss";
 
@@ -44,10 +44,8 @@ const FooterDesktop = () => {
     mapDesktopText = "UKRYJ";
   }
 
-
-
   return (
-    <footer className="footerDesktop">
+    <footer className={darkMode ? "footerDesktop footerDesktop--dark" : "footerDesktop footerDesktop--bright"}>
       <iframe
         ref={desktopMap}
         className="footerDesktop__topContainer"
@@ -58,9 +56,9 @@ const FooterDesktop = () => {
         title="map"
       />
       <div className="footerDesktop__middleContainer">
-        <div className={darkMode ? "middleContainer__leftContainer middleContainer__leftContainer--dark" : "middleContainer__leftContainer middleContainer__leftContainer--bright"}>
+        <div className="middleContainer__leftContainer">
           <div className="leftContainer__logoContainer">
-            <img className={darkMode ? "logoContainer__logo logoContainer__logo--dark" : "logoContainer__logo logoContainer__logo--bright"} src={Logo} alt="logo" />
+            <img className="logoContainer__logo" src={Logo} alt="logo" />
           </div>
           <div className="leftContainer__dataContainer">
             <div className="dataContainer__left"></div>
@@ -95,19 +93,19 @@ const FooterDesktop = () => {
             </div>
           </div>
         </div>
-        <div className="topContainer__rightContainer">
+        <div className="middleContainer__rightContainer">
           <div className="rightContainer__leftContainer">
-            <div className={darkMode ? "leftContainer__backgroundContainer leftContainer__backgroundContainer--dark" : "leftContainer__backgroundContainer leftContainer__backgroundContainer--bright"}>
-              <div className={darkMode ? "backgroundContainer__textContainer backgroundContainer__textContainer--dark" : "backgroundContainer__textContainer backgroundContainer__textContainer--bright"}>
+            <div className="leftContainer__backgroundContainer">
+              <div className="backgroundContainer__textContainer">
                 {languagePrimary ? "JAK NAS" : "HOW TO FIND"}
                 <br />
-                {languagePrimary ? "ZNALEŹĆ?" : "US?"}&nbsp;<i className={darkMode ? "bi bi-arrow-right-square-fill textContainer__icon--dark" : "bi bi-arrow-right-square-fill textContainer__icon--bright"}></i>
+                {languagePrimary ? "ZNALEŹĆ?" : "US?"}&nbsp;<i className="bi bi-arrow-right-square-fill textContainer__icon"></i>
               </div>
             </div>
           </div>
           <div className="rightContainer__rightContainer">
-            <div className={darkMode ? "rightContainer__background rightContainer__background--dark" : "rightContainer__background rightContainer__background--bright"}>
-              <div className={darkMode ? "background__textContainer background__textContainer--dark" : "background__textContainer background__textContainer--bright"} onClick={showMapDesktopHandler}>
+            <div className="rightContainer__backgroundContainer">
+              <div className="backgroundContainer__textContainer" onClick={showMapDesktopHandler}>
                 {mapDesktopText}
                 <br />
                 {languagePrimary ? "MAPĘ" : "MAP"}&nbsp;<i className={showMapDekstop ? "bi bi-arrow-up-circle-fill textContainer__icon" : "bi bi-arrow-up-circle-fill textContainer__icon"}></i>
@@ -116,9 +114,9 @@ const FooterDesktop = () => {
           </div>
         </div>
       </div>
-      <div ref={footerDesktopBottom} className={darkMode ? "footerDesktop__bottomContainer footerDesktop__bottomContainer--dark" : "footerDesktop__bottomContainer footerDesktop__bottomContainer--bright"}>
-        <div className={darkMode ? "bottomContainer__text bottomContainer__text--dark" : "bottomContainer__text bottomContainer__text--bright"}>&#169;&nbsp;{languagePrimary ? "WSZYSTKIE PRAWA ZASTRZEŻONE" : "ALL RIGHTS RESERVED"}</div>
-        <div className={darkMode ? "bottomContainer__leftContainer bottomContainer__leftContainer--dark" : "bottomContainer__leftContainer bottomContainer__leftContainer--bright"}></div>
+      <div ref={footerDesktopBottom} className="footerDesktop__bottomContainer">
+        <div className="bottomContainer__text">&#169;&nbsp;{languagePrimary ? "WSZYSTKIE PRAWA ZASTRZEŻONE" : "ALL RIGHTS RESERVED"}</div>
+        <div className="bottomContainer__leftContainer"></div>
         <div className="bottomContainer__rightContainer"></div>
       </div>
     </footer>

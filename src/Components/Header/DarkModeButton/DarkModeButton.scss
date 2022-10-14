@@ -1,8 +1,14 @@
 .darkModeButton--bright {
   background: rgba(255, 255, 255, 0.4);
+  .darkModeButton__icon {
+    color: rgba(0, 0, 0, 0.7);
+  }
 }
 .darkModeButton--dark {
   background: rgba(0, 0, 0, 0.4);
+  .darkModeButton__icon {
+    color: rgba(255, 255, 255, 0.7);
+  }
 }
 .darkModeButton {
   height: 45px;
@@ -11,12 +17,6 @@
   clip-path: polygon(50% 30%, 0% 100%, 100% 100%);
   -webkit-tap-highlight-color: transparent;
   cursor: pointer;
-  .darkModeBtn__icon--bright {
-    color: rgba(0, 0, 0, 0.7);
-  }
-  .darkModeButton__icon--dark {
-    color: rgba(255, 255, 255, 0.7);
-  }
   .darkModeButton__icon {
     position: relative;
     top: 13px;

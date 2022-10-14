@@ -1,5 +1,30 @@
 @import "../../../../scss/variables/variables.scss";
 
+.windowNavigationMobile--bright {
+  .windowNavigationMobile__leftContainer {
+    .leftContainer__container {
+      background: rgba(255, 255, 255, 0.7);
+      .container__navLinksContainer {
+        .navLinksContainer__link {
+          color: $color1;
+        }
+      }
+    }
+  }
+}
+.windowNavigationMobile--dark {
+  .windowNavigationMobile__leftContainer {
+    .leftContainer__container {
+      background: rgba(0, 0, 0, 0.7);
+      .container__navLinksContainer {
+        .navLinksContainer__link {
+          color: $color2;
+        }
+      }
+    }
+  }
+}
+
 .windowNavigationMobile {
   position: absolute;
   top: 0;
@@ -56,22 +81,9 @@
         flex-direction: column;
         .navLinksContainer__link {
           text-decoration: none;
-        }
-        .navLinksContainer__link--bright {
-          color: black;
-          -webkit-tap-highlight-color: transparent;
-        }
-        .navLinksContainer__link--dark {
-          color: white;
           -webkit-tap-highlight-color: transparent;
         }
       }
-    }
-    .leftContainer__container--bright {
-      background: rgba(255, 255, 255, 0.7);
-    }
-    .leftContainer__container--dark {
-      background: rgba(0, 0, 0, 0.7);
     }
   }
   .windowNavigationMobile__rightContainer--show {
@@ -89,12 +101,6 @@
       display: none;
     }
   }
-  .windowNavigationMobile__rightContainer--bright {
-    background: $color3;
-  }
-  .windowNavigationMobile__rightContainer--dark {
-    background: $color3;
-  }
   .windowNavigationMobile__rightContainer {
     overflow: hidden;
     position: relative;
@@ -102,6 +108,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background: $color3;
     .rightContainer__decorationContainer {
       width: 95%;
       height: 200px;

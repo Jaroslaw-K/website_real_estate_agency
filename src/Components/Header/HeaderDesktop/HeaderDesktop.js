@@ -11,7 +11,7 @@ const HeaderDesktop = (props) => {
   const darkMode = useSelector((state) => state.darkMode);
   const languagePrimary = useSelector((state) => state.languagePrimary);
   return (
-    <header className="headerDesktop">
+    <header className={darkMode ? "headerDesktop headerDesktop--dark" : "headerDesktop headerDesktop--bright"}>
       <div className="headerDesktop__containerTop">
         <div className="containerTop__left">
           <div className="left__emailContainer">
@@ -26,22 +26,22 @@ const HeaderDesktop = (props) => {
         </div>
         <div className="containerTop__central">
           <div className="central__decorationContainer">
-            <div className="decorationContainer__decoration--left1"></div>
-            <div className="decorationContainer__decoration--left2"></div>
-            <div className="decorationContainer__decoration--left3"></div>
+            <div className="decorationContainer__decoration decorationContainer__decoration--left1"></div>
+            <div className="decorationContainer__decoration decorationContainer__decoration--left2"></div>
+            <div className="decorationContainer__decoration decorationContainer__decoration--left3"></div>
           </div>
           <img src={Logo} alt="logo" className="central__logo" />
-          <div className="decorationContainer__decoration central__decorationContainer">
-            <div className="decorationContainer__decoration--right1"></div>
-            <div className="decorationContainer__decoration--right2"></div>
-            <div className="decorationContainer__decoration--right3"></div>
+          <div className="central__decorationContainer">
+            <div className="decorationContainer__decoration decorationContainer__decoration--right1"></div>
+            <div className="decorationContainer__decoration decorationContainer__decoration--right2"></div>
+            <div className="decorationContainer__decoration decorationContainer__decoration--right3"></div>
           </div>
         </div>
-        <div className={darkMode ? "containerTop__right containerTop__right--dark" : "containerTop__right containerTop__right--bright"}>
+        <div className="containerTop__right">
           <div className="right__line right__line--1"></div>
           <div className="right__line right__line--2"></div>
           <div className="right__line right__line--3"></div>
-          <div className={darkMode ? "right__backgroundBox right__backgroundBox--dark" : "right__backgroundBox right__backgroundBox--bright"}></div>
+          <div className="right__backgroundBox"></div>
           <div className="right__optionsContainer">
             <DarkModeButton />
             <LanguagesButton onToggleLanguagesList={props.onToggleLanguagesList} />
@@ -49,20 +49,20 @@ const HeaderDesktop = (props) => {
           </div>
         </div>
       </div>
-      <div className={darkMode ? "headerDesktop__containerBottom headerDesktop__containerBottom--dark" : "headerDesktop__containerBottom headerDesktop__containerBottom--bright"}>
-        <NavLink to="" className={darkMode ? "containerBottom__link containerBottom__link--dark" : "containerBottom__link containerBottom__link--bright"}>
+      <div className="headerDesktop__containerBottom">
+        <NavLink to="" className="containerBottom__link">
           {languagePrimary ? "OFERTA" : "OFFER"}
         </NavLink>
-        <NavLink to="/sell-or-rent" className={darkMode ? "containerBottom__link containerBottom__link--dark" : "containerBottom__link containerBottom__link--bright"}>
+        <NavLink to="/sell-or-rent" className="containerBottom__link">
           {languagePrimary ? "SPRZEDAŻ/WYNAJEM" : "SELL/RENT"}
         </NavLink>
-        <NavLink to="/about-us" className={darkMode ? "containerBottom__link containerBottom__link--dark" : "containerBottom__link containerBottom__link--bright"}>
+        <NavLink to="/about-us" className="containerBottom__link">
           {languagePrimary ? "O NAS" : "ABOUT US"}
         </NavLink>
-        <NavLink to="/privacy-policy" className={darkMode ? "containerBottom__link containerBottom__link--dark" : "containerBottom__link containerBottom__link--bright"}>
+        <NavLink to="/privacy-policy" className="containerBottom__link">
           {languagePrimary ? "POLITYKA RODO" : "PRIVACY POLICY"}
         </NavLink>
-        <NavLink to="/contact" className={darkMode ? "containerBottom__link containerBottom__link--dark" : "containerBottom__link containerBottom__link--bright"}>
+        <NavLink to="/contact" className="containerBottom__link">
           {languagePrimary ? "KONTAKT" : "CONTACT"}
         </NavLink>
       </div>

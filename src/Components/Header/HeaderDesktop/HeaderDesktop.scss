@@ -1,5 +1,52 @@
 @import "../../../scss/variables/variables.scss";
 
+.headerDesktop--bright {
+  .headerDesktop__containerTop {
+    .containerTop__right {
+      background: $color5;
+      .right__backgroundBox {
+        background: $color5;
+      }
+    }
+  }
+  .headerDesktop__containerBottom {
+    background: rgba(255, 255, 255, 0.9);
+    .containerBottom__link {
+      color: black;
+    }
+  }
+}
+.headerDesktop--dark {
+  .headerDesktop__containerTop {
+    .containerTop__right {
+      background: $color1;
+      .right__backgroundBox {
+        background: $color1;
+      }
+      .right__optionsContainer {
+        .darkModeButton {
+          background: $color2;
+          .darkModeButton__icon {
+            color: $color1;
+          }
+        }
+        .languageButton {
+          background: $color2;
+          .languageButton__countryText {
+            color: $color1;
+          }
+        }
+      }
+    }
+  }
+  .headerDesktop__containerBottom {
+    background: rgba(0, 0, 0, 0.9);
+    .containerBottom__link {
+      color: white;
+    }
+  }
+}
+
 .headerDesktop {
   position: fixed;
   z-index: 2;
@@ -56,110 +103,104 @@
         justify-content: space-between;
         align-items: center;
         flex-direction: column;
-        .decorationContainer__decoration--left1::before {
-          content: "";
-          position: absolute;
-          height: 3px;
-          width: 3px;
-          background: white;
-          right: 0;
-          top: -1px;
-          transform: rotate(45deg);
-        }
-        .decorationContainer__decoration--left1 {
+        .decorationContainer__decoration {
           position: relative;
+          background: white;
+        }
+        // .decorationContainer__decoration--left1::before {
+        //   content: "";
+        //   position: absolute;
+        //   height: 3px;
+        //   width: 3px;
+        //   background: white;
+        //   right: 0;
+        //   top: -1px;
+        //   transform: rotate(45deg);
+        // }
+        .decorationContainer__decoration--left1 {
           height: 1px;
           width: 50%;
-          background: white;
           align-self: flex-end;
         }
-        .decorationContainer__decoration--left2::before {
-          content: "";
-          position: absolute;
-          height: 5px;
-          width: 5px;
-          background: white;
-          right: 0;
-          top: -2px;
-          transform: rotate(45deg);
-        }
+        // .decorationContainer__decoration--left2::before {
+        //   content: "";
+        //   position: absolute;
+        //   height: 5px;
+        //   width: 5px;
+        //   background: white;
+        //   right: 0;
+        //   top: -2px;
+        //   transform: rotate(45deg);
+        // }
         .decorationContainer__decoration--left2 {
-          position: relative;
           right: 10px;
           height: 1px;
           width: 75%;
-          background: white;
           align-self: flex-end;
         }
-        .decorationContainer__decoration--left3::before {
-          content: "";
-          position: absolute;
-          height: 7px;
-          width: 7px;
-          background: white;
-          right: 0;
-          top: -3px;
-          transform: rotate(45deg);
-        }
+        // .decorationContainer__decoration--left3::before {
+        //   content: "";
+        //   position: absolute;
+        //   height: 7px;
+        //   width: 7px;
+        //   background: white;
+        //   right: 0;
+        //   top: -3px;
+        //   transform: rotate(45deg);
+        // }
         .decorationContainer__decoration--left3 {
-          position: relative;
           right: 20px;
+          top: 1px;
           height: 1px;
           width: 100%;
-          background: white;
           align-self: flex-end;
         }
-        .decorationContainer__decoration--right1::before {
-          content: "";
-          position: absolute;
-          height: 3px;
-          width: 3px;
-          background: white;
-          left: 0;
-          top: -1px;
-          transform: rotate(45deg);
-        }
+        // .decorationContainer__decoration--right1::before {
+        //   content: "";
+        //   position: absolute;
+        //   height: 3px;
+        //   width: 3px;
+        //   background: white;
+        //   left: 0;
+        //   top: -1px;
+        //   transform: rotate(45deg);
+        // }
         .decorationContainer__decoration--right1 {
-          position: relative;
           height: 1px;
           width: 50%;
-          background: white;
           align-self: flex-start;
         }
-        .decorationContainer__decoration--right2::before {
-          content: "";
-          position: absolute;
-          height: 5px;
-          width: 5px;
-          background: white;
-          left: 0;
-          top: -2px;
-          transform: rotate(45deg);
-        }
+        // .decorationContainer__decoration--right2::before {
+        //   content: "";
+        //   position: absolute;
+        //   height: 5px;
+        //   width: 5px;
+        //   background: white;
+        //   left: 0;
+        //   top: -2px;
+        //   transform: rotate(45deg);
+        // }
         .decorationContainer__decoration--right2 {
-          position: relative;
           left: 10px;
           height: 1px;
           width: 75%;
-          background: white;
           align-self: flex-start;
         }
-        .decorationContainer__decoration--right3::before {
-          content: "";
-          position: absolute;
-          height: 7px;
-          width: 7px;
-          background: white;
-          left: 0;
-          top: -3px;
-          transform: rotate(45deg);
-        }
+        // .decorationContainer__decoration--right3::before {
+        //   content: "";
+        //   position: absolute;
+        //   height: 7px;
+        //   width: 7px;
+        //   background: white;
+        //   left: 0;
+        //   top: -3px;
+        //   transform: rotate(45deg);
+        // }
         .decorationContainer__decoration--right3 {
-          position: relative;
           left: 20px;
+          top: 1px;
           height: 1px;
           width: 100%;
-          background: white;
           align-self: flex-start;
         }
       }
@@ -170,12 +211,6 @@
         overflow: hidden;
         background: url(../../../assets/logo.svg);
       }
-    }
-    .containerTop__right--bright {
-      background: $color5;
-    }
-    .containerTop__right--dark {
-      background: $color1;
     }
     .containerTop__right {
       height: 100%;
@@ -198,12 +233,6 @@
       .right__line--3 {
         left: -50px;
       }
-      .right__backgroundBox--bright {
-        background: $color5;
-      }
-      .right__backgroundBox--dark {
-        background: $color1;
-      }
       .right__backgroundBox {
         position: absolute;
         height: 100%;
@@ -218,22 +247,10 @@
           top: -5px;
           left: 50px;
         }
-        .darkModeButton--dark {
-          background: $color2;
-          .darkModeButton__icon--dark {
-            color: $color1;
-          }
-        }
         .languageButton {
           position: absolute;
           top: 8px;
           left: 20px;
-        }
-        .languageButton--dark {
-          background: $color2;
-          .languageButton__countryTxt--dark {
-            color: $color1;
-          }
         }
         .languagesList {
           position: absolute;
@@ -243,12 +260,6 @@
       }
     }
   }
-  .headerDesktop__containerBottom--bright {
-    background: rgba(255, 255, 255, 0.9);
-  }
-  .headerDesktop__containerBottom--dark {
-    background: rgba(0, 0, 0, 0.9);
-  }
   .headerDesktop__containerBottom {
     width: 100vw;
     height: 25px;
@@ -256,12 +267,6 @@
     justify-content: space-evenly;
     align-items: center;
     font-size: 14px;
-    .containerBottom__link--bright {
-      color: black;
-    }
-    .containerBottom__link--dark {
-      color: white;
-    }
     .containerBottom__link {
       text-decoration: none;
     }

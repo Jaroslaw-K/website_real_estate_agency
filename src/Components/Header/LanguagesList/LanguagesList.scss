@@ -1,5 +1,22 @@
 @import "../../../scss/variables/variables.scss";
 
+.languagesList--bright {
+  .languagesList__country:first-of-type {
+    border-bottom: 1px solid black;
+  }
+  .languagesList__country {
+    background: rgba(255, 255, 255, 0.8);
+  }
+}
+.languagesList--dark {
+  .languagesList__country:first-of-type {
+    border-bottom: 1px solid white;
+  }
+  .languagesList__country {
+    background: rgba(0, 0, 0, 0.8);
+    color: $color2;
+  }
+}
 .languagesList {
   position: absolute;
   overflow: hidden;
@@ -9,21 +26,8 @@
   .languagesList__country:first-of-type {
     border-radius: 5px 5px 0 0;
   }
-  .languagesList__country--bright:first-of-type {
-    border-bottom: 1px solid black;
-  }
-  .languagesList__country--dark:first-of-type {
-    border-bottom: 1px solid white;
-  }
   .languagesList__country:last-of-type {
     border-radius: 0 0 5px 5px;
-  }
-  .languagesList__country--bright {
-    background: rgba(255, 255, 255, 0.8);
-  }
-  .languagesList__country--dark {
-    background: rgba(0, 0, 0, 0.8);
-    color: $color2;
   }
   .languagesList__country {
     overflow: hidden;

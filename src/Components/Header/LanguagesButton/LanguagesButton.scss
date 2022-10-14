@@ -1,26 +1,23 @@
 .languageButton--bright {
   background: rgba(255, 255, 255, 0.4);
+  .languageButton__countryText {
+    color: rgba(0, 0, 0, 0.7);
+  }
 }
 .languageButton--dark {
   background: rgba(0, 0, 0, 0.4);
+  .languageButton__countryText {
+    color: rgba(255, 255, 255, 0.7);
+  }
 }
 .languageButton {
-  // position: absolute;
-  // right: -2px;
-  // bottom: -29px;
   height: 45px;
   width: 45px;
   border: none;
   cursor: pointer;
   clip-path: polygon(50% 70%, 0 0, 100% 0);
   -webkit-tap-highlight-color: transparent;
-  .languageButton__countryTxt--bright {
-    color: rgba(0, 0, 0, 0.7);
-  }
-  .languageButton__countryTxt--dark {
-    color: rgba(255, 255, 255, 0.7);
-  }
-  .languageButton__countryTxt {
+  .languageButton__countryText {
     position: relative;
     top: -10px;
     left: 0px;

@@ -3,6 +3,7 @@ import { useRef, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
 const NavigationButton = (props) => {
+  const darkMode = useSelector((state) => state.darkMode);
   const [initialRender, setInitialRender] = useState(true);
   const buttonLineTop = useRef();
   const buttonLineMiddle = useRef();
@@ -14,29 +15,28 @@ const NavigationButton = (props) => {
       return;
     }
     if (props.showNav === true) {
-      buttonLineTop.current.classList.remove("navigationButton__line--topTransformClose");
-      buttonLineMiddle.current.classList.remove("navigationButton__line--middleTransformClose");
-      buttonLineBottom.current.classList.remove("navigationButton__line--bottomTransformClose");
-      buttonLineTop.current.classList.add("navigationButton__line--topTransformOpen");
-      buttonLineMiddle.current.classList.add("navigationButton__line--middleTransformOpen");
-      buttonLineBottom.current.classList.add("navigationButton__line--bottomTransformOpen");
+      buttonLineTop.current.classList.remove("navigationButton__line--topAnimationClose");
+      buttonLineMiddle.current.classList.remove("navigationButton__line--middleAnimationClose");
+      buttonLineBottom.current.classList.remove("navigationButton__line--bottomAnimationClose");
+      buttonLineTop.current.classList.add("navigationButton__line--topAnimationOpen");
+      buttonLineMiddle.current.classList.add("navigationButton__line--middleAnimationOpen");
+      buttonLineBottom.current.classList.add("navigationButton__line--bottomAnimationOpen");
     }
     if (props.showNav === false) {
-      buttonLineTop.current.classList.remove("navigationButton__line--topTransformOpen");
-      buttonLineMiddle.current.classList.remove("navigationButton__line--middleTransformOpen");
-      buttonLineBottom.current.classList.remove("navigationButton__line--bottomTransformOpen");
-      buttonLineTop.current.classList.add("navigationButton__line--topTransformClose");
-      buttonLineMiddle.current.classList.add("navigationButton__line--middleTransformClose");
-      buttonLineBottom.current.classList.add("navigationButton__line--bottomTransformClose");
+      buttonLineTop.current.classList.remove("navigationButton__line--topAnimationOpen");
+      buttonLineMiddle.current.classList.remove("navigationButton__line--middleAnimationOpen");
+      buttonLineBottom.current.classList.remove("navigationButton__line--bottomAnimationOpen");
+      buttonLineTop.current.classList.add("navigationButton__line--topAnimationClose");
+      buttonLineMiddle.current.classList.add("navigationButton__line--middleAnimationClose");
+      buttonLineBottom.current.classList.add("navigationButton__line--bottomAnimationClose");
     }
   }, [props.showNav]);
 
-  const darkMode = useSelector((state) => state.darkMode);
   return (
-    <div className="navigationButton" onClick={props.onToggleNavHandler}>
-      <div ref={buttonLineTop} className={darkMode ? "navigationButton__line navigationButton__line--dark navigationButton__line--top" : "navigationButton__line navigationButton__line--bright navigationButton__line--top"}></div>
-      <div ref={buttonLineMiddle} className={darkMode ? "navigationButton__line navigationButton__line--dark navigationButton__line--middle" : "navigationButton__line navigationButton__line--bright navigationButton__line--middle"}></div>
-      <div ref={buttonLineBottom} className={darkMode ? "navigationButton__line navigationButton__line--dark navigationButton__line--bottom" : "navigationButton__line navigationButton__line--bright navigationButton__line--bottom"}></div>
+    <div className={darkMode ? "navigationButton navigationButton--dark" : "navigationButton navigationButton--bright"} onClick={props.onToggleNavHandler}>
+      <div ref={buttonLineTop} className="navigationButton__line navigationButton__line--top"></div>
+      <div ref={buttonLineMiddle} className="navigationButton__line navigationButton__line--middle"></div>
+      <div ref={buttonLineBottom} className="navigationButton__line navigationButton__line--bottom"></div>
     </div>
   );
 };

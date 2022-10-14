@@ -3,14 +3,14 @@ import { useEffect, useRef, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 const LanguagesList = (props) => {
+  const darkMode = useSelector((state) => state.darkMode);
+  const languagePrimary = useSelector((state) => state.languagePrimary);
+  const dispatch = useDispatch();
+  
   const languagesList = useRef();
   const firstLanguageLi = useRef();
   const secondLanguageLi = useRef();
   const [initialRender, setInitialRender] = useState(true);
-
-  const darkMode = useSelector((state) => state.darkMode);
-  const languagePrimary = useSelector((state) => state.languagePrimary);
-  const dispatch = useDispatch();
 
   const toggleLanguage1 = () => {
     dispatch({ type: "switchLanguage", languagePrimary: true });
@@ -44,22 +44,9 @@ const LanguagesList = (props) => {
     }
   }, [props.showLanguagesList]);
 
-  useEffect(() => {
-    if (darkMode === true) {
-      firstLanguageLi.current.classList.remove("languagesList__country--bright");
-      secondLanguageLi.current.classList.remove("languagesList__country-bright");
-      firstLanguageLi.current.classList.add("languagesList__country--dark");
-      secondLanguageLi.current.classList.add("languagesList__country--dark");
-    }
-    if (darkMode === false) {
-      firstLanguageLi.current.classList.remove("languagesList__country--dark");
-      secondLanguageLi.current.classList.remove("languagesList__country--dark");
-      firstLanguageLi.current.classList.add("languagesList__country--bright");
-      secondLanguageLi.current.classList.add("languagesList__country--bright");
-    }
-  }, [darkMode]);
+  
   return (
-    <ul ref={languagesList} className="languagesList">
+    <ul ref={languagesList} className={darkMode? "languagesList languagesList--dark":"languagesList languagesList--bright"}>
       <li ref={firstLanguageLi} className="languagesList__country" onClick={toggleLanguage1}>
         <span className="fi fi-pl country__flag"></span>
         <span className={languagePrimary ? "activeLanguage" : ""}>&nbsp;{languagePrimary ? "POLSKI" : "POLISH"}</span>

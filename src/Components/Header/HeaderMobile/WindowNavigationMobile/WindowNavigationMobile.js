@@ -1,4 +1,3 @@
-
 import "./WindowNavigationMobile.scss";
 import { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
@@ -37,29 +36,29 @@ const WindowNavigationMobile = (props) => {
   }, [props.showNav]);
 
   return (
-    <nav ref={windowNavigationMobile} className="windowNavigationMobile">
+    <nav ref={windowNavigationMobile} className={darkMode ? "windowNavigationMobile windowNavigationMobile--dark" : "windowNavigationMobile windowNavigationMobile--bright"}>
       <div ref={windowNavigationMobileLeftContainer} className="windowNavigationMobile__leftContainer">
-        <div className={darkMode ? "leftContainer__container leftContainer__container--dark" : "leftContainer__container leftContainer__container--bright"}>
+        <div className="leftContainer__container">
           <div className="container__navLinksContainer">
-            <NavLink onClick={props.onToggleNavHandler} to="" className={darkMode ? "navLinksContainer__link navLinksContainer__link--dark" : "navLinksContainer__link navLinksContainer__link--bright"}>
+            <NavLink onClick={props.onToggleNavHandler} to="" className="navLinksContainer__link">
               {languagePrimary ? "OFERTA" : "OFFER"}
             </NavLink>
-            <NavLink onClick={props.onToggleNavHandler} to="/sell-or-rent" className={darkMode ? "navLinksContainer__link navLinksContainer__link--dark" : "navLinksContainer__link navLinksContainer__link--bright"}>
+            <NavLink onClick={props.onToggleNavHandler} to="/sell-or-rent" className="navLinksContainer__link">
               {languagePrimary ? "SPRZEDAŻ/WYNAJEM" : "SELL/RENT"}
             </NavLink>
-            <NavLink onClick={props.onToggleNavHandler} to="/about-us" className={darkMode ? "navLinksContainer__link navLinksContainer__link--dark" : "navLinksContainer__link navLinksContainer__link--bright"}>
+            <NavLink onClick={props.onToggleNavHandler} to="/about-us" className="navLinksContainer__link">
               {languagePrimary ? "O NAS" : "ABOUT US"}
             </NavLink>
-            <NavLink onClick={props.onToggleNavHandler} to="/privacy-policy" className={darkMode ? "navLinksContainer__link navLinksContainer__link--dark" : "navLinksContainer__link navLinksContainer__link--bright"}>
+            <NavLink onClick={props.onToggleNavHandler} to="/privacy-policy" className="navLinksContainer__link">
               {languagePrimary ? "POLITYKA RODO" : "PRIVACY POLICY"}
             </NavLink>
-            <NavLink onClick={props.onToggleNavHandler} to="/contact" className={darkMode ? "navLinksContainer__link navLinksContainer__link--dark" : "navLinksContainer__link navLinksContainer__link--bright"}>
+            <NavLink onClick={props.onToggleNavHandler} to="/contact" className="navLinksContainer__link">
               {languagePrimary ? "KONTAKT" : "CONTACT"}
             </NavLink>
           </div>
         </div>
       </div>
-      <div ref={windowNavigationMobileRightContainer} className={darkMode ? "windowNavigationMobile__rightContainer windowNavigationMobile__rightContainer--dark" : "windowNavigationMobile__rightContainer windowNavigationMobile__rightContainer--bright"}>
+      <div ref={windowNavigationMobileRightContainer} className="windowNavigationMobile__rightContainer">
         <div className="rightContainer__decorationContainer">
           <hr className="decorationContainer__line" />
           <hr className="decorationContainer__line" />

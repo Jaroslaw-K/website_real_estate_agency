@@ -1,5 +1,15 @@
 @import "../../../../scss/variables/variables.scss";
 
+.navigationButton--bright {
+  .navigationButton__line {
+    background: $color1;
+  }
+}
+.navigationButton--dark {
+  .navigationButton__line {
+    background: $color2;
+  }
+}
 .navigationButton {
   height: 18px;
   width: 40px;
@@ -13,59 +23,49 @@
   z-index: 3;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-  .navigationButton__line--bright {
-    background: $color1;
-  }
-  .navigationButton__line--dark {
-    background: $color2;
-  }
   .navigationButton__line {
     height: 2px;
     width: 40px;
   }
-
   .navigationButton__line--top {
     margin-left: 12px;
     transform: translate(0, -50%);
-  }
-  .navigationButton__line--middle {
   }
   .navigationButton__line--bottom {
     margin-right: 12px;
     transform: translate(0, 50%);
   }
-  .navigationButton__line--topTransformOpen {
+  .navigationButton__line--topAnimationOpen {
     animation-name: buttonLineTopOpen;
     animation-duration: 0.2s;
     animation-fill-mode: forwards;
     transition: ease;
   }
-  .navigationButton__line--middleTransformOpen {
+  .navigationButton__line--middleAnimationOpen {
     animation-name: buttonLineMiddleOpen;
     animation-duration: 0.1s;
     animation-fill-mode: forwards;
     transition: ease;
   }
-  .navigationButton__line--bottomTransformOpen {
+  .navigationButton__line--bottomAnimationOpen {
     animation-name: buttonLineBottomOpen;
     animation-duration: 0.2s;
     animation-fill-mode: forwards;
     transition: ease;
   }
-
-  .navigationButton__line--topTransformClose {
+  .navigationButton__line--topAnimationClose {
     animation-name: buttonLineTopClose;
     animation-duration: 0.2s;
     animation-fill-mode: forwards;
     transition: ease;
   }
-  .navigationButton__line--middleTransformClose {
+  .navigationButton__line--middleAnimationClose {
     animation-name: buttonLineMiddleClose;
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
     transition: ease;
   }
-  .navigationButton__line--bottomTransformClose {
+  .navigationButton__line--bottomAnimationClose {
     animation-name: buttonLineBottomClose;
     animation-duration: 0.2s;
     animation-fill-mode: forwards;
