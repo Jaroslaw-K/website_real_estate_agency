@@ -260,6 +260,24 @@
       }
     }
   }
+  .headerDesktop__containerTop--hide {
+    animation-name: hideHeaderTop;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    transition: ease-out;
+    .containerTop__right {
+      display: none;
+    }
+  }
+  .headerDesktop__containerTop--show {
+    animation-name: showHeaderTop;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    transition: ease-out;
+    .containerTop__right {
+      display: block;
+    }
+  }
   .headerDesktop__containerBottom {
     width: 100vw;
     height: 25px;
@@ -272,3 +290,22 @@
     }
   }
 }
+
+
+@keyframes hideHeaderTop {
+  0% {
+    height: 50px;
+  }
+  100% {
+    height: 0px;
+  }
+ }
+
+@keyframes showHeaderTop {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 50px;
+  }
+ }
