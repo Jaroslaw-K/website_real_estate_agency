@@ -1,4 +1,5 @@
 import "./HeaderDesktop.scss";
+import { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 
@@ -8,11 +9,31 @@ import LanguagesButton from "../LanguagesButton/LanguagesButton";
 import LanguagesList from "../LanguagesList/LanguagesList";
 
 const HeaderDesktop = (props) => {
+  const headerDesktopTop = useRef();
+  const [isScrolling, setIsScrolling] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (isScrolling === false) {
+        setIsScrolling(true);
+        headerDesktopTop.current.classList.remove("headerDesktop__containerTop--show");
+        headerDesktopTop.current.classList.add("headerDesktop__containerTop--hide");
+      }
+    });
+    if (isScrolling === true) {
+      setTimeout(() => {
+        headerDesktopTop.current.classList.remove("headerDesktop__containerTop--hide");
+        headerDesktopTop.current.classList.add("headerDesktop__containerTop--show");
+        setIsScrolling(false);
+      }, 1500);
+    }
+  }, [isScrolling, setIsScrolling]);
+
   const darkMode = useSelector((state) => state.darkMode);
   const languagePrimary = useSelector((state) => state.languagePrimary);
   return (
     <header className={darkMode ? "headerDesktop headerDesktop--dark" : "headerDesktop headerDesktop--bright"}>
-      <div className="headerDesktop__containerTop">
+      <div ref={headerDesktopTop} className="headerDesktop__containerTop">
         <div className="containerTop__left">
           <div className="left__emailContainer">
             <i className="bi bi-envelope-fill"></i>&nbsp;&nbsp;Email&nbsp;Address
