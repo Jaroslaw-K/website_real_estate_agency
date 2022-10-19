@@ -1,5 +1,7 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useReducer, useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
+import { PreloadMedia, MediaType } from "react-preload-media";
+
 import Header from "./Components/Header/Header";
 import AboutUs from "./Pages/AboutUs";
 import Contact from "./Pages/Contact";
@@ -8,9 +10,27 @@ import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import SellRent from "./Pages/SellRent";
 import Footer from "./Components/Footer/Footer";
 
-const App = () => {
+const media = [
+  { type: MediaType.Image, url: "./assets/images/34753.jpg" },
+  { type: MediaType.Image, url: "./assets/images/186077.jpg" },
+  { type: MediaType.Image, url: "./assets/images/259588.jpg" },
+  { type: MediaType.Image, url: "./assets/images/1438834.jpg" },
+  { type: MediaType.Image, url: "./assets/logo.svg" },
+];
+
+export const App = () => {
+  const [isLoaded, setIsloaded] = useReducer(() => true, false);
   return (
-    <Fragment>
+    <div>
+      <PreloadMedia media={media} onFinished={() => setIsloaded()}></PreloadMedia>
+      {isLoaded ? <AppLoaded /> : <Fragment></Fragment>}
+    </div>
+  );
+};
+
+const AppLoaded = () => {
+  return (
+    <div className="app">
       <Header />
       <Routes>
         <Route path="/*" element={<Navigate to="/offer" />} />
@@ -21,7 +41,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
-    </Fragment>
+    </div>
   );
 };
 
