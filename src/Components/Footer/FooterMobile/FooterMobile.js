@@ -13,19 +13,20 @@ const FooterMobile = () => {
 
   useEffect(() => {
     if (showMapMobile === true) {
-      mapLeftContainer.current.classList.add("map__leftContainer--show");
-      mapRightContainer.current.classList.add("map__rightContainer--show");
+      mapLeftContainer.current.classList.add("topContainer__leftContainer--show");
+      mapRightContainer.current.classList.add("topContainer__rightContainer--show");
     }
   }, [showMapMobile]);
 
   const showMapMobileHandler = () => {
     setShowMapMobile((prevousState) => !prevousState);
+    console.log(mapLeftContainer.current.classList)
   };
 
   return (
     <footer className={darkMode ? "footerMobile footerMobile--dark" : "footerMobile footerMobile--bright"}>
       <div className="footerMobile__topContainer">
-        <iframe
+        <iframe 
           className="topContainer__map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5035856.899819962!2d19.134378599999998!3d51.953750549999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47009964a4640bbb%3A0x97573ca49cc55ea!2sPolska!5e0!3m2!1spl!2spl!4v1660920589679!5m2!1spl!2spl"
           allowFullScreen=""
