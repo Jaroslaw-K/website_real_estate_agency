@@ -1,4 +1,4 @@
-import React, { Fragment, useReducer, useState } from "react";
+import React, { Fragment, useReducer } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { PreloadMedia, MediaType } from "react-preload-media";
 
@@ -9,6 +9,7 @@ import Offer from "./Pages/Offer";
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import SellRent from "./Pages/SellRent";
 import Footer from "./Components/Footer/Footer";
+import Cursor from "./Components/Cursor/Cursor";
 
 const media = [
   { type: MediaType.Image, url: "./assets/images/34753.jpg" },
@@ -31,6 +32,7 @@ export const App = () => {
 const AppLoaded = () => {
   return (
     <div className="app">
+      <Cursor/>
       <Header />
       <Routes>
         <Route path="/*" element={<Navigate to="/offer" />} />
