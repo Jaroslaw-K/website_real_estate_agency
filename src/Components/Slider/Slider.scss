@@ -1,18 +1,136 @@
+// .slider--bright {
+// }
+// .slider--dark {
+// }
+// .slider {
+//   width: 100vw;
+//   height: 700px;
+//   overflow: hidden;
+//   position: relative;
+//   @media screen and (max-width: 1200px) {
+//     height: 350px;
+//   }
+//   .slider__containerButton {
+//     position: absolute;
+//     z-index: 1;
+//   }
+//   .slider__containerButton--left {
+//     height: 100%;
+//     width: 7vw;
+//     left: 0;
+//   }
+//   .slider__containerButton--right {
+//     height: 100%;
+//     width: 7vw;
+//     right: 0;
+//   }
+//   .slider__containerButton--removeClick {
+//     pointer-events: none;
+//   }
+//   .slider__slidesContainer {
+//     width: 100%;
+//     height: 100%;
+//     display: flex;
+//     position: relative;
+//     overflow: hidden;
+//     .slidesContainer__slide {
+//       position: absolute;
+//       height: 100%;
+//       width: 100%;
+//       background-size: cover;
+//       background-position: 50% 10%;
+//       background-repeat: no-repeat;
+//       display: none;
+//     }
+//     .slidesContainer__slide:nth-of-type(1) {
+//       background-image: url(../../assets/images/259588.jpg);
+//     }
+//     .slidesContainer__slide:nth-of-type(2) {
+//       background-image: url(../../assets/images/1438834.jpg);
+//     }
+//     .slidesContainer__slide:nth-of-type(3) {
+//       background-image: url(../../assets/images/1438834.jpg);
+//     }
+//     .slidesContainer__slide:nth-of-type(4) {
+//       background-image: url(../../assets/images/1438834.jpg);
+//     }
+//     .slidesContainer__slide:nth-of-type(5) {
+//       background-image: url(../../assets/images/1438834.jpg);
+//     }
+//     .slidesContainer__slide--current {
+//       display: block;
+//     }
+//     .slidesContainer__slide--currentLeft {
+//       display: block;
+//       animation-name: currentLeft;
+//       animation-duration: 1.2s;
+//       animation-fill-mode: forwards;
+//     }
+//     .slidesContainer__slide--previousLeft {
+//       display: block;
+//       animation-name: previousLeft;
+//       animation-duration: 1.2s;
+//       animation-fill-mode: forwards;
+//     }
+//     .slidesContainer__slide--currentRight {
+//       display: block;
+//       animation-name: currentRight;
+//       animation-duration: 1.2s;
+//       animation-fill-mode: forwards;
+//     }
+//     .slidesContainer__slide--previousRight {
+//       display: block;
+//       animation-name: previousRight;
+//       animation-duration: 1.2s;
+//       animation-fill-mode: forwards;
+//     }
+//   }
+// }
+
+// @keyframes currentRight {
+//   0% {
+//     left: 100%;
+//   }
+
+//   100% {
+//     left: 0;
+//   }
+// }
+
+// @keyframes previousRight {
+//   0% {
+//     right: 0;
+//   }
+
+//   100% {
+//     right: 100%;
+//   }
+// }
+
+// @keyframes currentLeft {
+//   0% {
+//     right: 100%;
+//   }
+
+//   100% {
+//     right: 0;
+//   }
+// }
+
+// @keyframes previousLeft {
+//   0% {
+//     left: 0;
+//   }
+
+//   100% {
+//     left: 100%;
+//   }
+// }
+
+
 .slider--bright {
-  .slider__containerButton--left:hover,
-  .slider__containerButton--right:hover {
-    background: rgb(255, 255, 255);
-    transition: ease-in;
-    opacity: 0.5;
-  }
 }
 .slider--dark {
-  .slider__containerButton--left:hover,
-  .slider__containerButton--right:hover {
-    background: rgb(0, 0, 0);
-    transition: ease-in;
-    opacity: 0.5;
-  }
 }
 .slider {
   width: 100vw;
@@ -28,18 +146,16 @@
   }
   .slider__containerButton--left {
     height: 100%;
-    width: 10vw;
+    width: 7vw;
     left: 0;
-    clip-path: polygon(0 0, 0% 100%, 100% 50%);
   }
   .slider__containerButton--right {
     height: 100%;
-    width: 10vw;
+    width: 7vw;
     right: 0;
-    clip-path: polygon(100% 0, 100% 100%, 0 50%);
   }
   .slider__containerButton--removeClick {
-    pointer-events: none;
+    // pointer-events: none;
   }
   .slider__slidesContainer {
     width: 100%;
@@ -57,86 +173,37 @@
       display: none;
     }
     .slidesContainer__slide:nth-of-type(1) {
-      background-image: url(../../assets/images/259588.jpg);
+     background: black;
     }
     .slidesContainer__slide:nth-of-type(2) {
-      background-image: url(../../assets/images/1438834.jpg);
+    background: orange;
+   
     }
     .slidesContainer__slide:nth-of-type(3) {
-      background-image: url(../../assets/images/1438834.jpg);
+      background: green;
+      
     }
     .slidesContainer__slide:nth-of-type(4) {
-      background-image: url(../../assets/images/1438834.jpg);
+      background: blue;
+
     }
     .slidesContainer__slide:nth-of-type(5) {
-      background-image: url(../../assets/images/1438834.jpg);
+      background: red;
     }
     .slidesContainer__slide--current {
-      display: block;
+      background: blueviolet;
     }
     .slidesContainer__slide--currentLeft {
-      display: block;
-      animation-name: currentLeft;
-      animation-duration: 1.2s;
-      animation-fill-mode: forwards;
+     
     }
     .slidesContainer__slide--previousLeft {
-      display: block;
-      animation-name: previousLeft;
-      animation-duration: 1.2s;
-      animation-fill-mode: forwards;
+     
     }
     .slidesContainer__slide--currentRight {
-      display: block;
-      animation-name: currentRight;
-      animation-duration: 1.2s;
-      animation-fill-mode: forwards;
+    
     }
     .slidesContainer__slide--previousRight {
-      display: block;
-      animation-name: previousRight;
-      animation-duration: 1.2s;
-      animation-fill-mode: forwards;
+    
     }
-  }
-}
-
-@keyframes currentRight {
-  0% {
-    left: 100%;
-  }
-
-  100% {
-    left: 0;
-  }
-}
-
-@keyframes previousRight {
-  0% {
-    right: 0;
-  }
-
-  100% {
-    right: 100%;
-  }
-}
-
-@keyframes currentLeft {
-  0% {
-    right: 100%;
-  }
-
-  100% {
-    right: 0;
-  }
-}
-
-@keyframes previousLeft {
-  0% {
-    left: 0;
-  }
-
-  100% {
-    left: 100%;
   }
 }
