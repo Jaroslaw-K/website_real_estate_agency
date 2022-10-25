@@ -2,7 +2,6 @@ import { createStore } from "redux";
 
 const initialState = { darkMode: localStorage.getItem("darkMode") === "true", 
                       languagePrimary: localStorage.getItem("languagePrimary") === "true",
-                      changedMouse: false 
                      };
 
 const websiteReducer = (state = initialState, action) => {
@@ -10,21 +9,12 @@ const websiteReducer = (state = initialState, action) => {
     return {
       darkMode: !state.darkMode,
       languagePrimary: state.languagePrimary,
-      changedMouse: state.changedMouse 
     };
   }
   if (action.type === "switchLanguage") {
     return {
       darkMode: state.darkMode,
       languagePrimary: action.languagePrimary,
-      changedMouse: state.changedMouse 
-    };
-  }
-  if (action.type === "switchMouse") {
-    return {
-      darkMode: state.darkMode,
-      languagePrimary: state.languagePrimary,
-      changedMouse: !state.changedMouse
     };
   }
   return state;
