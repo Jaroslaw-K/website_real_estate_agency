@@ -15,20 +15,3 @@
   top: 19px;
   left: 17px;
 }
-.cursorChanged--bright {
-  background: rgba(0, 0, 0, 0.7);
-}
-.cursorChanged--dark {
-  background: rgba(255, 255, 255, 0.7);
-}
-.cursorChanged {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  z-index: 1000;
-  position: fixed;
-  pointer-events: none;
-  top: 19px;
-  left: 17px;
-}
-
