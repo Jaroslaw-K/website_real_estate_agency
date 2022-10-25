@@ -27,13 +27,11 @@ const Cursor = () => {
     });
   }, []);
 
-  let mouse;
-  if (changedMouse) {
-    mouse = <div className={darkMode ? "cursorChanged cursorChanged--dark" : "cursorChanged cursorChanged--bright"} ref={cursor}></div>;
-  } else {
-    mouse = <i className={darkMode ? "bi bi-cursor-fill cursor cursor--dark" : "bi bi-cursor-fill cursor cursor--bright"} ref={cursor}></i>;
-  }
-  return <BrowserView>{mouse}</BrowserView>;
+  return (
+    <BrowserView>
+      <i className={darkMode ? "bi bi-cursor-fill cursor cursor--dark" : "bi bi-cursor-fill cursor cursor--bright"} ref={cursor}></i>
+    </BrowserView>
+  );
 };
 
 export default Cursor;
