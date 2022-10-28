@@ -13,8 +13,11 @@ import image7 from "../../../assets/imagesSlider/7031408.jpg";
 const SliderDesktop = () => {
   const darkMode = useSelector((state) => state.darkMode);
   const slidesContainer = useRef();
+  const smallSlidesContainer = useRef();
   const containerButtonLeft = useRef();
   const containerButtonRight = useRef();
+  const containerSmallButtonLeft = useRef();
+  const containerSmallButtonRight = useRef();
   const [currentId, setCurrentId] = useState(undefined);
   const [slides, setSlides] = useState([
     {
@@ -51,11 +54,14 @@ const SliderDesktop = () => {
     slidesContainer.current.childNodes[0].classList.add("current");
     slidesContainer.current.childNodes[0].style.display = "block";
     setCurrentId(0);
+    console.log(typeof image1);
   }, []);
 
   const toggleLeftImgHandler = () => {
     containerButtonLeft.current.style.pointerEvents = "none";
     containerButtonRight.current.style.pointerEvents = "none";
+    containerSmallButtonLeft.current.style.pointerEvents = "none";
+    containerSmallButtonRight.current.style.pointerEvents = "none";
     for (let i = 0; i < slidesContainer.current.childNodes.length; i++) {
       if (slidesContainer.current.childNodes[i].classList.contains("current")) {
         slidesContainer.current.childNodes[i].style.left = "0";
@@ -82,6 +88,8 @@ const SliderDesktop = () => {
           if (counterCurrent === 100 || counterSecond === 0) {
             containerButtonLeft.current.style.pointerEvents = "auto";
             containerButtonRight.current.style.pointerEvents = "auto";
+            containerSmallButtonLeft.current.style.pointerEvents = "auto";
+            containerSmallButtonRight.current.style.pointerEvents = "auto";
             clearInterval(move);
             slidesContainer.current.childNodes[i].classList.remove("current");
             slidesContainer.current.childNodes[i].style.display = "none";
@@ -103,6 +111,8 @@ const SliderDesktop = () => {
   const toggleRightImgHandler = () => {
     containerButtonLeft.current.style.pointerEvents = "none";
     containerButtonRight.current.style.pointerEvents = "none";
+    containerSmallButtonLeft.current.style.pointerEvents = "none";
+    containerSmallButtonRight.current.style.pointerEvents = "none";
     for (let i = 0; i < slidesContainer.current.childNodes.length; i++) {
       if (slidesContainer.current.childNodes[i].classList.contains("current")) {
         slidesContainer.current.childNodes[i].style.left = "0";
@@ -129,6 +139,8 @@ const SliderDesktop = () => {
           if (counterCurrent === 100 || counterSecond === 0) {
             containerButtonLeft.current.style.pointerEvents = "auto";
             containerButtonRight.current.style.pointerEvents = "auto";
+            containerSmallButtonLeft.current.style.pointerEvents = "auto";
+            containerSmallButtonRight.current.style.pointerEvents = "auto";
             clearInterval(move);
             slidesContainer.current.childNodes[i].classList.remove("current");
             slidesContainer.current.childNodes[i].style.display = "none";
@@ -147,38 +159,58 @@ const SliderDesktop = () => {
     }
   };
 
-  const toggleSmallLeftImgHandler = () => {
-    console.log('moveLeft');
-  }
+  const pickSlideHandler = (event) => {
+    for (let i = 0; i < slidesContainer.current.childNodes.length; i++) {
+      slidesContainer.current.childNodes[i].classList.remove("second");
+      slidesContainer.current.childNodes[i].classList.remove("current");
+      slidesContainer.current.childNodes[i].style.display = "none";
+    }
+    slidesContainer.current.childNodes[+event.target.id].style.display = "block";
+    slidesContainer.current.childNodes[+event.target.id].style.left = "0";
+    slidesContainer.current.childNodes[+event.target.id].classList.add("current");
+    setCurrentId(+event.target.id);
+  };
 
-  const toggleSmallRightImgHandler = () => {
-    console.log('moveRight');
-  }
- 
   let slidesMain = slides.map((slide) => <div key={slide.id} className="slidesContainer__slide" style={{ backgroundImage: `url(${slide.url})` }}></div>);
-  let slidesSmall = <Fragment>
-       {slides.map((slide) => { if (slide.id === currentId && slide.id === 0) {
-        return <div className="slidesContainer__slide" style={{ backgroundImage: `url(${slides[slides.length - 2].url})` }}></div>
+  let slidesSmall = (
+    <Fragment>
+      {slides.map((slide) => {
+        if (slide.id === currentId && slide.id === 0) {
+          return <div onClick={pickSlideHandler} id={slides.length - 2} key={slides.length - 2} className="slidesContainer__slide" style={{ backgroundImage: `url(${slides[slides.length - 2].url})` }}></div>;
         } else if (slide.id === currentId && slide.id === 1) {
-          return <div className="slidesContainer__slide" style={{ backgroundImage: `url(${slides[slides.length - 1].url})` }}></div>
-        }  else if (slide.id === currentId && slide.id >= 2) {
-          return <div className="slidesContainer__slide" style={{ backgroundImage: `url(${slides[slide.id - 2].url})` }}></div>
+          return <div onClick={pickSlideHandler} id={slides.length - 1} key={slides.length - 1} className="slidesContainer__slide" style={{ backgroundImage: `url(${slides[slides.length - 1].url})` }}></div>;
+        } else if (slide.id === currentId && slide.id >= 2) {
+          return <div onClick={pickSlideHandler} id={slide.id - 2} key={slide.id - 2} className="slidesContainer__slide" style={{ backgroundImage: `url(${slides[slide.id - 2].url})` }}></div>;
         }
-        })}
-        
-      {slides.map((slide) => { if (slide.id === currentId) {return <div className="slidesContainer__slide" style={{ backgroundImage: `url(${slides[slide.id <= 0? slides.length - 1:slide.id - 1].url})` }}></div>}})}
-      {slides.map((slide) => { if (slide.id === currentId) {return <div className="slidesContainer__slide currentSmall" style={{ backgroundImage: `url(${slides[slide.id].url})` }}></div>}})}
-      {slides.map((slide) => { if (slide.id === currentId) {return <div className="slidesContainer__slide" style={{ backgroundImage: `url(${slides[slide.id >= slides.length - 1? 0:slide.id + 1].url})` }}></div>}})}
-      
-      {slides.map((slide) => { if (slide.id === currentId && slide.id === slides.length - 2) {
-        return <div className="slidesContainer__slide" style={{ backgroundImage: `url(${slides[0].url})` }}></div>
+      })}
+
+      {slides.map((slide) => {
+        if (slide.id === currentId) {
+          return <div onClick={pickSlideHandler} id={slide.id <= 0 ? slides.length - 1 : slide.id - 1} key={slide.id <= 0 ? slides.length - 1 : slide.id - 1} className="slidesContainer__slide" style={{ backgroundImage: `url(${slides[slide.id <= 0 ? slides.length - 1 : slide.id - 1].url})` }}></div>;
+        }
+      })}
+      {slides.map((slide) => {
+        if (slide.id === currentId) {
+          return <div id={slide.id} key={slide.id} className="slidesContainer__slide currentSmall" style={{ backgroundImage: `url(${slides[slide.id].url})` }}></div>;
+        }
+      })}
+      {slides.map((slide) => {
+        if (slide.id === currentId) {
+          return <div onClick={pickSlideHandler} id={slide.id >= slides.length - 1 ? 0 : slide.id + 1} key={slide.id >= slides.length - 1 ? 0 : slide.id + 1} className="slidesContainer__slide" style={{ backgroundImage: `url(${slides[slide.id >= slides.length - 1 ? 0 : slide.id + 1].url})` }}></div>;
+        }
+      })}
+
+      {slides.map((slide) => {
+        if (slide.id === currentId && slide.id === slides.length - 2) {
+          return <div onClick={pickSlideHandler} id={0} key={0} className="slidesContainer__slide" style={{ backgroundImage: `url(${slides[0].url})` }}></div>;
         } else if (slide.id === currentId && slide.id === slides.length - 1) {
-          return <div className="slidesContainer__slide" style={{ backgroundImage: `url(${slides[1].url})` }}></div>
-        }  else if (slide.id === currentId && slide.id >= 0) {
-          return <div className="slidesContainer__slide" style={{ backgroundImage: `url(${slides[slide.id + 2].url})` }}></div>
+          return <div onClick={pickSlideHandler} id={1} key={1} className="slidesContainer__slide" style={{ backgroundImage: `url(${slides[1].url})` }}></div>;
+        } else if (slide.id === currentId && slide.id >= 0) {
+          return <div onClick={pickSlideHandler} id={slide.id + 2} key={slide.id + 2} className="slidesContainer__slide" style={{ backgroundImage: `url(${slides[slide.id + 2].url})` }}></div>;
         }
-        })}
-   </Fragment>
+      })}
+    </Fragment>
+  );
 
   return (
     <div className={darkMode ? "sliderDesktop sliderDesktop--dark" : "sliderDesktop sliderDesktop--bright"}>
@@ -188,11 +220,11 @@ const SliderDesktop = () => {
         {slidesMain}
       </div>
       <div className="sliderDesktop__smallSlidesContainer">
-        <i className="bi bi-caret-left-fill smallSlidesContainer__arrow smallSlidesContainer__arrow--left" onClick={toggleSmallLeftImgHandler}></i>
-        <i className="bi bi-caret-right-fill smallSlidesContainer__arrow smallSlidesContainer__arrow--right" onClick={toggleSmallRightImgHandler}></i>
-        <div className="smallSlidesContainer__slidesContainer">
-        {slidesSmall}
-          </div>
+        <i ref={containerSmallButtonLeft} className="bi bi-caret-left-fill smallSlidesContainer__arrow smallSlidesContainer__arrow--left" onClick={toggleLeftImgHandler}></i>
+        <i ref={containerSmallButtonRight} className="bi bi-caret-right-fill smallSlidesContainer__arrow smallSlidesContainer__arrow--right" onClick={toggleRightImgHandler}></i>
+        <div ref={smallSlidesContainer} className="smallSlidesContainer__slidesContainer">
+          {slidesSmall}
+        </div>
       </div>
     </div>
   );
