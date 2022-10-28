@@ -1,14 +1,15 @@
 import "./Cursor.scss";
 import { useRef, useEffect } from "react";
 import { useSelector } from "react-redux";
-import { BrowserView } from "react-device-detect";
+import { BrowserView, isBrowser } from "react-device-detect";
 
 const Cursor = () => {
   const darkMode = useSelector((state) => state.darkMode);
   const cursor = useRef(null);
-  const changedMouse = useSelector((state) => state.changedMouse);
 
   useEffect(() => {
+
+    if (isBrowser) {
     document.addEventListener("mousemove", (event) => {
       const { x, y } = event;
       const countX = x - cursor.current.clientWidth;
@@ -24,7 +25,7 @@ const Cursor = () => {
       } else {
         cursor.current.style.display = "block";
       }
-    });
+    })};
   }, []);
 
   return (
