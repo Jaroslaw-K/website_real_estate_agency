@@ -1,0 +1,20 @@
+.sliderMobile {
+  width: 100vw;
+  height: 400px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  .sliderMobile__slide {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+    
+  }
+  .current {
+
+  }
+}
