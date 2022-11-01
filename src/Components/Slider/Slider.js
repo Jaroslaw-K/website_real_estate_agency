@@ -3,14 +3,14 @@ import SliderDesktop from "./SliderDesktop/SliderDesktop";
 import SliderMobile from "./SliderMobile/SliderMobile";
 import { BrowserView, MobileView } from "react-device-detect";
 
-const Slider = () => {
+const Slider = (props) => {
   return (
     <Fragment>
       <BrowserView>
-        <SliderDesktop />
+        <SliderDesktop moveSlider={props.moveSlider}/>
       </BrowserView>
       <MobileView>
-        <SliderMobile />
+        <SliderMobile moveSlider={props.moveSlider}/>
       </MobileView>
     </Fragment>
   );
