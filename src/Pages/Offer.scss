@@ -1,5 +1,10 @@
-main {
-    height: 500px;
-    background-image: url(../assets/images/259588.jpg);
-    background-size: cover;
+.offer {
+  .sliderDesktop {
+    .sliderDesktop__containerButton {
+        display: none;
+    }
+    .sliderDesktop__smallSlidesContainer {
+        display: none;
+    }
+  }
 }
