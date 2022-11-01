@@ -9,28 +9,10 @@ import LanguagesButton from "../LanguagesButton/LanguagesButton";
 import LanguagesList from "../LanguagesList/LanguagesList";
 
 const HeaderDesktop = (props) => {
-  const headerDesktopTop = useRef();
-  const [isScrolling, setIsScrolling] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (isScrolling === false) {
-        setIsScrolling(true);
-        headerDesktopTop.current.classList.remove("headerDesktop__containerTop--show");
-        headerDesktopTop.current.classList.add("headerDesktop__containerTop--hide");
-      }
-    });
-    if (isScrolling === true) {
-      setTimeout(() => {
-        headerDesktopTop.current.classList.remove("headerDesktop__containerTop--hide");
-        headerDesktopTop.current.classList.add("headerDesktop__containerTop--show");
-        setIsScrolling(false);
-      }, 1500);
-    }
-  }, [isScrolling, setIsScrolling]);
-
   const darkMode = useSelector((state) => state.darkMode);
   const languagePrimary = useSelector((state) => state.languagePrimary);
+  const headerDesktopTop = useRef();
+
   return (
     <header className={darkMode ? "headerDesktop headerDesktop--dark" : "headerDesktop headerDesktop--bright"}>
       <div ref={headerDesktopTop} className="headerDesktop__containerTop">
