@@ -1,10 +1,15 @@
 import "./Offer.scss";
 import Slider from "../Components/Slider/Slider";
 
-const Offer = () => {
-  return <main>
-    <Slider/>
-  </main>;
+const Offer = (props) => {
+  const moveSlider = (moveSlider) => {
+    moveSlider();
+  }
+  return (
+    <main className="offer">
+      <Slider moveSlider={moveSlider}/>
+    </main>
+  );
 };
 
 export default Offer;
