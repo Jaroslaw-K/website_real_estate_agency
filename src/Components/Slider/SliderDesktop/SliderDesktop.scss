@@ -4,6 +4,15 @@
     background: rgba(255, 255, 255, 0.3);
     transition: 1s;
   }
+  .sliderDesktop__slidesContainer {
+    .slidesContainer__slide {
+      .slide__text {
+        color: black;
+        text-shadow: 0px 0px 5px white;
+        background: rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
   .sliderDesktop__smallSlidesContainer {
     background: rgba(255, 255, 255, 0.5);
     .smallSlidesContainer__arrow {
@@ -15,6 +24,15 @@
   .sliderDesktop__containerButton:hover {
     background: rgba(0, 0, 0, 0.3);
     transition: 1s;
+  }
+  .sliderDesktop__slidesContainer {
+    .slidesContainer__slide {
+      .slide__text {
+        color: white;
+        text-shadow: 0px 0px 5px black;
+        background: rgba(0, 0, 0, 0.7);
+      }
+    }
   }
   .sliderDesktop__smallSlidesContainer {
     background: rgba(0, 0, 0, 0.5);
@@ -59,6 +77,31 @@
       background-position: 50% 15%;
       background-repeat: no-repeat;
       display: none;
+      .slide__text {
+        position: absolute;
+        font-size: 30px;
+        padding: 8px;
+        display: inline-block;
+        width: 40%;
+      }
+      .slide__text--left {
+        animation-name: textLeftMove;
+        animation-duration: 3s;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+        text-align: right;
+        top: 35%;
+        left: -100%;
+      }
+      .slide__text--right {
+        animation-name: textRightMove;
+        animation-duration: 3s;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+        text-align: left;
+        top: 80%;
+        right: -100%;
+      }
     }
   }
   .sliderDesktop__smallSlidesContainer {
@@ -105,5 +148,23 @@
         border: 3px solid $color2;
       }
     }
+  }
+}
+
+@keyframes textLeftMove {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes textRightMove {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0%;
   }
 }
