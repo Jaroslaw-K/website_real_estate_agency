@@ -7,10 +7,10 @@ const Slider = (props) => {
   return (
     <Fragment>
       <BrowserView>
-        <SliderDesktop moveSlider={props.moveSlider}/>
+        <SliderDesktop moveSlider={props.moveSlider}  slidesArray={props.slidesArray}/>
       </BrowserView>
       <MobileView>
-        <SliderMobile moveSlider={props.moveSlider}/>
+        <SliderMobile moveSlider={props.moveSlider} slidesArray={props.slidesArray}/>
       </MobileView>
     </Fragment>
   );
