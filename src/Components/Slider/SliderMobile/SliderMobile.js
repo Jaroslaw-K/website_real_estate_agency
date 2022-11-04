@@ -1,48 +1,13 @@
 import { useState, useEffect, useRef } from "react";
+import { useSelector } from "react-redux";
 import "./SliderMobile.scss";
 
-import image1 from "../../../assets/imagesSlider/259588.jpg";
-import image2 from "../../../assets/imagesSlider/280222.jpg";
-import image3 from "../../../assets/imagesSlider/209296.jpg";
-import image4 from "../../../assets/imagesSlider/1438834.jpg";
-import image5 from "../../../assets/imagesSlider/5502227.jpg";
-import image6 from "../../../assets/imagesSlider/5524205.jpg";
-import image7 from "../../../assets/imagesSlider/7031408.jpg";
-
 const SliderMobile = (props) => {
+  const darkMode = useSelector((state) => state.darkMode);
+  const languagePrimary = useSelector((state) => state.languagePrimary);
   const sliderMobile = useRef();
   const [startingPoint, setStartingPoint] = useState();
   const [shift, setShift] = useState(0);
-  const [slides] = useState([
-    {
-      id: 0,
-      url: image1,
-    },
-    {
-      id: 1,
-      url: image2,
-    },
-    {
-      id: 2,
-      url: image3,
-    },
-    {
-      id: 3,
-      url: image4,
-    },
-    {
-      id: 4,
-      url: image5,
-    },
-    {
-      id: 5,
-      url: image6,
-    },
-    {
-      id: 6,
-      url: image7,
-    },
-  ]);
 
   useEffect(() => {
     sliderMobile.current.childNodes[0].classList.add("current");
@@ -89,7 +54,7 @@ const SliderMobile = (props) => {
           }, 1);
         }
       }
-    }, 12500);
+    }, 20000);
   };
 
   const touchStartHandler = (event) => {
@@ -324,9 +289,14 @@ const SliderMobile = (props) => {
     }
   };
 
-  let slidesMobile = slides.map((slide) => <div key={slide.id} className="sliderMobile__slide" style={{ backgroundImage: `url(${slide.url})` }}></div>);
+  let slidesMobile = props.slidesArray.map((slide) => (
+    <div key={slide.id} className="sliderMobile__slide" style={{ backgroundImage: `url(${slide.url})` }}>
+      <div className="slide__text slide__text--left">{languagePrimary ? `${slide.text1_PL}` : `${slide.text1_EN}`}</div>
+      <div className="slide__text slide__text--right">{languagePrimary ? `${slide.text2_PL}` : `${slide.text2_EN}`}</div>
+    </div>
+  ));
   return (
-    <div ref={sliderMobile} onTouchStart={touchStartHandler} onTouchMove={touchMoveHandler} onTouchEnd={touchEndHandler} className="sliderMobile">
+    <div ref={sliderMobile} onTouchStart={touchStartHandler} onTouchMove={touchMoveHandler} onTouchEnd={touchEndHandler} className={darkMode ? "sliderMobile sliderMobile--dark" : "sliderMobile sliderMobile--bright"}>
       {slidesMobile}
     </div>
   );

@@ -2,16 +2,9 @@ import "./SliderDesktop.scss";
 import { useRef, useEffect, useState, Fragment } from "react";
 import { useSelector } from "react-redux";
 
-import image1 from "../../../assets/imagesSlider/259588.jpg";
-import image2 from "../../../assets/imagesSlider/280222.jpg";
-import image3 from "../../../assets/imagesSlider/209296.jpg";
-import image4 from "../../../assets/imagesSlider/1438834.jpg";
-import image5 from "../../../assets/imagesSlider/5502227.jpg";
-import image6 from "../../../assets/imagesSlider/5524205.jpg";
-import image7 from "../../../assets/imagesSlider/7031408.jpg";
-
 const SliderDesktop = (props) => {
   const darkMode = useSelector((state) => state.darkMode);
+  const languagePrimary = useSelector((state) => state.languagePrimary);
   const sliderDesktop = useRef();
   const slidesContainer = useRef();
   const smallSlidesContainer = useRef();
@@ -20,36 +13,6 @@ const SliderDesktop = (props) => {
   const containerSmallButtonLeft = useRef();
   const containerSmallButtonRight = useRef();
   const [currentId, setCurrentId] = useState(undefined);
-  const [slides] = useState([
-    {
-      id: 0,
-      url: image1,
-    },
-    {
-      id: 1,
-      url: image2,
-    },
-    {
-      id: 2,
-      url: image3,
-    },
-    {
-      id: 3,
-      url: image4,
-    },
-    {
-      id: 4,
-      url: image5,
-    },
-    {
-      id: 5,
-      url: image6,
-    },
-    {
-      id: 6,
-      url: image7,
-    },
-  ]);
 
   useEffect(() => {
     slidesContainer.current.childNodes[0].classList.add("current");
@@ -59,7 +22,7 @@ const SliderDesktop = (props) => {
   }, []);
 
   const toggleLeftImgHandler = () => {
-    if (slides.length > 1) {
+    if (slidesContainer.current.childNodes.length > 1) {
       containerButtonLeft.current.style.pointerEvents = "none";
       containerButtonRight.current.style.pointerEvents = "none";
       containerSmallButtonLeft.current.style.pointerEvents = "none";
@@ -108,7 +71,7 @@ const SliderDesktop = (props) => {
   };
 
   const toggleRightImgHandler = () => {
-    if (slides.length > 1) {
+    if (slidesContainer.current.childNodes.length > 1) {
       containerButtonLeft.current.style.pointerEvents = "none";
       containerButtonRight.current.style.pointerEvents = "none";
       containerSmallButtonLeft.current.style.pointerEvents = "none";
@@ -171,94 +134,98 @@ const SliderDesktop = (props) => {
     sliderDesktop.current.style.pointerEvents = "none";
     setInterval(() => {
       toggleRightImgHandler();
-    }, 12500)
-  }
+    }, 20000);
+  };
 
-  let slidesMain = slides.map((slide) => <div key={slide.id} className="slidesContainer__slide" style={{ backgroundImage: `url(${slide.url})` }}></div>);
+  let slidesMain = props.slidesArray.map((slide) => (
+    <div key={slide.id} className="slidesContainer__slide" style={{ backgroundImage: `url(${slide.url})` }}>
+      <div className="slide__text slide__text--left">{languagePrimary ? `${slide.text1_PL}` : `${slide.text1_EN}`}</div>
+      <div className="slide__text slide__text--right">{languagePrimary ? `${slide.text2_PL}` : `${slide.text2_EN}`}</div>
+    </div>
+  ));
   let slidesSmall;
-  if (slides.length > 3) {
+  if (props.slidesArray.length > 3) {
     slidesSmall = (
       <Fragment>
-        {slides.map((slide) => {
+        {props.slidesArray.map((slide) => {
           if (slide.id === currentId && slide.id === 0) {
-            return <div onClick={pickSlideHandler} id={slides.length - 2} key={slides.length - 2} className="slidesContainer__slide" style={{ backgroundImage: `url(${slides[slides.length - 2].url})` }}></div>;
+            return <div onClick={pickSlideHandler} id={props.slidesArray.length - 2} key={props.slidesArray.length - 2} className="slidesContainer__slide" style={{ backgroundImage: `url(${props.slidesArray[props.slidesArray.length - 2].url})` }}></div>;
           } else if (slide.id === currentId && slide.id === 1) {
-            return <div onClick={pickSlideHandler} id={slides.length - 1} key={slides.length - 1} className="slidesContainer__slide" style={{ backgroundImage: `url(${slides[slides.length - 1].url})` }}></div>;
+            return <div onClick={pickSlideHandler} id={props.slidesArray.length - 1} key={props.slidesArray.length - 1} className="slidesContainer__slide" style={{ backgroundImage: `url(${props.slidesArray[props.slidesArray.length - 1].url})` }}></div>;
           } else if (slide.id === currentId && slide.id >= 2) {
-            return <div onClick={pickSlideHandler} id={slide.id - 2} key={slide.id - 2} className="slidesContainer__slide" style={{ backgroundImage: `url(${slides[slide.id - 2].url})` }}></div>;
+            return <div onClick={pickSlideHandler} id={slide.id - 2} key={slide.id - 2} className="slidesContainer__slide" style={{ backgroundImage: `url(${props.slidesArray[slide.id - 2].url})` }}></div>;
           }
         })}
-
-        {slides.map((slide) => {
+        {props.slidesArray.map((slide) => {
           if (slide.id === currentId) {
-            return <div onClick={pickSlideHandler} id={slide.id <= 0 ? slides.length - 1 : slide.id - 1} key={slide.id <= 0 ? slides.length - 1 : slide.id - 1} className="slidesContainer__slide" style={{ backgroundImage: `url(${slides[slide.id <= 0 ? slides.length - 1 : slide.id - 1].url})` }}></div>;
+            return <div onClick={pickSlideHandler} id={slide.id <= 0 ? props.slidesArray.length - 1 : slide.id - 1} key={slide.id <= 0 ? props.slidesArray.length - 1 : slide.id - 1} className="slidesContainer__slide" style={{ backgroundImage: `url(${props.slidesArray[slide.id <= 0 ? props.slidesArray.length - 1 : slide.id - 1].url})` }}></div>;
           }
         })}
-        {slides.map((slide) => {
+        {props.slidesArray.map((slide) => {
           if (slide.id === currentId) {
-            return <div id={slide.id} key={slide.id} className="slidesContainer__slide currentSmall" style={{ backgroundImage: `url(${slides[slide.id].url})` }}></div>;
+            return <div id={slide.id} key={slide.id} className="slidesContainer__slide currentSmall" style={{ backgroundImage: `url(${props.slidesArray[slide.id].url})` }}></div>;
           }
         })}
-        {slides.map((slide) => {
+        {props.slidesArray.map((slide) => {
           if (slide.id === currentId) {
-            return <div onClick={pickSlideHandler} id={slide.id >= slides.length - 1 ? 0 : slide.id + 1} key={slide.id >= slides.length - 1 ? 0 : slide.id + 1} className="slidesContainer__slide" style={{ backgroundImage: `url(${slides[slide.id >= slides.length - 1 ? 0 : slide.id + 1].url})` }}></div>;
+            return <div onClick={pickSlideHandler} id={slide.id >= props.slidesArray.length - 1 ? 0 : slide.id + 1} key={slide.id >= props.slidesArray.length - 1 ? 0 : slide.id + 1} className="slidesContainer__slide" style={{ backgroundImage: `url(${props.slidesArray[slide.id >= props.slidesArray.length - 1 ? 0 : slide.id + 1].url})` }}></div>;
           }
         })}
-        {slides.map((slide) => {
-          if (slide.id === currentId && slide.id === slides.length - 2) {
-            return <div onClick={pickSlideHandler} id={0} key={0} className="slidesContainer__slide" style={{ backgroundImage: `url(${slides[0].url})` }}></div>;
-          } else if (slide.id === currentId && slide.id === slides.length - 1) {
-            return <div onClick={pickSlideHandler} id={1} key={1} className="slidesContainer__slide" style={{ backgroundImage: `url(${slides[1].url})` }}></div>;
+        {props.slidesArray.map((slide) => {
+          if (slide.id === currentId && slide.id === props.slidesArray.length - 2) {
+            return <div onClick={pickSlideHandler} id={0} key={0} className="slidesContainer__slide" style={{ backgroundImage: `url(${props.slidesArray[0].url})` }}></div>;
+          } else if (slide.id === currentId && slide.id === props.slidesArray.length - 1) {
+            return <div onClick={pickSlideHandler} id={1} key={1} className="slidesContainer__slide" style={{ backgroundImage: `url(${props.slidesArray[1].url})` }}></div>;
           } else if (slide.id === currentId && slide.id >= 0) {
-            return <div onClick={pickSlideHandler} id={slide.id + 2} key={slide.id + 2} className="slidesContainer__slide" style={{ backgroundImage: `url(${slides[slide.id + 2].url})` }}></div>;
+            return <div onClick={pickSlideHandler} id={slide.id + 2} key={slide.id + 2} className="slidesContainer__slide" style={{ backgroundImage: `url(${props.slidesArray[slide.id + 2].url})` }}></div>;
           }
         })}
       </Fragment>
     );
   }
-  if (slides.length === 3) {
+  if (props.slidesArray.length === 3) {
     slidesSmall = (
       <Fragment>
-        {slides.map((slide) => {
+        {props.slidesArray.map((slide) => {
           if (slide.id === currentId) {
-            return <div onClick={pickSlideHandler} id={slide.id <= 0 ? slides.length - 1 : slide.id - 1} key={slide.id <= 0 ? slides.length - 1 : slide.id - 1} className="slidesContainer__slide" style={{ backgroundImage: `url(${slides[slide.id <= 0 ? slides.length - 1 : slide.id - 1].url})` }}></div>;
+            return <div onClick={pickSlideHandler} id={slide.id <= 0 ? props.slidesArray.length - 1 : slide.id - 1} key={slide.id <= 0 ? props.slidesArray.length - 1 : slide.id - 1} className="slidesContainer__slide" style={{ backgroundImage: `url(${props.slidesArray[slide.id <= 0 ? props.slidesArray.length - 1 : slide.id - 1].url})` }}></div>;
           }
         })}
-        {slides.map((slide) => {
+        {props.slidesArray.map((slide) => {
           if (slide.id === currentId) {
-            return <div id={slide.id} key={slide.id} className="slidesContainer__slide currentSmall" style={{ backgroundImage: `url(${slides[slide.id].url})` }}></div>;
+            return <div id={slide.id} key={slide.id} className="slidesContainer__slide currentSmall" style={{ backgroundImage: `url(${props.slidesArray[slide.id].url})` }}></div>;
           }
         })}
-        {slides.map((slide) => {
+        {props.slidesArray.map((slide) => {
           if (slide.id === currentId) {
-            return <div onClick={pickSlideHandler} id={slide.id >= slides.length - 1 ? 0 : slide.id + 1} key={slide.id >= slides.length - 1 ? 0 : slide.id + 1} className="slidesContainer__slide" style={{ backgroundImage: `url(${slides[slide.id >= slides.length - 1 ? 0 : slide.id + 1].url})` }}></div>;
+            return <div onClick={pickSlideHandler} id={slide.id >= props.slidesArray.length - 1 ? 0 : slide.id + 1} key={slide.id >= props.slidesArray.length - 1 ? 0 : slide.id + 1} className="slidesContainer__slide" style={{ backgroundImage: `url(${props.slidesArray[slide.id >= props.slidesArray.length - 1 ? 0 : slide.id + 1].url})` }}></div>;
           }
         })}
       </Fragment>
     );
   }
-  if (slides.length === 2) {
+  if (props.slidesArray.length === 2) {
     slidesSmall = (
       <Fragment>
-        {slides.map((slide) => {
+        {props.slidesArray.map((slide) => {
           if (slide.id === currentId) {
-            return <div id={slide.id} key={slide.id} className="slidesContainer__slide currentSmall" style={{ backgroundImage: `url(${slides[slide.id].url})` }}></div>;
+            return <div id={slide.id} key={slide.id} className="slidesContainer__slide currentSmall" style={{ backgroundImage: `url(${props.slidesArray[slide.id].url})` }}></div>;
           }
         })}
-        {slides.map((slide) => {
+        {props.slidesArray.map((slide) => {
           if (slide.id === currentId) {
-            return <div onClick={pickSlideHandler} id={slide.id >= slides.length - 1 ? 0 : slide.id + 1} key={slide.id >= slides.length - 1 ? 0 : slide.id + 1} className="slidesContainer__slide" style={{ backgroundImage: `url(${slides[slide.id >= slides.length - 1 ? 0 : slide.id + 1].url})` }}></div>;
+            return <div onClick={pickSlideHandler} id={slide.id >= props.slidesArray.length - 1 ? 0 : slide.id + 1} key={slide.id >= props.slidesArray.length - 1 ? 0 : slide.id + 1} className="slidesContainer__slide" style={{ backgroundImage: `url(${props.slidesArray[slide.id >= props.slidesArray.length - 1 ? 0 : slide.id + 1].url})` }}></div>;
           }
         })}
       </Fragment>
     );
   }
-  if (slides.length === 1) {
+  if (props.slidesArray.length === 1) {
     slidesSmall = (
       <Fragment>
-        {slides.map((slide) => {
+        {props.slidesArray.map((slide) => {
           if (slide.id === currentId) {
-            return <div id={slide.id} key={slide.id} className="slidesContainer__slide currentSmall" style={{ backgroundImage: `url(${slides[slide.id].url})` }}></div>;
+            return <div id={slide.id} key={slide.id} className="slidesContainer__slide currentSmall" style={{ backgroundImage: `url(${props.slidesArray[slide.id].url})` }}></div>;
           }
         })}
       </Fragment>
