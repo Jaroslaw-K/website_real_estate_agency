@@ -16,6 +16,7 @@ const media = [
   { type: MediaType.Image, url: "./assets/images/186077.jpg" },
   { type: MediaType.Image, url: "./assets/images/259588.jpg" },
   { type: MediaType.Image, url: "./assets/images/1438834.jpg" },
+  { type: MediaType.Image, url: "./assets/images/2251247.jpg" },
   { type: MediaType.Image, url: "./assets/imagesSlider/280222.jpg" },
   { type: MediaType.Image, url: "./assets/imagesSlider/5502227.jpg" },
   { type: MediaType.Image, url: "./assets/imagesSlider/5524205.jpg" },
@@ -36,7 +37,7 @@ export const App = () => {
 const AppLoaded = () => {
   return (
     <div className="app">
-      <Cursor/>
+      <Cursor />
       <Header />
       <Routes>
         <Route path="/*" element={<Navigate to="/offer" />} />
