@@ -1,5 +1,6 @@
 import "./HeaderMobile.scss";
 import Logo from "../../../assets/logo.svg";
+// COMPONENTS
 import DarkModeButton from "../DarkModeButton/DarkModeButton";
 import LanguagesButton from "../LanguagesButton/LanguagesButton";
 import LanguagesList from "../LanguagesList/LanguagesList";

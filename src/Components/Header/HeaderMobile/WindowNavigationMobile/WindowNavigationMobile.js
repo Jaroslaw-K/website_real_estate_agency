@@ -5,13 +5,13 @@ import { NavLink } from "react-router-dom";
 
 const WindowNavigationMobile = (props) => {
   const [initialRender, setInitialRender] = useState(true);
-  const darkMode = useSelector((state) => state.darkMode);
-  const languagePrimary = useSelector((state) => state.languagePrimary);
+  const darkMode = useSelector((state) => state.darkMode); // RESPONSIBLE FOR WEBSITE COLORS - DARK OR BRIGHT WEBSITE, BY DEFAULT IS BRIGHT
+  const languagePrimary = useSelector((state) => state.languagePrimary); // RESPONSIBLE FOR WEBSITE LANGUAGE - ENGLISH OR POLISH
   const windowNavigationMobile = useRef();
   const windowNavigationMobileLeftContainer = useRef();
   const windowNavigationMobileRightContainer = useRef();
 
-  useEffect(() => {
+  useEffect(() => { // RESPONSIBLE FOR SHOWING/HIDING MOBILE NAVIGATION
     if (initialRender === true) {
       setInitialRender(false);
       return;

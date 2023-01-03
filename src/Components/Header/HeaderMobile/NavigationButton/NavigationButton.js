@@ -3,13 +3,13 @@ import { useRef, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
 const NavigationButton = (props) => {
-  const darkMode = useSelector((state) => state.darkMode);
+  const darkMode = useSelector((state) => state.darkMode); // RESPONSIBLE FOR WEBSITE COLORS - DARK OR BRIGHT WEBSITE, BY DEFAULT IS BRIGHT
   const [initialRender, setInitialRender] = useState(true);
   const buttonLineTop = useRef();
   const buttonLineMiddle = useRef();
   const buttonLineBottom = useRef();
 
-  useEffect(() => {
+  useEffect(() => { // RESPONSIBLE FOR MOBILE BUTTON ANIMATION 
     if (initialRender) {
       setInitialRender(false);
       return;
