@@ -5,7 +5,7 @@ import { BrowserView, isBrowser } from "react-device-detect";
 
 const Cursor = () => {
   const darkMode = useSelector((state) => state.darkMode); // RESPONSIBLE FOR WEBSITE COLORS - DARK OR BRIGHT WEBSITE, BY DEFAULT IS BRIGHT
-  const cursor = useRef(null);
+  const cursor = useRef(null); 
 
   useEffect(() => {
     if (isBrowser) {

@@ -1,4 +1,6 @@
 @import "../../../scss/variables/variables.scss";
+
+// STYLING DIVIDED INTO DARK MODE AND BRIGHT MODE
 .sliderDesktop--bright {
   .sliderDesktop__containerButton:hover {
     background: rgba(255, 255, 255, 0.3);
@@ -41,6 +43,8 @@
     }
   }
 }
+
+// LAYOUT
 .sliderDesktop {
   width: 100vw;
   height: 700px;
@@ -151,6 +155,7 @@
   }
 }
 
+// ANIMATIONS
 @keyframes textLeftMove {
   0% {
     left: -100%;
