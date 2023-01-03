@@ -8,10 +8,10 @@ const Header = () => {
   const [showNav, setShowNav] = useState(false);
   const [showLanguagesList, setShowLanguagesList] = useState(false);
 
-  const toggleNavHandler = () => {
+  const toggleNavHandler = () => { // RESPONSIBLE FOR SHOWING/HIDING MOBILE NAVIGATION
     setShowNav((previousState) => !previousState);
   };
-  const toggleLanguagesList = () => {
+  const toggleLanguagesList = () => { // REPONSIBLE FOR DISPLAYING LANGUAGES LIST
     setShowLanguagesList((previousState) => !previousState);
   };
   return (
