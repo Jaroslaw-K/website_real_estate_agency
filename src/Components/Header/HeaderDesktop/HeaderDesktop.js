@@ -1,5 +1,5 @@
 import "./HeaderDesktop.scss";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 
@@ -9,8 +9,8 @@ import LanguagesButton from "../LanguagesButton/LanguagesButton";
 import LanguagesList from "../LanguagesList/LanguagesList";
 
 const HeaderDesktop = (props) => {
-  const darkMode = useSelector((state) => state.darkMode);
-  const languagePrimary = useSelector((state) => state.languagePrimary);
+  const darkMode = useSelector((state) => state.darkMode); // RESPONSIBLE FOR WEBSITE COLORS - DARK OR BRIGHT WEBSITE, BY DEFAULT IS BRIGHT
+  const languagePrimary = useSelector((state) => state.languagePrimary); // RESPONSIBLE FOR WEBSITE LANGUAGE - ENGLISH OR POLISH
   const headerDesktopTop = useRef();
 
   return (
