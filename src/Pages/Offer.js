@@ -8,7 +8,7 @@ import Slider from "../Components/Slider/Slider";
 import SearchEngine from "../Components/SearchEngine/SearchEngine";
 
 const Offer = () => {
-  const darkMode = useSelector((state) => state.darkMode); // RESPONSIBLE FOR COLORS
+  const darkMode = useSelector((state) => state.darkMode); // RESPONSIBLE FOR WEBSITE COLORS - DARK OR BRIGHT WEBSITE, BY DEFAULT IS BRIGHT
   const languagePrimary = useSelector((state) => state.languagePrimary);  // RESPONSIBLE FOR LANGUAGE
   const moveSlider = (moveSlider) => {
     moveSlider(); // FUNCTION RESPONSIBLE FOR AUTO-MOVE SLIDER
