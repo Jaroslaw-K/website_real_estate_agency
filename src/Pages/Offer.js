@@ -9,7 +9,7 @@ import SearchEngine from "../Components/SearchEngine/SearchEngine";
 
 const Offer = () => {
   const darkMode = useSelector((state) => state.darkMode); // RESPONSIBLE FOR WEBSITE COLORS - DARK OR BRIGHT WEBSITE, BY DEFAULT IS BRIGHT
-  const languagePrimary = useSelector((state) => state.languagePrimary);  // RESPONSIBLE FOR LANGUAGE
+  const languagePrimary = useSelector((state) => state.languagePrimary);  // RESPONSIBLE FOR WEBSITE LANGUAGE - ENGLISH OR POLISH
   const moveSlider = (moveSlider) => {
     moveSlider(); // FUNCTION RESPONSIBLE FOR AUTO-MOVE SLIDER
   };
