@@ -1,5 +1,6 @@
 @import "../../../scss/variables/variables.scss";
 
+// STYLING
 .languagesList--bright {
   .languagesList__country:first-of-type {
     border-bottom: 1px solid black;
@@ -17,6 +18,7 @@
     color: $color2;
   }
 }
+// LAYOUT
 .languagesList {
   position: absolute;
   overflow: hidden;
@@ -43,6 +45,7 @@
       font-weight: 700;
     }
   }
+  // ANIMATIONS CLASSES
   .languagesList__country--show {
     animation-name: showLanguagesCountry;
     animation-duration: 0.2s;
@@ -78,7 +81,7 @@
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
-
+ // ANIMATIONS
 @keyframes showLanguagesList {
   from {
     height: 0;

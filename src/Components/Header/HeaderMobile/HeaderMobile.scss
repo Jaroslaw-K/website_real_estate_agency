@@ -1,4 +1,5 @@
 @import "../../../scss/variables/variables.scss";
+// LAYOUT
 .headerMobile {
   height: 70px;
   width: 100vw;
@@ -39,6 +40,7 @@
     }
   }
 }
+// ANIMATIONS CLASSES
 .headerMobile--show {
   animation-name: showHeaderMobile;
   animation-duration: 0.2s;
@@ -53,7 +55,7 @@
   transition: ease-out;
   pointer-events: none;
 }
-
+// ANIMATIONS
 @keyframes hideHeaderMobile {
   0% {
     opacity: 1;

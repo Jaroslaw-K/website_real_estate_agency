@@ -1,5 +1,6 @@
 @import "../../../../scss/variables/variables.scss";
 
+// STYLING
 .navigationButton--bright {
   .navigationButton__line {
     background: $color1;
@@ -10,6 +11,7 @@
     background: $color2;
   }
 }
+// LAYOUT
 .navigationButton {
   height: 18px;
   width: 40px;
@@ -72,7 +74,7 @@
     transition: ease;
   }
 }
-
+// ANIMATIONS
 @keyframes buttonLineTopOpen {
   0% {
   }

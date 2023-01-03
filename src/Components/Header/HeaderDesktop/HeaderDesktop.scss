@@ -1,9 +1,32 @@
 @import "../../../scss/variables/variables.scss";
-
+// STYLING
 .headerDesktop--bright {
   .headerDesktop__containerTop {
+    .containerTop__left {
+      .left__emailContainer {
+        color: white;
+      }
+      .left__phoneContainer {
+        color: white;
+      }
+      .left__line {
+        background: white;
+      }
+    }
+
+    .containerTop__central {
+      .central__decorationContainer {
+        .decorationContainer__decoration {
+          background: white;
+        }
+      }
+    }
+
     .containerTop__right {
       background: $color5;
+      .right__line {
+        background: white;
+      }
       .right__backgroundBox {
         background: $color5;
       }
@@ -18,8 +41,30 @@
 }
 .headerDesktop--dark {
   .headerDesktop__containerTop {
+    .containerTop__left {
+      .left__emailContainer {
+        color: white;
+      }
+      .left__phoneContainer {
+        color: white;
+      }
+      .left__line {
+        background: white;
+      }
+    }
+    .containerTop__central {
+      .central__decorationContainer {
+        .decorationContainer__decoration {
+          background: white;
+        }
+      }
+    }
+
     .containerTop__right {
       background: $color1;
+      .right__line {
+        background: white;
+      }
       .right__backgroundBox {
         background: $color1;
       }
@@ -46,6 +91,7 @@
     }
   }
 }
+// LAYOUT
 .headerDesktop {
   position: fixed;
   z-index: 2;
@@ -63,18 +109,15 @@
       position: relative;
       .left__emailContainer {
         margin-bottom: 5px;
-        color: white;
         font-size: 12px;
       }
       .left__phoneContainer {
         margin-bottom: 5px;
-        color: white;
         font-size: 12px;
       }
       .left__line {
         height: 100%;
         width: 40px;
-        background: white;
         clip-path: polygon(95% 0, 100% 0, 5% 100%, 0 100%);
         position: absolute;
         z-index: 2;
@@ -104,7 +147,6 @@
         flex-direction: column;
         .decorationContainer__decoration {
           position: relative;
-          background: white;
         }
         .decorationContainer__decoration--left1 {
           height: 1px;
@@ -158,7 +200,6 @@
       .right__line {
         height: 100%;
         width: 40px;
-        background: white;
         clip-path: polygon(0 0, 5% 0, 100% 100%, 95% 100%);
         position: absolute;
         z-index: 2;
