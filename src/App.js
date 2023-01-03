@@ -2,6 +2,7 @@ import React, { Fragment, useReducer } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { PreloadMedia, MediaType } from "react-preload-media";
 
+// COMPONENTS
 import Header from "./Components/Header/Header";
 import AboutUs from "./Pages/AboutUs";
 import Contact from "./Pages/Contact";
@@ -11,6 +12,7 @@ import SellRent from "./Pages/SellRent";
 import Footer from "./Components/Footer/Footer";
 import Cursor from "./Components/Cursor/Cursor";
 
+// IMAGES FOR PRELOADMEDIA
 const media = [
   { type: MediaType.Image, url: "./assets/images/34753.jpg" },
   { type: MediaType.Image, url: "./assets/images/186077.jpg" },
@@ -24,6 +26,7 @@ const media = [
   { type: MediaType.Image, url: "./assets/logo.svg" },
 ];
 
+// APP COMPONENT RENDER APPLOADED COMPONENT WHEN ALL MEDIA ARE LOAD
 export const App = () => {
   const [isLoaded, setIsloaded] = useReducer(() => true, false);
   return (
@@ -40,7 +43,7 @@ const AppLoaded = () => {
       <Cursor />
       <Header />
       <Routes>
-        <Route path="/*" element={<Navigate to="/offer" />} />
+        <Route path="/*" element={<Navigate to="/offer" />} /> {/* IF ADDRESS IS INCORRECT PAGE WILL BE REDIRECT IT INTO OFFER PAGE */}
         <Route path="/offer" element={<Offer />} />
         <Route path="/sell-or-rent" element={<SellRent />} />
         <Route path="/about-us" element={<AboutUs />} />
