@@ -124,8 +124,8 @@ const SliderDesktop = (props) => {
 
   let slidesMain = props.slidesArray.map((slide) => (
     <div key={slide.id} className="slidesContainer__slide" style={{ backgroundImage: `url(${slide.url})` }}>
-      <div className="slide__text slide__text--left">{languagePrimary ? `${slide.text1_PL}` : `${slide.text1_EN}`}</div>
-      <div className="slide__text slide__text--right">{languagePrimary ? `${slide.text2_PL}` : `${slide.text2_EN}`}</div>
+      <div className="slide__text slide__text--left">{languagePrimary ? `${slide.textLeft_PL}` : `${slide.textLeft_EN}`}</div>
+      <div className="slide__text slide__text--right">{languagePrimary ? `${slide.textRight_PL}` : `${slide.textRight_EN}`}</div>
     </div>
   ));
   let slidesSmall;
