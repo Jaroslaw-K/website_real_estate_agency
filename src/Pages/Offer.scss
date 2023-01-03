@@ -1,4 +1,5 @@
 @import "../scss/variables/variables.scss";
+// STYLING DIVIDED INTO DARK MODE AND BRIGHT MODE
 .offer--bright {
   .offer__searchBackground {
     .searchBackground__background {
@@ -22,18 +23,19 @@
   }
 }
 
+// LAYOUT
 .offer {
   .sliderDesktop {
     .sliderDesktop__containerButton {
-      display: none;
+      display: none; // REMOVE PART OF CLICKABLE SLIDER
     }
     .sliderDesktop__smallSlidesContainer {
-      display: none;
+      display: none; // REMOVE PART OF CLICKABLE SLIDER
     }
   }
   .sliderMobile {
     .sliderMobile__smallSlidesContainer {
-      display: none;
+      display: none; // REMOVE PART OF CLICKABLE SLIDER
     }
   }
   .offer__searchBackground {
