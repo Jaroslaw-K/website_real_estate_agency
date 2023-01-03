@@ -3,8 +3,8 @@ import { useRef, useEffect, useState, Fragment } from "react";
 import { useSelector } from "react-redux";
 
 const SliderDesktop = (props) => {
-  const darkMode = useSelector((state) => state.darkMode);
-  const languagePrimary = useSelector((state) => state.languagePrimary);
+  const darkMode = useSelector((state) => state.darkMode); // RESPONSIBLE FOR WEBSITE COLORS - DARK OR BRIGHT WEBSITE, BY DEFAULT IS BRIGHT
+  const languagePrimary = useSelector((state) => state.languagePrimary); // RESPONSIBLE FOR WEBSITE LANGUAGE - ENGLISH OR POLISH
   const sliderDesktop = useRef();
   const slidesContainer = useRef();
   const smallSlidesContainer = useRef();
