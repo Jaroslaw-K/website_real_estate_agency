@@ -1,5 +1,6 @@
 @import "../../../scss/variables/variables.scss";
 
+// STYLING
 .footerMobile--bright {
   .footerMobile__topContainer {
     .topContainer__leftContainer {
@@ -11,6 +12,11 @@
             color: $color3;
           }
         }
+      }
+    }
+    .topContainer__rightContainer {
+      .rightContainer__text {
+        color: white;
       }
     }
   }
@@ -25,6 +31,11 @@
         }
       }
     }
+    .middleContainer__rightContainer {
+      .rightContainer__dataInformation {
+        color: $color2;
+      }
+    }
   }
   .footerMobile__bottomContainer {
     background: rgba(198, 218, 233, 1);
@@ -33,6 +44,9 @@
     }
     .bottomContainer__leftBackgroundContainer {
       background: rgba(198, 218, 233, 1);
+    }
+    .bottomContainer__rightBackgroundContainer {
+      background: $color3;
     }
   }
 }
@@ -50,6 +64,11 @@
         }
       }
     }
+    .topContainer__rightContainer {
+      .rightContainer__text {
+        color: white;
+      }
+    }
   }
   .footerMobile__middleContainer {
     .middleContainer__leftContainer {
@@ -65,6 +84,11 @@
         }
       }
     }
+    .middleContainer__rightContainer {
+      .rightContainer__dataInformation {
+        color: $color2;
+      }
+    }
   }
   .footerMobile__bottomContainer {
     background: $color4;
@@ -74,8 +98,12 @@
     .bottomContainer__leftBackgroundContainer {
       background: $color4;
     }
+    .bottomContainer__rightBackgroundContainer {
+      background: $color3;
+    }
   }
 }
+// LAYOUT
 .footerMobile {
   overflow: hidden;
   .footerMobile__topContainer {
@@ -133,7 +161,6 @@
       align-items: center;
       z-index: 1;
       .rightContainer__text {
-        color: white;
         font-size: 24px;
         text-align: center;
         -webkit-tap-highlight-color: transparent;
@@ -189,7 +216,6 @@
       .rightContainer__dataInformation {
         margin: 0 0 10px 10px;
         font-size: 12px;
-        color: $color2;
       }
     }
   }
@@ -212,12 +238,11 @@
     .bottomContainer__rightBackgroundContainer {
       height: 100%;
       width: 40%;
-      background: $color3;
       clip-path: polygon(1% 0, 100% 0, 100% 100%, 70% 100%);
     }
   }
 }
-
+// ANIMATIONS
 @keyframes mapLeftContainerShow {
   0% {
     right: 0%;

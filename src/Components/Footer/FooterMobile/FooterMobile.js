@@ -1,7 +1,7 @@
 import "./FooterMobile.scss";
 import { useState, useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
-
+// COMPONENTS
 import Logo from "../../../assets/logo.svg";
 
 const FooterMobile = () => {
@@ -11,17 +11,17 @@ const FooterMobile = () => {
   const mapLeftContainer = useRef();
   const mapRightContainer = useRef();
 
-  useEffect(() => {
-    if (showMapMobile === true) {
-      mapLeftContainer.current.classList.add("topContainer__leftContainer--show");
-      mapRightContainer.current.classList.add("topContainer__rightContainer--show");
-    }
-  }, [showMapMobile]);
-
-  const showMapMobileHandler = () => {
+  const showMapMobileHandler = () => { // RESPONSIBLE FOR SHOWING MAP
     setShowMapMobile((prevousState) => !prevousState);
     console.log(mapLeftContainer.current.classList)
   };
+
+  useEffect(() => {  // RESPONSIBLE FOR ANIMATIONS SHOWING MAP
+    if (showMapMobile === true) {
+      mapLeftContainer.current.classList.add("topContainer__leftContainer--show"); // RESPONSIBLE FOR WEBSITE COLORS - DARK OR BRIGHT WEBSITE, BY DEFAULT IS BRIGHT
+      mapRightContainer.current.classList.add("topContainer__rightContainer--show"); // RESPONSIBLE FOR WEBSITE LANGUAGE - ENGLISH OR POLISH
+    }
+  }, [showMapMobile]);
 
   return (
     <footer className={darkMode ? "footerMobile footerMobile--dark" : "footerMobile footerMobile--bright"}>

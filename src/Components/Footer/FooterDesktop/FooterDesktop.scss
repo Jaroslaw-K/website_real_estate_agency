@@ -1,5 +1,6 @@
 @import "../../../scss/variables/variables.scss";
 
+// STYLING
 .footerDesktop--bright {
   .footerDesktop__middleContainer {
     .middleContainer__leftContainer {
@@ -7,6 +8,20 @@
     }
     .middleContainer__rightContainer {
       .rightContainer__leftContainer {
+        .leftContainer__dataContainer {
+          background: $color3;
+          .right__addressContainer {
+            .addressContainer__element {
+              color: $color2;
+            }
+          }
+
+          .right__infoContainer {
+            .infoContainer__element {
+              color: $color2;
+            }
+          }
+        }
         .leftContainer__backgroundContainer {
           background: rgba(255, 255, 255, 0.7);
           .backgroundContainer__textContainer {
@@ -32,6 +47,9 @@
   }
   .footerDesktop__bottomContainer {
     background: rgba(198, 218, 233, 1);
+    .bottomContainer__text {
+      color: white;
+    }
     .bottomContainer__leftContainer {
       background: rgba(198, 218, 233, 1);
     }
@@ -42,6 +60,19 @@
   .footerDesktop__middleContainer {
     .middleContainer__leftContainer {
       background: rgba(0, 0, 0, 0.7);
+      .leftContainer__dataContainer {
+        background: $color3;
+        .right__addressContainer {
+          .addressContainer__element {
+            color: $color2;
+          }
+        }
+        .right__infoContainer {
+          .infoContainer__element {
+            color: $color2;
+          }
+        }
+      }
       .leftContainer__logoContainer {
         .logoContainer__logo {
           filter: $logoFilter;
@@ -72,6 +103,9 @@
   }
   .footerDesktop__bottomContainer {
     background: $color4;
+    .bottomContainer__text {
+      color: white;
+    }
     .bottomContainer__leftContainer {
       background: $color4;
     }
@@ -133,7 +167,6 @@
       .leftContainer__dataContainer {
         height: 100%;
         width: 100%;
-        background: $color3;
         clip-path: polygon(70% 0, 100% 0, 100% 100%, 0% 100%);
         display: flex;
         .dataContainer__left {
@@ -158,7 +191,6 @@
             .addressContainer__element {
               font-size: 14px;
               margin: 0 0 15px 0;
-              color: $color2;
             }
           }
           .right__infoContainer {
@@ -170,7 +202,6 @@
             .infoContainer__element {
               font-size: 14px;
               margin: 0 0 15px 0;
-              color: $color2;
             }
           }
         }
@@ -235,7 +266,6 @@
       transform: translate(-50%, -50%);
       font-size: 12px;
       z-index: 1;
-      color: white;
     }
     .bottomContainer__leftContainer {
       height: 100%;
@@ -249,7 +279,7 @@
     }
   }
 }
-
+// ANIMATIONS
 @keyframes desktopShowMap {
   0% {
     height: 60vh;

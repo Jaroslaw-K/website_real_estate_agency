@@ -1,25 +1,24 @@
 import { useState, useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 import "./FooterDesktop.scss";
-
 import Logo from "../../../assets/logo.svg";
 
 const FooterDesktop = () => {
-  const darkMode = useSelector((state) => state.darkMode);
-  const languagePrimary = useSelector((state) => state.languagePrimary);
+  const darkMode = useSelector((state) => state.darkMode); // RESPONSIBLE FOR WEBSITE COLORS - DARK OR BRIGHT WEBSITE, BY DEFAULT IS BRIGHT
+  const languagePrimary = useSelector((state) => state.languagePrimary); // RESPONSIBLE FOR WEBSITE LANGUAGE - ENGLISH OR POLISH
   const [showMapDekstop, setShowMapDesktop] = useState(false);
   const desktopMap = useRef();
   const footerDesktopBottom = useRef();
 
-  const showMapDesktopHandler = () => {
+  const showMapDesktopHandler = () => { // RESPONSIBLE FOR SHOWING MAP
     setShowMapDesktop((prevousState) => !prevousState);
 
-    setTimeout(() => {
+    setTimeout(() => { // RESPONSIBLE FOR ANIMATIONS SHOWING MAP
       footerDesktopBottom.current.scrollIntoView({ behavior: "smooth" });
     }, 500);
   };
 
-  useEffect(() => {
+  useEffect(() => { // RESPONSIBLE FOR ANIMATIONS SHOWING MAP
     if (showMapDekstop === true) {
       desktopMap.current.classList.remove("footerDesktop__topContainer--hide");
       desktopMap.current.classList.add("footerDesktop__topContainer--show");

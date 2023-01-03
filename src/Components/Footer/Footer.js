@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { useMediaQuery } from "react-responsive";
-
+// COMPONENTS
 import FooterMobile from "./FooterMobile/FooterMobile";
 import FooterDesktop from "./FooterDesktop/FooterDesktop";
 
