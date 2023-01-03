@@ -3,6 +3,7 @@ import image2 from "../assets/imagesSlider/5502227.jpg";
 import image3 from "../assets/imagesSlider/5524205.jpg";
 import image4 from "../assets/imagesSlider/280222.jpg";
 
+// ARRAY OF OFFERS
 const offers = [
   {
     id: 0,
@@ -33,6 +34,7 @@ const offers = [
   },
 ];
 
+// ARRAYS OF OFFERS IMAGES
 const offersImages = [
   {
     id: 0,
@@ -40,38 +42,40 @@ const offersImages = [
   },
 ];
 
+// ARRAY OF DATA FOR MAIN SLIDER - IMAGES WITH TEXTS
 const autoMoveSliderData = [
   {
     id: 0,
     url: image1,
-    text1_EN: "PLACE FOR TEXT",
-    text2_EN: "PLACE FOR TEXT",
-    text1_PL: "MIEJSCE NA TEKST",
-    text2_PL: "MIEJSCE NA TEKST",
+    textLeft_EN: "PLACE FOR TEXT",
+    textRight_EN: "PLACE FOR TEXT",
+    textLeft_PL: "MIEJSCE NA TEKST",
+    textRight_PL: "MIEJSCE NA TEKST",
   },
   {
     id: 1,
     url: image2,
-    text1_EN: "PLACE FOR TEXT",
-    text2_EN: "PLACE FOR TEXT",
-    text1_PL: "MIEJSCE NA TEKST",
-    text2_PL: "MIEJSCE NA TEKST",
+    textLeft_EN: "PLACE FOR TEXT",
+    textRight_EN: "PLACE FOR TEXT",
+    textLeft_PL: "MIEJSCE NA TEKST",
+    textRight_PL: "MIEJSCE NA TEKST",
   },
   {
     id: 2,
     url: image3,
-    text1_EN: "PLACE FOR TEXT",
-    text2_EN: "PLACE FOR TEXT",
-    text1_PL: "MIEJSCE NA TEKST",
-    text2_PL: "MIEJSCE NA TEKST",
+    textLeft_EN: "PLACE FOR TEXT",
+    textRight_EN: "PLACE FOR TEXT",
+    textLeft_PL: "MIEJSCE NA TEKST",
+    textRight_PL: "MIEJSCE NA TEKST",
   },
   {
     id: 3,
     url: image4,
-    text1_EN: "PLACE FOR TEXT",
-    text2_EN: "PLACE FOR TEXT",
-    text1_PL: "MIEJSCE NA TEKST",
-    text2_PL: "MIEJSCE NA TEKST",
+    textLeft_EN: "PLACE FOR TEXT",
+    textRight_EN: "PLACE FOR TEXT",
+    textLeft_PL: "MIEJSCE NA TEKST",
+    textRight_PL: "MIEJSCE NA TEKST",
   },
 ];
-export { offers, offersImages,  autoMoveSliderData};
+
+export { offers, offersImages, autoMoveSliderData };
