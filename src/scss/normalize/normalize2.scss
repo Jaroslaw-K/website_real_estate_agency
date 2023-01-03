@@ -1,7 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap");
-
+// NORMALIZE SECOND FILE
 html {
-  cursor: none;
+  cursor: none; 
   overflow-x: hidden;
 }
 
@@ -12,7 +11,7 @@ button,
 span,
 ul,
 li {
-  cursor: none !important;
+  cursor: none !important; // PREVENTS DOUBLES CURSOR
 }
 
 body {
