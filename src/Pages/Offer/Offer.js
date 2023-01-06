@@ -24,10 +24,10 @@ const Offer = () => {
       <div className="offer__searchBackground">
         <div className="searchBackground__background">
           <SearchEngine />
-          {useMediaQuery({ maxWidth: 1200 }) && <div className="background__info background__info--mobile">{languagePrimary ? "CO ROBIMY?" : "WHAT WE DO?"}</div>}
+          {useMediaQuery({ maxWidth: 1200 }) && <h1 className="background__info background__info--mobile">{languagePrimary ? "CO ROBIMY?" : "WHAT WE DO?"}</h1>}
           {!useMediaQuery({ maxWidth: 1200 }) && (
             <div className="background__info background__info--desktop">
-              <div className="info__txt">{languagePrimary ? "CO ROBIMY?" : "WHAT WE DO?"}</div>
+              <h1 className="info__txt">{languagePrimary ? "CO ROBIMY?" : "WHAT WE DO?"}</h1>
               <div className="info__container">
                 <Specialsation image={image1} title={languagePrimary ? "SPRZEDAŻ/WYNAJEM" : "SELL/RENT"} text={languagePrimary ? "SPRZEDAJEMY ORAZ WYNAJMUJEMY NIERUCHOMOŚCI" : "WE SELL AND RENT PROPERTIES"} />
                 <Specialsation image={image2} title={languagePrimary ? "DORADZTWO" : "ADVISORY"} text={languagePrimary ? "DORADZAMY W SPRAWACH KREDYTÓW" : "WE ADVISE ON LOAN MATTERS"} />
