@@ -1,0 +1,71 @@
+@import "../../../scss/variables/variables.scss";
+// STYLING
+.specialisation--bright {
+  box-shadow: 4px 4px 12px rgb(0, 0, 0, 0.25);
+  .specialisation__containerTop {
+    .containerTop__background {
+      background-color: rgba(255, 255, 255, 0.7);
+      color: $color1;
+      font-size: 18px;
+    }
+  }
+  .specialisation__containerBottom {
+    background-color: $color3;
+    color: $color2;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+.specialisation--dark {
+  .specialisation__containerTop {
+    .containerTop__background {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: $color2;
+      font-size: 18px;
+    }
+  }
+  .specialisation__containerBottom {
+    background-color: $color4;
+    color: $color2;
+    @media screen and (min-width: 1201px) {
+      background-color: $color3;
+    }
+    font-size: 14px;
+  }
+}
+// LAYOUT
+.specialisation {
+  width: 85%;
+  max-width: 500px;
+  @media screen and (min-width: 1201px) {
+    width: 300px;
+  }
+  height: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  .specialisation__containerTop {
+    width: 100%;
+    height: 70%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    .containerTop__background {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .specialisation__containerBottom {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .containerBottom__text {
+      padding: 10px;
+    }
+  }
+}
