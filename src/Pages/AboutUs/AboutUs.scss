@@ -1,0 +1,34 @@
+@import "../../scss/variables/variables.scss";
+// STYLING
+.aboutUs--dark {
+  .sliderMobile {
+    .sliderMobile__smallSlidesContainer {
+      background-color: $color4;
+    }
+  }
+}
+// LAYOUT
+.aboutUs {
+  // DISABLE PARTS OF SLIDER
+  .sliderMobile {
+    .sliderMobile__slidesContainer {
+      .slidesContainer__slide {
+        .slide__text {
+          display: none;
+        }
+      }
+    }
+  }
+  // DISABLE PARTS OF SLIDER
+  .sliderDesktop {
+    .sliderDesktop__slidesContainer {
+      .slidesContainer__slide {
+        background-position: center;
+        background-size: cover;
+        .slide__text {
+          display: none;
+        }
+      }
+    }
+  }
+}
