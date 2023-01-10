@@ -1,0 +1,60 @@
+@import "../../../scss/variables/variables.scss";
+// STYLING
+.privacyPolicyDesktop--bright {
+  background-color: $color2;
+  .privacyPolicyDesktop__textContainer {
+    .textContainer__header {
+      color: $color3;
+    }
+    .textContainer__paragraph {
+      color: $color3;
+      font-size: 14px;
+    }
+  }
+  .privacyPolicyDesktop__decoration {
+    background-color: $color3;
+  }
+}
+.privacyPolicyDesktop--dark {
+  background-color: $color4;
+  .privacyPolicyDesktop__textContainer {
+    background-color: $color4;
+    .textContainer__header {
+      color: $color2;
+    }
+    .textContainer__paragraph {
+      color: $color2;
+      font-size: 14px;
+    }
+  }
+  .privacyPolicyDesktop__decoration {
+    background-color: $color3;
+  }
+}
+// LAYOUT
+.privacyPolicyDesktop {
+  width: 100vw;
+  display: flex;
+  .privacyPolicyDesktop__textContainer {
+    width: 82%;
+    .textContainer__header {
+      position: relative;
+      left: 50%;
+      margin-top: 100px;
+      margin-bottom: 50px;
+    }
+    .textContainer__paragraph {
+      text-align: left;
+      margin-left: 220px;
+      margin-right: 150px;
+      line-height: 22px;
+    }
+    .textContainer__paragraph:nth-last-of-type(1) {
+      margin-bottom: 100px;
+    }
+  }
+  .privacyPolicyDesktop__decoration {
+    width: 18%;
+    clip-path: polygon(20% 6vw, 100% 0, 100% 100%, 0% 100%);
+  }
+}
