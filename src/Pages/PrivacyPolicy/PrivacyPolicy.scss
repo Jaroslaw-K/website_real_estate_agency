@@ -1,0 +1,18 @@
+// LAYOUT
+.privacyPolicy {
+  // DISABLE PARTS OF SLIDER
+  .sliderMobile {
+    .sliderMobile__smallSlidesContainer {
+      display: none;
+    }
+  }
+  // DISABLE PARTS OF SLIDER
+  .sliderDesktop {
+    .sliderDesktop__containerButton {
+      display: none;
+    }
+    .sliderDesktop__smallSlidesContainer {
+      display: none;
+    }
+  }
+}
