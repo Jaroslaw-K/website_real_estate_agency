@@ -1,0 +1,55 @@
+@import "../../../scss/variables/variables.scss";
+// STYLING
+.privacyPolicyMobile--bright {
+  background-color: $color2;
+  .privacyPolicyMobile__container {
+    border: 5px solid $color3;
+    background-color: $color2;
+    .container__header {
+      font-size: 18px;
+      color: $color3;
+    }
+    .container__paragraph {
+      font-size: 14px;
+      line-height: 16px;
+      text-align: left;
+      color: $color3;
+    }
+  }
+}
+.privacyPolicyMobile--dark {
+  background-color: $color4;
+  .privacyPolicyMobile__container {
+    border: 5px solid $color3;
+    background-color: $color3;
+    .container__header {
+      font-size: 18px;
+      color: $color2;
+    }
+    .container__paragraph {
+      font-size: 14px;
+      line-height: 16px;
+      text-align: left;
+      color: $color2;
+    }
+  }
+}
+// LAYOUT
+.privacyPolicyMobile {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  .privacyPolicyMobile__container {
+    width: 90%;
+    margin: 15px 0 15px 0;
+    .container__header {
+      text-align: center;
+    }
+    .container__paragraph {
+      font-size: 14px;
+      line-height: 16px;
+      padding: 0px 20px 0 20px;
+      text-align: left;
+    }
+  }
+}
