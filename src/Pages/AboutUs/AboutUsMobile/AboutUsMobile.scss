@@ -1,0 +1,122 @@
+@import "../../../scss/variables/variables.scss";
+// STYLING
+.aboutUsMobile--bright {
+  background-color: $color2;
+  .aboutUsMobile__container {
+    border: 5px solid $color3;
+    background-color: $color2;
+    .container__header {
+      font-size: 18px;
+      color: $color3;
+    }
+    .container__paragraph {
+      font-size: 14px;
+      line-height: 16px;
+      text-align: left;
+      color: $color3;
+    }
+  }
+  .aboutUsMobile__partnersContainer {
+    background-color: $color2;
+    .partnersContainer__header {
+      font-size: 18px;
+      color: $color3;
+    }
+    .partersContainer__imgBackground {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+    .partnersContainer__containerLeft {
+      background-color: $color2;
+    }
+    .partnersContainer__containerRight {
+      background-color: $color3;
+    }
+  }
+}
+.aboutUsMobile--dark {
+  background-color: $color4;
+  .aboutUsMobile__container {
+    border: 5px solid $color3;
+    background-color: $color3;
+    .container__header {
+      font-size: 18px;
+      color: $color2;
+    }
+    .container__paragraph {
+      font-size: 14px;
+      line-height: 16px;
+      text-align: left;
+      color: $color2;
+    }
+  }
+  .aboutUsMobile__partnersContainer {
+    background-color: $color4;
+    .partnersContainer__header {
+      font-size: 18px;
+      color: $color2;
+    }
+    .partersContainer__imgBackground {
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+    .partnersContainer__containerLeft {
+      background-color: $color4;
+    }
+    .partnersContainer__containerRight {
+      background-color: $color3;
+    }
+  }
+}
+// LAYOUT
+.aboutUsMobile {
+  width: 100vw;
+  position: relative;
+  padding-top: 15px;
+  .aboutUsMobile__container {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    margin: 0 0 15px 0;
+    .container__header {
+      text-align: center;
+    }
+    .container__paragraph {
+      font-size: 14px;
+      line-height: 16px;
+      padding: 0px 20px 0 20px;
+      text-align: left;
+    }
+  }
+  .aboutUsMobile__partnersContainer {
+    width: 100vw;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    .partnersContainer__header {
+      z-index: 2;
+      text-align: center;
+    }
+    .partersContainer__imgBackground {
+      width: 50%;
+      z-index: 2;
+      align-self: center;
+      margin-bottom: 20px;
+      .imgBackground__img {
+        width: 100%;
+      }
+    }
+    .partnersContainer__containerLeft {
+      height: 100%;
+      width: 60%;
+      position: absolute;
+      left: 0;
+    }
+    .partnersContainer__containerRight {
+      height: 100%;
+      width: 40%;
+      clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+      position: absolute;
+      right: 0;
+    }
+  }
+}
