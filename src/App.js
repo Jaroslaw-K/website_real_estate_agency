@@ -4,10 +4,10 @@ import { PreloadMedia, MediaType } from "react-preload-media";
 
 // COMPONENTS
 import Header from "./Components/Header/Header";
-import AboutUs from "./Pages/AboutUs";
+import AboutUs from "./Pages/AboutUs/AboutUs";
 import Contact from "./Pages/Contact";
 import Offer from "./Pages/Offer/Offer";
-import PrivacyPolicy from "./Pages/PrivacyPolicy";
+import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy";
 import SellRent from "./Pages/SellRent";
 import Footer from "./Components/Footer/Footer";
 import Cursor from "./Components/Cursor/Cursor";
