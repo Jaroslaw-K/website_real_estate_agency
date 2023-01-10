@@ -50,7 +50,8 @@
 .sliderMobile {
   .sliderMobile__slidesContainer {
     width: 100vw;
-    height: 400px;
+    min-height: 400px;
+    height: 60vh;
     display: flex;
     position: relative;
     overflow: hidden;

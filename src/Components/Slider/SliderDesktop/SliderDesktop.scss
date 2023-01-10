@@ -47,7 +47,7 @@
 // LAYOUT
 .sliderDesktop {
   width: 100vw;
-  height: 700px;
+  height: 90vh;
   position: relative;
   @media screen and (max-width: 1200px) {
     height: 400px;
@@ -113,7 +113,7 @@
     width: 80vw;
     height: 140px;
     left: 50%;
-    bottom: -5%;
+    bottom: -15%;
     transform: translate(-50%, 0);
     z-index: 1;
     .smallSlidesContainer__arrow {
@@ -146,6 +146,7 @@
         height: 100%;
         background-size: cover;
         background-repeat: no-repeat;
+        background-position: center;
       }
       .currentSmall {
         height: 95%;
