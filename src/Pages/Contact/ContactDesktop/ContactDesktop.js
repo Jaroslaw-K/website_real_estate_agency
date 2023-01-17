@@ -14,7 +14,7 @@ const ContactDesktop = () => {
   return (
     <div className={darkMode ? "contactDesktop contactDesktop--dark" : "contactDesktop contactDesktop--bright"}>
       <div className="contactDesktop__background">
-        <ContactForm />
+        <ContactForm headerText={languagePrimary ? "SKONTAKTUJ SIĘ Z NAMI" : "CONTACT US"} placeholderMessage={languagePrimary ? "Wiadomość..." : "Message..."} />
         <div className="background__bottom">
           <h1 className="bottom__header">{languagePrimary ? "Co robimy?" : "What we do?"}</h1>
           <div className="bottom__specialisationsContainer">
