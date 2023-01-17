@@ -5,7 +5,7 @@ import { PreloadMedia, MediaType } from "react-preload-media";
 // COMPONENTS
 import Header from "./Components/Header/Header";
 import AboutUs from "./Pages/AboutUs/AboutUs";
-import Contact from "./Pages/Contact";
+import Contact from "./Pages/Contact/Contact";
 import Offer from "./Pages/Offer/Offer";
 import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy";
 import SellRent from "./Pages/SellRent";
