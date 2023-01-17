@@ -10,7 +10,9 @@ div,
 button,
 span,
 ul,
-li {
+li,
+textarea,
+input {
   cursor: none !important; // PREVENTS DOUBLES CURSOR
 }
 
