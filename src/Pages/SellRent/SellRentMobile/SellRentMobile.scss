@@ -1,0 +1,27 @@
+@import "../../../scss/variables/variables.scss";
+
+// STYLING
+.sellRentMobile--bright {
+  .sellRentMobile__specialisations {
+    background-color: $color2;
+  }
+}
+.sellRentMobile--dark {
+  .sellRentMobile__specialisations {
+    background-color: $color3;
+  }
+}
+// LAYOUT
+.sellRentMobile {
+  .sellRentMobile__contactForm {
+    height: 1000px;
+  }
+  .sellRentMobile__specialisations {
+    height: 1000px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
