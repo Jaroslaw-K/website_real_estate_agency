@@ -31,7 +31,7 @@ const AboutUsMobile = () => {
         </p>
       </div>
       <div className="aboutUsMobile__partnersContainer">
-        <h1 className="partnersContainer__header">{languagePrimary ? "Nasi  partnerzy" : "Our Parters"}</h1>
+        <h1 className="partnersContainer__header">{languagePrimary ? "Nasi  partnerzy" : "Our Partners"}</h1>
         <div className="partersContainer__imgBackground">
           <img className="imgBackground__img" src={logo} alt="" />
         </div>
