@@ -1,4 +1,3 @@
-import "./SellRent.scss";
 import { BrowserView, MobileView } from "react-device-detect";
 // COMPONENTS
 import Slider from "../../Components/Slider/Slider";
