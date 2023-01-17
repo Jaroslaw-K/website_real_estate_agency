@@ -2,7 +2,7 @@ import "./ContactFormMobile.scss";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 
-const ContactFormMobile = () => {
+const ContactFormMobile = (props) => {
   const [userNameAndSurname, setUserNameAndSurname] = useState();
   const [emailAddress, setEmailAddress] = useState();
   const [phoneNumber, setPhoneNumber] = useState();
@@ -15,7 +15,7 @@ const ContactFormMobile = () => {
     setUserNameAndSurname(event.target.value);
   };
   const emailAddressHandler = (event) => {
-    setEmailAddress(emailAddress);
+    setEmailAddress(event.target.value);
   };
   const phoneNumberHandler = (event) => {
     setPhoneNumber(event.target.value);
@@ -33,12 +33,12 @@ const ContactFormMobile = () => {
   return (
     <form onSubmit={sumitFormHandler} className={darkMode ? "contactFormMobile contactFormMobile--dark" : "contactFormMobile contactFormMobile--bright"}>
       <div className="contactFormMobile__decorationTop">
-        <h1 className="decorationTop__header">{languagePrimary ? "SKONTAKTUJ SIĘ Z NAMI" : " CONTACT US"}</h1>
+        <h1 className="decorationTop__header">{props.headerText}</h1>
       </div>
       <input type="text" value={userNameAndSurname} onChange={userNameAndSurnameHandler} className="contactFormMobile__input" placeholder={languagePrimary ? "IMIĘ I NAZWISKO*" : "NAME AND SURNAME*"} />
       <input type="text" value={emailAddress} onChange={emailAddressHandler} className="contactFormMobile__input" placeholder={languagePrimary ? "ADRES EMAIL*" : "EMAIL ADDRESS*"} />
       <input type="tel" value={phoneNumber} onChange={phoneNumberHandler} className="contactFormMobile__input" placeholder={languagePrimary ? "NUMER TELEFONU*" : "PHONE NUMBER*"} />
-      <textarea type="text" value={message} onChange={messageHander} className="contactFormMobile__textarea" />
+      <textarea type="text" value={message} onChange={messageHander} className="contactFormMobile__textarea" placeholder={props.placeholderMessage} />
       <div className="contactFormMobile__checkboxContainer">
         <input type="checkbox" className="checkboxContainer__checkbox" required />
         <span className="checkboxContainer__clause">

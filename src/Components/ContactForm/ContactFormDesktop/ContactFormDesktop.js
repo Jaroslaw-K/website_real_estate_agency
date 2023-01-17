@@ -1,7 +1,7 @@
 import "./ContactFormDesktop.scss";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-const ContactFormDesktop = () => {
+const ContactFormDesktop = (props) => {
   const [userNameAndSurname, setUserNameAndSurname] = useState();
   const [emailAddress, setEmailAddress] = useState();
   const [phoneNumber, setPhoneNumber] = useState();
@@ -31,7 +31,7 @@ const ContactFormDesktop = () => {
   };
   return (
     <form onSubmit={sumitFormHandler} className={darkMode ? "contactForm contactForm--dark" : "contactForm contactForm--bright"}>
-      <h1 className="contactForm__header">{languagePrimary ? "SKONTAKTUJ SIĘ Z NAMI" : "CONTACT US"}</h1>
+      <h1 className="contactForm__header">{props.headerText}</h1>
       <div className="contactForm__windowsContainer">
         <div className="windowContainer__windowLeft">
           <input type="text" value={userNameAndSurname} onChange={userNameAndSurnameHandler} className="windowLeft__input" placeholder={languagePrimary ? "IMIĘ I NAZWISKO*" : "NAME AND SURNAME*"} />
@@ -48,7 +48,7 @@ const ContactFormDesktop = () => {
             <span className="button__text">{languagePrimary ? "WYŚLIJ" : "SEND"}</span>
           </button>
         </div>
-        <textarea type="text" value={message} onChange={messageHander} className="windowContainer__windowRight" placeholder={languagePrimary ? "Wiadomość..." : "Message..."} />
+        <textarea type="text" value={message} onChange={messageHander} className="windowContainer__windowRight" placeholder={props.placeholderMessage} />
       </div>
       <div className="contactForm__containerLeft"></div>
       <div className="contactForm__containerRight"></div>
