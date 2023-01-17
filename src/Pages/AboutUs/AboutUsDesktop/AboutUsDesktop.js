@@ -31,7 +31,7 @@ const AboutUsDesktop = () => {
           Mauris blandit, tellus eu pharetra viverra, lacus tortor pellentesque enim, eu euismod enim erat id libero. Ut scelerisque, eros vitae dictum accumsan, erat massa interdum sapien, vel elementum mi diam in dui. Curabitur convallis, purus id interdum tristique, eros velit pharetra enim, eget accumsan neque arcu ac libero. Maecenas efficitur auctor nunc sed vehicula. Etiam et lectus sagittis purus posuere blandit sed sit amet turpis. Quisque tellus lacus, volutpat vitae ex at, tincidunt
           dapibus purus. Nullam in est sed sapien rutrum pharetra. Nulla sed ullamcorper sapien. Suspendisse potenti. Etiam felis lacus, pharetra et suscipit vel, rutrum sed lorem. In vel commodo ligula. Morbi in dictum ex, nec luctus mi.
         </p>
-        <h1 className="textContainer__header">{languagePrimary ? "Nasi Partnerzy" : "Our Parters"}</h1>
+        <h1 className="textContainer__header">{languagePrimary ? "Nasi Partnerzy" : "Our Partners"}</h1>
         <div className="textContainer__logoContainer">
           <img className="logoContainer__logo" src={logo} alt="" />
           <img className="logoContainer__logo" src={logo} alt="" />
