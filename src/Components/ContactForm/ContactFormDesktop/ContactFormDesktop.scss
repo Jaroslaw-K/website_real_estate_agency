@@ -1,0 +1,174 @@
+@import "../../../scss/variables/variables.scss";
+
+// STYLING
+.contactForm--bright {
+  background-color: rgba(255, 255, 255, 0.8);
+  .contactForm__header {
+    color: $color1;
+  }
+  .contactForm__windowsContainer {
+    .windowContainer__windowLeft {
+      background-color: $color2;
+      .windowLeft__input {
+        background: transparent;
+        color: $color1;
+        border-bottom: 1px solid $color1;
+      }
+      .windowLeft__input::placeholder {
+        color: rgba(0, 0, 0, 0.5);
+      }
+      .windowLeft__checkboxContainer {
+        .checkboxContainer__checkbox {
+          accent-color: $color1;
+        }
+        .checkboxContainer__clause {
+          color: $color1;
+        }
+      }
+      .windowLeft__button {
+        background-color: $color5;
+        color: $color2;
+      }
+    }
+    .windowContainer__windowRight {
+      background-color: $color2;
+    }
+  }
+  .contactForm__containerRight {
+    background-color: $color3;
+  }
+}
+
+.contactForm--dark {
+  background-color: rgba(0, 0, 0, 0.8);
+  .contactForm__header {
+    color: $color2;
+  }
+  .contactForm__windowsContainer {
+    .windowContainer__windowLeft {
+      background-color: $color4;
+      .windowLeft__input {
+        background: transparent;
+        color: $color2;
+        border-bottom: 1px solid $color2;
+      }
+      .windowLeft__input::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+      }
+      .windowLeft__checkboxContainer {
+        .checkboxContainer__checkbox {
+          accent-color: $color4;
+        }
+        .checkboxContainer__clause {
+          color: $color2;
+        }
+      }
+      .windowLeft__button {
+        background-color: $color5;
+        color: $color2;
+      }
+    }
+    .windowContainer__windowRight {
+      background-color: $color5;
+      color: $color2;
+    }
+    .windowContainer__windowRight::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+  .contactForm__containerRight {
+    background-color: $color3;
+  }
+}
+// LAYOUT
+.contactForm {
+  position: relative;
+  top: -30px;
+  margin: 0 auto;
+  width: 85%;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .contactForm__header {
+    margin: 40px 0 40px 0;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .contactForm__windowsContainer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    justify-content: space-evenly;
+    .windowContainer__windowLeft {
+      width: 47%;
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .windowLeft__input:nth-of-type(1) {
+        margin-top: 30px;
+      }
+      .windowLeft__input {
+        margin-bottom: 30px;
+        padding-bottom: 5px;
+        width: 90%;
+        display: block;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        outline: none;
+        font-size: 14px;
+      }
+      .windowLeft__checkboxContainer {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        align-items: flex-start;
+        .checkboxContainer__clause {
+          text-align: justify;
+          font-size: 0.7vw;
+          margin-left: 5px;
+        }
+      }
+      .windowLeft__button {
+        position: relative;
+        align-self: flex-end;
+        left: 30px;
+        top: 25px;
+        width: 300px;
+        min-height: 40px;
+        clip-path: polygon(20% 0, 80% 0, 50% 100%, 50% 100%);
+        border: none;
+        .button__text {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -70%);
+        }
+      }
+    }
+    .windowContainer__windowRight {
+      width: 47%;
+      height: 76%;
+      border: none;
+      outline: none;
+      padding: 10px;
+      resize: none;
+    }
+  }
+  .contactForm__containerLeft {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 70%;
+  }
+  .contactForm__containerRight {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 30%;
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
