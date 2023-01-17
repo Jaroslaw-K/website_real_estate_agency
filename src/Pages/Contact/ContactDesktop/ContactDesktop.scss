@@ -1,0 +1,51 @@
+// STYLING
+.contactDesktop--bright {
+  background-image: url(../../../assets/images/2251247.jpg);
+  .contactDesktop__background {
+    background-color: rgba(255, 255, 255, 0.75);
+    .background__bottom {
+      background-color: rgba(255, 255, 255, 0.85);
+    }
+  }
+}
+.contactDesktop--dark {
+  background-image: url(../../../assets/images/2251247.jpg);
+  .contactDesktop__background {
+    background-color: rgba(0, 0, 0, 0.75);
+    .background__bottom {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  }
+}
+//LAYOUT
+.contactDesktop {
+  width: 100vw;
+  height: 1000px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .contactDesktop__background {
+    width: 100%;
+    height: 100%;
+    .background__bottom {
+      margin: 0 auto;
+      width: 85vw;
+      height: 330px;
+      display: flex;
+      flex-direction: column;
+      .bottom__header {
+        align-self: center;
+        font-weight: 500;
+        font-size: 20px;
+      }
+      .bottom__specialisationsContainer {
+        display: flex;
+        width: 100%;
+        height: 80%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+    }
+  }
+}
