@@ -1,0 +1,157 @@
+@import "../../../scss/variables/variables.scss";
+
+// STYLING
+.contactFormMobile--bright {
+  background-color: $color2;
+  .contactFormMobile__decorationTop {
+    background-color: $color3;
+    .decorationTop__header {
+      font-size: 20px;
+      color: $color2;
+      font-weight: 400;
+    }
+  }
+  .contactFormMobile__input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .contactFormMobile__input {
+    background: transparent;
+    color: $color1;
+    border-bottom: 1px solid $color1;
+  }
+  .contactFormMobile__textarea {
+    background-color: $color6;
+    color: $color1;
+  }
+  .contactFormMobile__checkboxContainer {
+    .checkboxContainer__checkbox {
+      accent-color: $color1;
+    }
+    .checkboxContainer__clause {
+      color: $color1;
+    }
+  }
+  .contactFormMobile__decorationBottom {
+    background-color: $color3;
+    .decorationBottom__button {
+      background-color: $color2;
+      .button__text {
+        color: $color1;
+      }
+    }
+  }
+}
+.contactFormMobile--dark {
+  background-color: $color5;
+  .contactFormMobile__decorationTop {
+    background-color: $color4;
+    .decorationTop__header {
+      font-size: 20px;
+      color: $color2;
+      font-weight: 400;
+    }
+  }
+  .contactFormMobile__input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .contactFormMobile__input {
+    background: transparent;
+    color: $color2;
+    border-bottom: 1px solid $color2;
+  }
+  .contactFormMobile__textarea {
+    background-color: $color4;
+    color: $color2;
+  }
+  .contactFormMobile__checkboxContainer {
+    .checkboxContainer__checkbox {
+      accent-color: $color4;
+    }
+    .checkboxContainer__clause {
+      color: $color2;
+    }
+  }
+  .contactFormMobile__decorationBottom {
+    background-color: $color4;
+    .decorationBottom__button {
+      background-color: $color5;
+      .button__text {
+        color: $color2;
+      }
+    }
+  }
+}
+// LAYOUT
+.contactFormMobile {
+  width: 100vw;
+  height: 700px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .contactFormMobile__decorationTop {
+    height: 15%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 30%, 100% 100%, 100% 100%, 35% 80%, 0 100%, 0% 30%);
+    .decorationTop__header {
+      text-align: center;
+      margin-top: 30px;
+    }
+  }
+  .contactFormMobile__input {
+    margin-bottom: 30px;
+    padding-bottom: 5px;
+    width: 90%;
+    display: block;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    font-size: 14px;
+  }
+  .contactFormMobile__textarea {
+    width: 90%;
+    height: 30%;
+    border: none;
+    outline: none;
+    resize: none;
+  }
+  .contactFormMobile__checkboxContainer {
+    width: 91%;
+    margin-top: 10px;
+    display: flex;
+    align-items: flex-start;
+    .checkboxContainer__clause {
+      width: 100%;
+      text-align: justify;
+      font-size: 1.7vw;
+      margin-left: 5px;
+    }
+  }
+  .contactFormMobile__decorationBottom {
+    position: absolute;
+    height: 15%;
+    width: 100%;
+    bottom: 0;
+    clip-path: polygon(70% 20%, 100% 0, 100% 30%, 100% 70%, 100% 100%, 0 100%, 0% 70%, 0 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .decorationBottom__button {
+      width: 300px;
+      min-height: 40px;
+      clip-path: polygon(20% 0, 80% 0, 50% 100%, 50% 100%);
+      border: none;
+      position: relative;
+      .button__text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -70%);
+      }
+    }
+  }
+}
