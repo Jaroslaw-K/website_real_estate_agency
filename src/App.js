@@ -8,7 +8,7 @@ import AboutUs from "./Pages/AboutUs/AboutUs";
 import Contact from "./Pages/Contact/Contact";
 import Offer from "./Pages/Offer/Offer";
 import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy";
-import SellRent from "./Pages/SellRent";
+import SellRent from "./Pages/SellRent/SellRent";
 import Footer from "./Components/Footer/Footer";
 import Cursor from "./Components/Cursor/Cursor";
 
