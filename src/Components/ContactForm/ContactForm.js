@@ -4,14 +4,14 @@ import { BrowserView, MobileView } from "react-device-detect";
 import ContactFormMobile from "./ContactFormMobile/ContactFormMobile";
 import ContactFormDesktop from "./ContactFormDesktop/ContactFormDesktop";
 
-const ContactForm = () => {
+const ContactForm = (props) => {
   return (
     <Fragment>
       <MobileView>
-        <ContactFormMobile />
+        <ContactFormMobile headerText={props.headerText} placeholderMessage={props.placeholderMessage} />
       </MobileView>
       <BrowserView>
-        <ContactFormDesktop />
+        <ContactFormDesktop headerText={props.headerText} placeholderMessage={props.placeholderMessage} />
       </BrowserView>
     </Fragment>
   );
