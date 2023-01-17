@@ -6,7 +6,7 @@ import { autoMoveSliderData } from "../../data/data";
 // COMPONENTS
 import Slider from "../../Components/Slider/Slider";
 import SearchEngine from "./SearchEngine/SearchEngine";
-import Specialsation from "./Specialisation/Specialisation";
+import Specialsation from "../../Components/Specialisation/Specialisation";
 // IMAGES
 import image1 from "../../assets/images/specialisations/8112172.jpg";
 import image2 from "../../assets/images/specialisations/7176319.jpg";
