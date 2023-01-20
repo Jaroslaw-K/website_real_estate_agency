@@ -1,40 +1,69 @@
 @import "../../../scss/variables/variables.scss";
-@import "../../../scss/variables/variables.scss";
 // STYLING
-.footerDesktop--bright {
+.footerDesktop--styling {
   .footerDesktop__middleContainer {
+    background-image: url(../../../assets/images/1438834.jpg);
     .middleContainer__leftContainer {
-      background: rgba(255, 255, 255, 0.7);
       .leftContainer__dataContainer {
         background: $color3;
-        .right__addressContainer {
-          .addressContainer__element {
-            color: $color2;
+        .dataContainer__right {
+          .right__addressContainer {
+            .addressContainer__element:first-child {
+              font-size: 20px;
+            }
+            .addressContainer__element {
+              font-size: 14px;
+              color: $color2;
+            }
           }
-        }
-        .right__infoContainer {
-          .infoContainer__element {
-            color: $color2;
+          .right__infoContainer {
+            .infoContainer__element {
+              font-size: 14px;
+              color: $color2;
+            }
           }
         }
       }
     }
     .middleContainer__rightContainer {
       .rightContainer__leftContainer {
-        .leftContainer__dataContainer {
-          background: $color3;
-          .right__addressContainer {
-            .addressContainer__element {
-              color: $color2;
-            }
-          }
-
-          .right__infoContainer {
-            .infoContainer__element {
-              color: $color2;
-            }
+        background-image: url(../../../assets/images/186077.jpg);
+        .leftContainer__backgroundContainer {
+          .backgroundContainer__textContainer {
+            font-size: 24px;
           }
         }
+      }
+      .rightContainer__rightContainer {
+        background-image: url(../../../assets/images/34753.jpg);
+        .rightContainer__backgroundContainer {
+          .backgroundContainer__textContainer {
+            font-size: 24px;
+            -webkit-tap-highlight-color: transparent;
+          }
+        }
+      }
+    }
+  }
+  .footerDesktop__bottomContainer {
+    .bottomContainer__text {
+      font-size: 12px;
+      color: $color2;
+    }
+    .bottomContainer__rightContainer {
+      background: $color3;
+    }
+  }
+}
+// STYLING DIVIDED INTO BRIGHT AND DARK WEBSITE MODE
+// BRIGHT
+.footerDesktop--bright {
+  .footerDesktop__middleContainer {
+    .middleContainer__leftContainer {
+      background: rgba(255, 255, 255, 0.7);
+    }
+    .middleContainer__rightContainer {
+      .rightContainer__leftContainer {
         .leftContainer__backgroundContainer {
           background: rgba(255, 255, 255, 0.7);
           .backgroundContainer__textContainer {
@@ -60,32 +89,16 @@
   }
   .footerDesktop__bottomContainer {
     background: rgba(198, 218, 233, 1);
-    .bottomContainer__text {
-      color: white;
-    }
     .bottomContainer__leftContainer {
       background: rgba(198, 218, 233, 1);
     }
   }
 }
-
+// DARK
 .footerDesktop--dark {
   .footerDesktop__middleContainer {
     .middleContainer__leftContainer {
       background: rgba(0, 0, 0, 0.7);
-      .leftContainer__dataContainer {
-        background: $color3;
-        .right__addressContainer {
-          .addressContainer__element {
-            color: $color2;
-          }
-        }
-        .right__infoContainer {
-          .infoContainer__element {
-            color: $color2;
-          }
-        }
-      }
       .leftContainer__logoContainer {
         .logoContainer__logo {
           filter: $logoFilter;
@@ -116,15 +129,12 @@
   }
   .footerDesktop__bottomContainer {
     background: $color4;
-    .bottomContainer__text {
-      color: white;
-    }
     .bottomContainer__leftContainer {
       background: $color4;
     }
   }
 }
-
+// LAYOUT
 .footerDesktop {
   position: relative;
   .footerDesktop__topContainer {
@@ -152,11 +162,9 @@
     animation-fill-mode: forwards;
     transition: ease-in;
   }
-
   .footerDesktop__middleContainer {
     width: 100%;
     height: 250px;
-    background-image: url(../../../assets/images/1438834.jpg);
     background-position: 20% 35%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -197,12 +205,10 @@
             align-items: flex-start;
             flex-direction: column;
             .addressContainer__element:first-child {
-              font-size: 20px;
               align-self: center;
               margin-bottom: 10px;
             }
             .addressContainer__element {
-              font-size: 14px;
               margin: 0 0 15px 0;
             }
           }
@@ -213,7 +219,6 @@
             align-items: flex-start;
             flex-direction: column;
             .infoContainer__element {
-              font-size: 14px;
               margin: 0 0 15px 0;
             }
           }
@@ -227,7 +232,6 @@
       .rightContainer__leftContainer {
         width: 60%;
         height: 100%;
-        background-image: url(../../../assets/images/186077.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -238,7 +242,6 @@
           justify-content: center;
           align-items: center;
           .backgroundContainer__textContainer {
-            font-size: 24px;
             text-align: center;
           }
         }
@@ -246,7 +249,6 @@
       .rightContainer__rightContainer {
         width: 40%;
         height: 100%;
-        background-image: url(../../../assets/images/34753.jpg);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -258,10 +260,7 @@
           align-items: center;
           .backgroundContainer__textContainer {
             cursor: pointer;
-            font-size: 24px;
             text-align: center;
-            -webkit-tap-highlight-color: transparent;
-            cursor: pointer;
           }
         }
       }
@@ -277,7 +276,6 @@
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      font-size: 12px;
       z-index: 1;
     }
     .bottomContainer__leftContainer {
@@ -287,7 +285,6 @@
     .bottomContainer__rightContainer {
       height: 100%;
       width: 70%;
-      background: $color3;
       clip-path: polygon(0% -10%, 100% -10%, 100% 100%, 10% 100%);
     }
   }
@@ -306,7 +303,6 @@
     visibility: visible;
   }
 }
-
 @keyframes desktopHideMap {
   0% {
     height: 60vh;
