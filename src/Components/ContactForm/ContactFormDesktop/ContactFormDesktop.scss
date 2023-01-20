@@ -1,6 +1,31 @@
 @import "../../../scss/variables/variables.scss";
-
 // STYLING
+.contactForm--styling {
+  .contactForm__header {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .contactForm__windowsContainer {
+    .windowContainer__windowLeft {
+      .windowLeft__input {
+        outline: none;
+        font-size: 14px;
+      }
+      .windowLeft__checkboxContainer {
+        .checkboxContainer__clause {
+          text-align: justify;
+          font-size: 12px;
+        }
+      }
+    }
+    .windowContainer__windowRight {
+      outline: none;
+    }
+  }
+}
+
+// STYLING DIVIDED INTO BRIGHT AND DARK WEBSITE MODE
+// BRIGHT
 .contactForm--bright {
   background-color: rgba(255, 255, 255, 0.8);
   .contactForm__header {
@@ -38,7 +63,7 @@
     background-color: $color3;
   }
 }
-
+// DARK
 .contactForm--dark {
   background-color: rgba(0, 0, 0, 0.8);
   .contactForm__header {
@@ -92,8 +117,6 @@
   align-items: center;
   .contactForm__header {
     margin: 40px 0 40px 0;
-    font-size: 24px;
-    font-weight: 500;
   }
   .contactForm__windowsContainer {
     display: flex;
@@ -118,8 +141,6 @@
         border-top: none;
         border-left: none;
         border-right: none;
-        outline: none;
-        font-size: 14px;
       }
       .windowLeft__checkboxContainer {
         width: 90%;
@@ -127,8 +148,6 @@
         display: flex;
         align-items: flex-start;
         .checkboxContainer__clause {
-          text-align: justify;
-          font-size: 0.7vw;
           margin-left: 5px;
         }
       }
@@ -153,7 +172,6 @@
       width: 47%;
       height: 76%;
       border: none;
-      outline: none;
       padding: 10px;
       resize: none;
     }
