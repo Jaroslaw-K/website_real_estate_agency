@@ -44,7 +44,7 @@ const FooterDesktop = () => {
   }
 
   return (
-    <footer className={darkMode ? "footerDesktop footerDesktop--dark" : "footerDesktop footerDesktop--bright"}>
+    <footer className={darkMode ? "footerDesktop footerDesktop--styling footerDesktop--dark" : "footerDesktop footerDesktop--styling footerDesktop--bright"}>
       <iframe
         ref={desktopMap}
         className="footerDesktop__topContainer"
