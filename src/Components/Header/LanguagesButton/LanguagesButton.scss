@@ -1,12 +1,22 @@
 // STYLING
+.languageButton--styling {
+  -webkit-tap-highlight-color: transparent;
+  .languageButton__countryText {
+    font-size: 13px;
+    font-weight: 500;
+  }
+}
+// STYLING DIVIDED INTO BRIGHT AND DARK WEBSITE MODE
+// BRIGHT
 .languageButton--bright {
-  background: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.4);
   .languageButton__countryText {
     color: rgba(0, 0, 0, 0.7);
   }
 }
+// DARK
 .languageButton--dark {
-  background: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.4);
   .languageButton__countryText {
     color: rgba(255, 255, 255, 0.7);
   }
@@ -18,12 +28,9 @@
   border: none;
   cursor: pointer;
   clip-path: polygon(50% 70%, 0 0, 100% 0);
-  -webkit-tap-highlight-color: transparent;
   .languageButton__countryText {
     position: relative;
     top: -10px;
     left: 0px;
-    font-size: 13px;
-    font-weight: 500;
   }
 }

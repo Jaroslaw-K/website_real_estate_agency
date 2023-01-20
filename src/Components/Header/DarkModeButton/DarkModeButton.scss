@@ -1,12 +1,18 @@
 // STYLING
+.darkModeButton--styling {
+  -webkit-tap-highlight-color: transparent;
+}
+// STYLING DIVIDED INTO BRIGHT AND DARK WEBSITE MODE
+// BRIGHT
 .darkModeButton--bright {
-  background: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.4);
   .darkModeButton__icon {
     color: rgba(0, 0, 0, 0.7);
   }
 }
+// DARK
 .darkModeButton--dark {
-  background: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.4);
   .darkModeButton__icon {
     color: rgba(255, 255, 255, 0.7);
   }
@@ -17,7 +23,6 @@
   width: 45px;
   border: none;
   clip-path: polygon(50% 30%, 0% 100%, 100% 100%);
-  -webkit-tap-highlight-color: transparent;
   cursor: pointer;
   .darkModeButton__icon {
     position: relative;

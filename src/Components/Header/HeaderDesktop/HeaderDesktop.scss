@@ -1,27 +1,44 @@
 @import "../../../scss/variables/variables.scss";
 // STYLING
-.headerDesktop--bright {
+.headerDesktop--styling {
   .headerDesktop__containerTop {
+    background: $color3;
     .containerTop__left {
       .left__emailContainer {
-        color: white;
+        color: $color2;
+        font-size: 12px;
       }
       .left__phoneContainer {
-        color: white;
+        color: $color2;
+        font-size: 12px;
       }
       .left__line {
-        background: white;
+        background-color: $color2;
       }
     }
-
     .containerTop__central {
       .central__decorationContainer {
         .decorationContainer__decoration {
-          background: white;
+          background-color: $color2;
         }
       }
+      .central__logo {
+        filter: $logoFilter;
+        background-image: url(../../../assets/logo.svg);
+      }
     }
-
+  }
+  .headerDesktop__containerBottom {
+    font-size: 14px;
+    .containerBottom__link {
+      text-decoration: none;
+    }
+  }
+}
+// STYLING DIVIDED INTO BRIGHT AND DARK WEBSITE MODE
+// BRIGHT
+.headerDesktop--bright {
+  .headerDesktop__containerTop {
     .containerTop__right {
       background: $color5;
       .right__line {
@@ -35,31 +52,13 @@
   .headerDesktop__containerBottom {
     background: rgba(255, 255, 255, 0.9);
     .containerBottom__link {
-      color: black;
+      color: $color1;
     }
   }
 }
+// DARK
 .headerDesktop--dark {
   .headerDesktop__containerTop {
-    .containerTop__left {
-      .left__emailContainer {
-        color: white;
-      }
-      .left__phoneContainer {
-        color: white;
-      }
-      .left__line {
-        background: white;
-      }
-    }
-    .containerTop__central {
-      .central__decorationContainer {
-        .decorationContainer__decoration {
-          background: white;
-        }
-      }
-    }
-
     .containerTop__right {
       background: $color1;
       .right__line {
@@ -87,7 +86,7 @@
   .headerDesktop__containerBottom {
     background: rgba(0, 0, 0, 0.9);
     .containerBottom__link {
-      color: white;
+      color: $color2;
     }
   }
 }
@@ -109,11 +108,9 @@
       position: relative;
       .left__emailContainer {
         margin-bottom: 5px;
-        font-size: 12px;
       }
       .left__phoneContainer {
         margin-bottom: 5px;
-        font-size: 12px;
       }
       .left__line {
         height: 100%;
@@ -188,9 +185,7 @@
       .central__logo {
         height: 100%;
         width: 100px;
-        filter: $logoFilter;
         overflow: hidden;
-        background: url(../../../assets/logo.svg);
       }
     }
     .containerTop__right {
@@ -246,9 +241,5 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    font-size: 14px;
-    .containerBottom__link {
-      text-decoration: none;
-    }
   }
 }
