@@ -10,7 +10,6 @@ import Offer from "./Pages/Offer/Offer";
 import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy";
 import SellRent from "./Pages/SellRent/SellRent";
 import Footer from "./Components/Footer/Footer";
-import Cursor from "./Components/Cursor/Cursor";
 
 // IMAGES FOR PRELOADMEDIA
 const media = [
@@ -40,7 +39,6 @@ export const App = () => {
 const AppLoaded = () => {
   return (
     <div className="app">
-      <Cursor />
       <Header />
       <Routes>
         <Route path="/*" element={<Navigate to="/offer" />} /> {/* IF ADDRESS IS INCORRECT PAGE WILL BE REDIRECT IT INTO OFFER PAGE */}
