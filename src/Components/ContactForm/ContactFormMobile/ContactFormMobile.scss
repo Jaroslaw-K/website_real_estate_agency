@@ -3,11 +3,16 @@
 .contactFormMobile--styling {
   .contactFormMobile__decorationTop {
     .decorationTop__header {
+      font-size: 20px;
+      color: $color2;
+      font-weight: 400;
     }
   }
   .contactFormMobile__input {
+    background: transparent;
     outline: none;
     font-size: 14px;
+    border-bottom: 1px solid;
   }
   .contactFormMobile__textarea {
     outline: none;
@@ -38,19 +43,13 @@
   background-color: $color2;
   .contactFormMobile__decorationTop {
     background-color: $color3;
-    .decorationTop__header {
-      font-size: 20px;
-      color: $color2;
-      font-weight: 400;
-    }
   }
   .contactFormMobile__input::placeholder {
     color: rgba(0, 0, 0, 0.5);
   }
   .contactFormMobile__input {
-    background: transparent;
     color: $color1;
-    border-bottom: 1px solid $color1;
+    border-color: $color1;
   }
   .contactFormMobile__textarea {
     background-color: $color6;
@@ -79,19 +78,13 @@
   background-color: $color5;
   .contactFormMobile__decorationTop {
     background-color: $color4;
-    .decorationTop__header {
-      font-size: 20px;
-      color: $color2;
-      font-weight: 400;
-    }
   }
   .contactFormMobile__input::placeholder {
     color: rgba(255, 255, 255, 0.5);
   }
   .contactFormMobile__input {
-    background: transparent;
     color: $color2;
-    border-bottom: 1px solid $color2;
+    border-color: $color2;
   }
   .contactFormMobile__textarea {
     background-color: $color4;

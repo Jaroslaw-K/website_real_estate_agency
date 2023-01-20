@@ -8,6 +8,7 @@
   .contactForm__windowsContainer {
     .windowContainer__windowLeft {
       .windowLeft__input {
+        border-bottom: 1px solid;
         outline: none;
         font-size: 14px;
       }
@@ -16,6 +17,11 @@
           text-align: justify;
           font-size: 12px;
         }
+      }
+      .windowLeft__button {
+        background-color: $color5;
+        color: $color2;
+        font-size: 14px;
       }
     }
     .windowContainer__windowRight {
@@ -37,7 +43,7 @@
       .windowLeft__input {
         background: transparent;
         color: $color1;
-        border-bottom: 1px solid $color1;
+        border-color: $color1;
       }
       .windowLeft__input::placeholder {
         color: rgba(0, 0, 0, 0.5);
@@ -49,10 +55,6 @@
         .checkboxContainer__clause {
           color: $color1;
         }
-      }
-      .windowLeft__button {
-        background-color: $color5;
-        color: $color2;
       }
     }
     .windowContainer__windowRight {
@@ -75,7 +77,7 @@
       .windowLeft__input {
         background: transparent;
         color: $color2;
-        border-bottom: 1px solid $color2;
+        border-color: $color2;
       }
       .windowLeft__input::placeholder {
         color: rgba(255, 255, 255, 0.5);
@@ -87,10 +89,6 @@
         .checkboxContainer__clause {
           color: $color2;
         }
-      }
-      .windowLeft__button {
-        background-color: $color5;
-        color: $color2;
       }
     }
     .windowContainer__windowRight {
