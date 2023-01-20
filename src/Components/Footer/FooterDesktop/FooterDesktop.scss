@@ -1,10 +1,23 @@
 @import "../../../scss/variables/variables.scss";
-
+@import "../../../scss/variables/variables.scss";
 // STYLING
 .footerDesktop--bright {
   .footerDesktop__middleContainer {
     .middleContainer__leftContainer {
       background: rgba(255, 255, 255, 0.7);
+      .leftContainer__dataContainer {
+        background: $color3;
+        .right__addressContainer {
+          .addressContainer__element {
+            color: $color2;
+          }
+        }
+        .right__infoContainer {
+          .infoContainer__element {
+            color: $color2;
+          }
+        }
+      }
     }
     .middleContainer__rightContainer {
       .rightContainer__leftContainer {
@@ -244,6 +257,7 @@
           justify-content: center;
           align-items: center;
           .backgroundContainer__textContainer {
+            cursor: pointer;
             font-size: 24px;
             text-align: center;
             -webkit-tap-highlight-color: transparent;
