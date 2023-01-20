@@ -30,7 +30,7 @@ const ContactFormDesktop = (props) => {
     setMessage("");
   };
   return (
-    <form onSubmit={sumitFormHandler} className={darkMode ? "contactForm contactForm--dark" : "contactForm contactForm--bright"}>
+    <form onSubmit={sumitFormHandler} className={darkMode ? "contactForm contactForm--styling contactForm--dark" : "contactForm contactForm--styling contactForm--bright"}>
       <h1 className="contactForm__header">{props.headerText}</h1>
       <div className="contactForm__windowsContainer">
         <div className="windowContainer__windowLeft">

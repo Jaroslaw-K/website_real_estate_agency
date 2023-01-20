@@ -31,7 +31,7 @@ const ContactFormMobile = (props) => {
     setMessage("");
   };
   return (
-    <form onSubmit={sumitFormHandler} className={darkMode ? "contactFormMobile contactFormMobile--dark" : "contactFormMobile contactFormMobile--bright"}>
+    <form onSubmit={sumitFormHandler} className={darkMode ? "contactFormMobile contactFormMobile--styling contactFormMobile--dark" : "contactFormMobile contactFormMobile--styling  contactFormMobile--bright"}>
       <div className="contactFormMobile__decorationTop">
         <h1 className="decorationTop__header">{props.headerText}</h1>
       </div>
