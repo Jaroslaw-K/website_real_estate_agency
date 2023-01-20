@@ -1,14 +1,19 @@
 @import "../../../../scss/variables/variables.scss";
-
 // STYLING
+.navigationButton--styling {
+  -webkit-tap-highlight-color: transparent;
+}
+// STYLING DIVIDED INTO BRIGHT AND DARK WEBSITE MODE
+// BRIGHT
 .navigationButton--bright {
   .navigationButton__line {
-    background: $color1;
+    background-color: $color1;
   }
 }
+// DARK
 .navigationButton--dark {
   .navigationButton__line {
-    background: $color2;
+    background-color: $color2;
   }
 }
 // LAYOUT
@@ -24,7 +29,6 @@
   position: relative;
   z-index: 4;
   cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
   .navigationButton__line {
     height: 2px;
     width: 40px;
@@ -102,7 +106,7 @@
     margin-left: 0;
     top: 50%;
     transform: translate(0, -50%) rotate(-45deg);
-    background: $color2;
+    background-color: $color2;
   }
 }
 
