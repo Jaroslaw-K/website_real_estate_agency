@@ -48,7 +48,7 @@ const LanguagesList = (props) => {
   }, [props.showLanguagesList]);
 
   return (
-    <ul ref={languagesList} className={darkMode ? "languagesList languagesList--dark" : "languagesList languagesList--bright"}>
+    <ul ref={languagesList} className={darkMode ? "languagesList languagesList--styling languagesList--dark" : "languagesList languagesList--styling languagesList--bright"}>
       <li ref={firstLanguageLi} className="languagesList__country" onClick={toggleLanguage1}>
         <span className="fi fi-pl country__flag"></span>
         <span className={languagePrimary ? "activeLanguage" : ""}>&nbsp;{languagePrimary ? "POLSKI" : "POLISH"}</span>
