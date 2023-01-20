@@ -5,7 +5,7 @@
     background-image: url(../../../assets/images/1438834.jpg);
     .middleContainer__leftContainer {
       .leftContainer__dataContainer {
-        background: $color3;
+        background-color: $color3;
         .dataContainer__right {
           .right__addressContainer {
             .addressContainer__element:first-child {
@@ -51,7 +51,7 @@
       color: $color2;
     }
     .bottomContainer__rightContainer {
-      background: $color3;
+      background-color: $color3;
     }
   }
 }
@@ -60,12 +60,12 @@
 .footerDesktop--bright {
   .footerDesktop__middleContainer {
     .middleContainer__leftContainer {
-      background: rgba(255, 255, 255, 0.7);
+      background-color: rgba(255, 255, 255, 0.7);
     }
     .middleContainer__rightContainer {
       .rightContainer__leftContainer {
         .leftContainer__backgroundContainer {
-          background: rgba(255, 255, 255, 0.7);
+          background-color: rgba(255, 255, 255, 0.7);
           .backgroundContainer__textContainer {
             color: $color1;
             .textContainer__icon {
@@ -76,7 +76,7 @@
       }
       .rightContainer__rightContainer {
         .rightContainer__backgroundContainer {
-          background: rgba(255, 255, 255, 0.4);
+          background-color: rgba(255, 255, 255, 0.4);
           .backgroundContainer__textContainer {
             color: $color1;
             .textContainer__icon {
@@ -88,9 +88,9 @@
     }
   }
   .footerDesktop__bottomContainer {
-    background: rgba(198, 218, 233, 1);
+    background-color: rgba(198, 218, 233, 1);
     .bottomContainer__leftContainer {
-      background: rgba(198, 218, 233, 1);
+      background-color: rgba(198, 218, 233, 1);
     }
   }
 }
@@ -98,7 +98,7 @@
 .footerDesktop--dark {
   .footerDesktop__middleContainer {
     .middleContainer__leftContainer {
-      background: rgba(0, 0, 0, 0.7);
+      background-color: rgba(0, 0, 0, 0.7);
       .leftContainer__logoContainer {
         .logoContainer__logo {
           filter: $logoFilter;
@@ -108,7 +108,7 @@
     .middleContainer__rightContainer {
       .rightContainer__leftContainer {
         .leftContainer__backgroundContainer {
-          background: rgba(0, 0, 0, 0.7);
+          background-color: rgba(0, 0, 0, 0.7);
           .backgroundContainer__textContainer {
             color: $color2;
             .textContainer__icon {
@@ -119,7 +119,7 @@
       }
       .rightContainer__rightContainer {
         .rightContainer__backgroundContainer {
-          background: rgba(0, 0, 0, 0.7);
+          background-color: rgba(0, 0, 0, 0.7);
           .backgroundContainer__textContainer {
             color: $color2;
           }
@@ -128,9 +128,9 @@
     }
   }
   .footerDesktop__bottomContainer {
-    background: $color4;
+    background-color: $color4;
     .bottomContainer__leftContainer {
-      background: $color4;
+      background-color: $color4;
     }
   }
 }

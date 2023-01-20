@@ -11,7 +11,7 @@
       }
     }
     .topContainer__rightContainer {
-      background: $color3;
+      background-color: $color3;
       .rightContainer__text {
         font-size: 24px;
         color: $color2;
@@ -34,7 +34,7 @@
       }
     }
     .middleContainer__rightContainer {
-      background: $color3;
+      background-color: $color3;
       .rightContainer__dataInformation {
         color: $color2;
         font-size: 12px;
@@ -49,7 +49,7 @@
       font-size: 8px;
     }
     .bottomContainer__rightBackgroundContainer {
-      background: $color3;
+      background-color: $color3;
     }
   }
 }
@@ -59,7 +59,7 @@
   .footerMobile__topContainer {
     .topContainer__leftContainer {
       .leftContainer__containerBackground {
-        background: rgba(255, 255, 255, 0.7);
+        background-color: rgba(255, 255, 255, 0.7);
         .containerBackground__text {
           color: $color1;
           .text__icon {
@@ -72,7 +72,7 @@
   .footerMobile__middleContainer {
     .middleContainer__leftContainer {
       .leftContainer__containerBackground {
-        background: rgba(255, 255, 255, 0.7);
+        background-color: rgba(255, 255, 255, 0.7);
         .containerBackground__companyData {
           .companyData__information {
             color: $color1;
@@ -82,12 +82,12 @@
     }
   }
   .footerMobile__bottomContainer {
-    background: rgba(198, 218, 233, 1);
+    background-color: rgba(198, 218, 233, 1);
     .cbottomContainer__text {
       color: $color1;
     }
     .bottomContainer__leftBackgroundContainer {
-      background: rgba(198, 218, 233, 1);
+      background-color: rgba(198, 218, 233, 1);
     }
   }
 }
@@ -96,7 +96,7 @@
   .footerMobile__topContainer {
     .topContainer__leftContainer {
       .leftContainer__containerBackground {
-        background: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.7);
         .containerBackground__text {
           color: $color2;
           .text__icon {
@@ -109,7 +109,7 @@
   .footerMobile__middleContainer {
     .middleContainer__leftContainer {
       .leftContainer__containerBackground {
-        background: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.7);
         .containerBackground__logo {
           filter: $logoFilter;
         }
@@ -122,12 +122,12 @@
     }
   }
   .footerMobile__bottomContainer {
-    background: $color4;
+    background-color: $color4;
     .bottomContainer__text {
       color: $color2;
     }
     .bottomContainer__leftBackgroundContainer {
-      background: $color4;
+      background-color: $color4;
     }
   }
 }
