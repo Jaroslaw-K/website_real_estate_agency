@@ -217,7 +217,7 @@ const SliderDesktop = (props) => {
     );
   }
   return (
-    <div ref={sliderDesktop} className={darkMode ? "sliderDesktop sliderDesktop--dark" : "sliderDesktop sliderDesktop--bright"}>
+    <div ref={sliderDesktop} className={darkMode ? "sliderDesktop sliderDesktop--styling sliderDesktop--dark" : "sliderDesktop sliderDesktop--styling sliderDesktop--bright"}>
       <div ref={containerButtonLeft} className="sliderDesktop__containerButton sliderDesktop__containerButton--left" onClick={() => toggleSlideHandler("previous")}></div>
       <div ref={containerButtonRight} className="sliderDesktop__containerButton sliderDesktop__containerButton--right" onClick={() => toggleSlideHandler("next")}></div>
       <div ref={slidesContainer} className="sliderDesktop__slidesContainer">
