@@ -14,7 +14,7 @@ const HeaderDesktop = (props) => {
   const headerDesktopTop = useRef();
 
   return (
-    <header className={darkMode ? "headerDesktop headerDesktop--dark" : "headerDesktop headerDesktop--bright"}>
+    <header className={darkMode ? "headerDesktop headerDesktop--styling headerDesktop--dark" : "headerDesktop headerDesktop--styling headerDesktop--bright"}>
       <div ref={headerDesktopTop} className="headerDesktop__containerTop">
         <div className="containerTop__left">
           <div className="left__emailContainer">
