@@ -372,7 +372,7 @@ const SliderMobile = (props) => {
     );
   }
   return (
-    <div className={darkMode ? "sliderMobile sliderMobile--dark" : "sliderMobile sliderMobile--bright"}>
+    <div className={darkMode ? "sliderMobile sliderMobile--styling sliderMobile--dark" : "sliderMobile sliderMobile--styling sliderMobile--bright"}>
       <div ref={slidesContainer} onTouchStart={touchStartHandler} onTouchMove={touchMoveHandler} onTouchEnd={touchEndHandler} className="sliderMobile__slidesContainer">
         {slidesMain}
       </div>
