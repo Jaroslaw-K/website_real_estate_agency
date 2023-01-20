@@ -33,7 +33,7 @@ const NavigationButton = (props) => {
   }, [props.showNav]);
 
   return (
-    <div className={darkMode ? "navigationButton navigationButton--dark" : "navigationButton navigationButton--bright"} onClick={props.onToggleNavHandler}>
+    <div className={darkMode ? "navigationButton navigationButton--styling navigationButton--dark" : "navigationButton navigationButton--styling navigationButton--bright"} onClick={props.onToggleNavHandler}>
       <div ref={buttonLineTop} className="navigationButton__line navigationButton__line--top"></div>
       <div ref={buttonLineMiddle} className="navigationButton__line navigationButton__line--middle"></div>
       <div ref={buttonLineBottom} className="navigationButton__line navigationButton__line--bottom"></div>

@@ -36,7 +36,7 @@ const WindowNavigationMobile = (props) => {
   }, [props.showNav]);
 
   return (
-    <nav ref={windowNavigationMobile} className={darkMode ? "windowNavigationMobile windowNavigationMobile--dark" : "windowNavigationMobile windowNavigationMobile--bright"}>
+    <nav ref={windowNavigationMobile} className={darkMode ? "windowNavigationMobile windowNavigationMobile--styling windowNavigationMobile--dark" : "windowNavigationMobile windowNavigationMobile--styling windowNavigationMobile--bright"}>
       <div ref={windowNavigationMobileLeftContainer} className="windowNavigationMobile__leftContainer">
         <div className="leftContainer__container">
           <div className="container__navLinksContainer">
