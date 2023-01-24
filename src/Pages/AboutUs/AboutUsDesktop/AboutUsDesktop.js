@@ -7,7 +7,7 @@ const AboutUsDesktop = () => {
   const darkMode = useSelector((state) => state.darkMode); // RESPONSIBLE FOR WEBSITE COLORS - DARK OR BRIGHT WEBSITE, BY DEFAULT IS BRIGHT
   const languagePrimary = useSelector((state) => state.languagePrimary); // RESPONSIBLE FOR WEBSITE LANGUAGE - ENGLISH OR POLISH
   return (
-    <section className={darkMode ? "aboutUsDesktop aboutUsDesktop--dark" : "aboutUsDesktop aboutUsDesktop--bright"}>
+    <section className={darkMode ? "aboutUsDesktop aboutUsDesktop--styling aboutUsDesktop--dark" : "aboutUsDesktop aboutUsDesktop--styling aboutUsDesktop--bright"}>
       <div className="aboutUsDesktop__textContainer">
         <h1 className="textContainer__header">{languagePrimary ? "O nas" : "About us"}</h1>
         <p className="textContainer__paragraph">
