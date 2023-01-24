@@ -1,11 +1,12 @@
 @import "../../../scss/variables/variables.scss";
-
-// STYLING
+// STYLING DIVIDED INTO BRIGHT AND DARK WEBSITE MODE
+// BRIGHT
 .sellRentMobile--bright {
   .sellRentMobile__specialisations {
     background-color: $color2;
   }
 }
+// DARK
 .sellRentMobile--dark {
   .sellRentMobile__specialisations {
     background-color: $color3;
