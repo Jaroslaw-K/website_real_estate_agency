@@ -12,7 +12,7 @@ const SellRentDesktop = () => {
   const darkMode = useSelector((state) => state.darkMode); // RESPONSIBLE FOR WEBSITE COLORS - DARK OR BRIGHT WEBSITE, BY DEFAULT IS BRIGHT
   const languagePrimary = useSelector((state) => state.languagePrimary); // RESPONSIBLE FOR WEBSITE LANGUAGE - ENGLISH OR POLISH
   return (
-    <div className={darkMode ? "sellRentDesktop sellRentDesktop--dark" : "sellRentDesktop sellRentDesktop--bright"}>
+    <div className={darkMode ? "sellRentDesktop sellRentDesktop--styling sellRentDesktop--dark" : "sellRentDesktop sellRentDesktop--styling sellRentDesktop--bright"}>
       <div className="sellRentDesktop__background">
         <ContactForm headerText={languagePrimary ? "MASZ NIERUCHOMOŚĆ NA SPRZEDAŻ LUB WYNAJEM?" : "HAVE PROPERTY FOR SALE OR RENT?"} placeholderMessage={languagePrimary ? "Prosimy napisz do nas odnośnie nieruchomości którą chcesz sprzedać lub wynająć..." : "Please write us about your property that you want to sell or rent..."} />
         <div className="background__bottom">
