@@ -7,6 +7,7 @@ import { autoMoveSliderData } from "../../data/data";
 import Slider from "../../Components/Slider/Slider";
 import SearchEngine from "./SearchEngine/SearchEngine";
 import Specialsation from "../../Components/Specialisation/Specialisation";
+import OffersWindow from "./OffersWindow/OffersWindow";
 // IMAGES
 import image1 from "../../assets/images/specialisations/8112172.jpg";
 import image2 from "../../assets/images/specialisations/7176319.jpg";
@@ -19,7 +20,7 @@ const Offer = () => {
     moveSlider(); // FUNCTION RESPONSIBLE FOR AUTO-MOVE SLIDER
   };
   return (
-    <main className={darkMode ? "offer offer--dark" : "offer offer--bright"}>
+    <main className={darkMode ? "offer offer--styling offer--dark" : "offer offer--styling offer--bright"}>
       <Slider moveSlider={moveSlider} slidesArray={autoMoveSliderData} />
       <div className="offer__searchBackground">
         <div className="searchBackground__background">
@@ -37,6 +38,7 @@ const Offer = () => {
           )}
         </div>
       </div>
+      {!useMediaQuery({ maxWidth: 1200 }) && <OffersWindow />}
       {useMediaQuery({ maxWidth: 1200 }) && (
         <div className="offer__specialisations">
           <Specialsation image={image1} title={languagePrimary ? "SPRZEDAŻ/WYNAJEM" : "SELL/RENT"} text={languagePrimary ? "SPRZEDAJEMY ORAZ WYNAJMUJEMY NIERUCHOMOŚCI" : "WE SELL AND RENT PROPERTIES"} />
@@ -44,6 +46,7 @@ const Offer = () => {
           <Specialsation image={image3} title={languagePrimary ? "WSPÓŁPRACA" : "COOPERATION"} text={languagePrimary ? "WSPÓŁPRACUJEMY Z BANKAMI ORAZ INNYMI AGENCJAMI NIERUCHOMOŚCI" : "WE COOPERATE WITH BANKS AND OTHER REAL ESTATE AGENCIES"} />
         </div>
       )}
+      {useMediaQuery({ maxWidth: 1200 }) && <OffersWindow />}
     </main>
   );
 };
