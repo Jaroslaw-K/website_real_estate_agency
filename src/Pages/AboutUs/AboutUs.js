@@ -1,6 +1,8 @@
 import "./AboutUs.scss";
 import { BrowserView, MobileView } from "react-device-detect";
+import { useMediaQuery } from "react-responsive";
 import { useSelector } from "react-redux";
+import { breaktPoint_1200 } from "../../data/variables";
 // DATA FOR SLIDER
 import { aboutUsSliderDataDesktop, aboutUsSliderDataMobile } from "../../data/data";
 // COMPONENTS
@@ -21,12 +23,8 @@ const AboutUs = () => {
       <BrowserView>
         <Slider moveSlider={moveSlider} slidesArray={aboutUsSliderDataDesktop} />
       </BrowserView>
-      <MobileView>
-        <AboutUsMobile />
-      </MobileView>
-      <BrowserView>
-        <AboutUsDesktop />
-      </BrowserView>
+      {useMediaQuery({ maxWidth: breaktPoint_1200 }) && <AboutUsMobile />}
+      {!useMediaQuery({ maxWidth: breaktPoint_1200 }) && <AboutUsDesktop />}
     </div>
   );
 };
