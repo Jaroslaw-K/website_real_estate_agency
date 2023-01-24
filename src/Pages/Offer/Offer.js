@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { useMediaQuery } from "react-responsive";
 // DATA FOR SLIDER
 import { autoMoveSliderData } from "../../data/data";
+import { breaktPoint_1200 } from "../../data/variables";
 // COMPONENTS
 import Slider from "../../Components/Slider/Slider";
 import SearchEngine from "./SearchEngine/SearchEngine";
@@ -25,8 +26,8 @@ const Offer = () => {
       <div className="offer__searchBackground">
         <div className="searchBackground__background">
           <SearchEngine />
-          {useMediaQuery({ maxWidth: 1200 }) && <h1 className="background__info background__info--mobile">{languagePrimary ? "CO ROBIMY?" : "WHAT WE DO?"}</h1>}
-          {!useMediaQuery({ maxWidth: 1200 }) && (
+          {useMediaQuery({ maxWidth: breaktPoint_1200 }) && <h1 className="background__info background__info--mobile">{languagePrimary ? "CO ROBIMY?" : "WHAT WE DO?"}</h1>}
+          {!useMediaQuery({ maxWidth: breaktPoint_1200 }) && (
             <div className="background__info background__info--desktop">
               <h1 className="info__txt">{languagePrimary ? "CO ROBIMY?" : "WHAT WE DO?"}</h1>
               <div className="info__container">
@@ -38,15 +39,15 @@ const Offer = () => {
           )}
         </div>
       </div>
-      {!useMediaQuery({ maxWidth: 1200 }) && <OffersWindow />}
-      {useMediaQuery({ maxWidth: 1200 }) && (
+      {!useMediaQuery({ maxWidth: breaktPoint_1200 }) && <OffersWindow />}
+      {useMediaQuery({ maxWidth: breaktPoint_1200 }) && (
         <div className="offer__specialisations">
           <Specialsation image={image1} title={languagePrimary ? "SPRZEDAŻ/WYNAJEM" : "SELL/RENT"} text={languagePrimary ? "SPRZEDAJEMY ORAZ WYNAJMUJEMY NIERUCHOMOŚCI" : "WE SELL AND RENT PROPERTIES"} />
           <Specialsation image={image2} title={languagePrimary ? "DORADZTWO" : "ADVISORY"} text={languagePrimary ? "DORADZAMY W SPRAWACH KREDYTÓW" : "WE ADVISE ON LOAN MATTERS"} />
           <Specialsation image={image3} title={languagePrimary ? "WSPÓŁPRACA" : "COOPERATION"} text={languagePrimary ? "WSPÓŁPRACUJEMY Z BANKAMI ORAZ INNYMI AGENCJAMI NIERUCHOMOŚCI" : "WE COOPERATE WITH BANKS AND OTHER REAL ESTATE AGENCIES"} />
         </div>
       )}
-      {useMediaQuery({ maxWidth: 1200 }) && <OffersWindow />}
+      {useMediaQuery({ maxWidth: breaktPoint_1200 }) && <OffersWindow />}
     </main>
   );
 };
