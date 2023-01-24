@@ -1,7 +1,8 @@
 import "./PrivacyPolicy.scss";
-import { BrowserView, MobileView } from "react-device-detect";
+import { useMediaQuery } from "react-responsive";
 // DATA FOR SLIDER
 import { autoMoveSliderData } from "../../data/data";
+import { breaktPoint_900 } from "../../data/variables";
 // COMPONENTS
 import Slider from "../../Components/Slider/Slider";
 import PrivacyPolicyMobile from "./PrivacyPolicyMobile/PrivacyPolicyMobile";
@@ -14,12 +15,8 @@ const PrivacyPolicy = () => {
   return (
     <main className="privacyPolicy">
       <Slider moveSlider={moveSlider} slidesArray={autoMoveSliderData} />
-      <MobileView>
-        <PrivacyPolicyMobile />
-      </MobileView>
-      <BrowserView>
-        <PrivacyPolicyDesktop />
-      </BrowserView>
+      {useMediaQuery({ maxWidth: breaktPoint_900 }) && <PrivacyPolicyMobile />}
+      {!useMediaQuery({ maxWidth: breaktPoint_900 }) && <PrivacyPolicyDesktop />}
     </main>
   );
 };
