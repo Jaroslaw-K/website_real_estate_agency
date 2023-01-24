@@ -34,30 +34,30 @@ const SearchEngineMobile = () => {
   const [maximalBuildYear, setMaximalBuildYear] = useState("");
   const [selectedOfferNumber, setSelectedOfferNumber] = useState("");
 
-  useEffect(() => {
-    // RESPONSIBLE FOR EXTENSION OF BACKGROUND WHEN USER CLICK MORE PROPERTIES BUTTON
-    if (visibilityMoreFields === false) {
-      let background = document.querySelector(".offer__searchBackground");
-      let searchEngineMobileHeight = document.querySelector(".searchEngineMobile").offsetHeight;
-      background.style.height = `${searchEngineMobileHeight + 50}px`;
-    } else {
-      let searchEngineMobileHeight;
-      let background = document.querySelector(".offer__searchBackground");
-      let backgroundCurrentHeight = document.querySelector(".offer__searchBackground").offsetHeight;
-      let counter = 0;
-      setTimeout(() => {
-        searchEngineMobileHeight = document.querySelector(".searchEngineMobile").offsetHeight;
-      }, 500);
-      const heightInterval = setInterval(() => {
-        counter += 5;
-        background.style.height = `${backgroundCurrentHeight + counter}px`;
-        if (background.offsetHeight >= searchEngineMobileHeight + 50) {
-          clearInterval(heightInterval);
-          // console.log(background.offsetHeight, searchEngineMobileHeight);
-        }
-      }, 1);
-    }
-  }, [visibilityMoreFields, setVisibilityMoreFields]);
+  // useEffect(() => {
+  //   // RESPONSIBLE FOR EXTENSION OF BACKGROUND WHEN USER CLICK MORE PROPERTIES BUTTON
+  //   if (visibilityMoreFields === false) {
+  //     let background = document.querySelector(".offer__searchBackground");
+  //     let searchEngineMobileHeight = document.querySelector(".searchEngineMobile").offsetHeight;
+  //     background.style.height = `${searchEngineMobileHeight + 50}px`;
+  //   } else {
+  //     let searchEngineMobileHeight;
+  //     let background = document.querySelector(".offer__searchBackground");
+  //     let backgroundCurrentHeight = document.querySelector(".offer__searchBackground").offsetHeight;
+  //     let counter = 0;
+  //     setTimeout(() => {
+  //       searchEngineMobileHeight = document.querySelector(".searchEngineMobile").offsetHeight;
+  //     }, 500);
+  //     const heightInterval = setInterval(() => {
+  //       counter += 5;
+  //       background.style.height = `${backgroundCurrentHeight + counter}px`;
+  //       if (background.offsetHeight >= searchEngineMobileHeight + 50) {
+  //         clearInterval(heightInterval);
+  //         // console.log(background.offsetHeight, searchEngineMobileHeight);
+  //       }
+  //     }, 1);
+  //   }
+  // }, [visibilityMoreFields, setVisibilityMoreFields]);
 
   // FORM FIELDS MANAGEMENT
   const propertyTypeHandler = (event) => {
@@ -277,7 +277,7 @@ const SearchEngineMobile = () => {
   }
 
   return (
-    <form onSubmit={submitSearchEngineHandler} className={darkMode ? "searchEngineMobile searchEngineMobile--dark" : "searchEngineMobile searchEngineMobile--bright"}>
+    <form onSubmit={submitSearchEngineHandler} className={darkMode ? "searchEngineMobile searchEngineMobile--styling searchEngineMobile--dark" : "searchEngineMobile searchEngineMobile--styling searchEngineMobile--bright"}>
       <div className="searchEngineMobile__selectContainer">
         <div ref={property} onClick={showOptionsHandler} className="selectContainer__field">
           {propertyTypeSelected.length > 1 ? `${propertyTypeSelected}` : `${languagePrimary ? "RODZAJ NIERUCHOMOŚCI" : "PROPERTY TYPE"}`}

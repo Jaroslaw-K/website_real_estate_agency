@@ -441,7 +441,7 @@ const SearchEngineDesktop = () => {
   };
 
   return (
-    <form onSubmit={submitSearchEngineHandler} className={darkMode ? "searchEngineDesktop searchEngineDesktop--dark" : "searchEngineDesktop searchEngineDesktop--bright"}>
+    <form onSubmit={submitSearchEngineHandler} className={darkMode ? "searchEngineDesktop searchEngineDesktop--styling searchEngineDesktop--dark" : "searchEngineDesktop searchEngineDesktop--styling searchEngineDesktop--bright"}>
       <div className="searchEngineDesktop__fieldsContainer">
         <div className="fieldsContainer__column">
           <div className="column__selectContainer">
