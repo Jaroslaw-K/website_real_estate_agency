@@ -209,7 +209,10 @@
         align-items: center;
         flex-direction: column;
         .containerBackground__logo {
-          height: 120px;
+          height: 50px;
+          @media screen and (min-width: $breaktPoint_600) {
+            height: 60px;
+          }
         }
         .containerBackground__companyData {
           width: 75%;

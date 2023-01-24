@@ -176,13 +176,14 @@
       position: relative;
       .leftContainer__logoContainer {
         position: absolute;
-        width: 30%;
+        top: 50px;
+        width: 25%;
         height: 100%;
         display: flex;
         justify-content: flex-end;
         align-items: flex-start;
         .logoContainer__logo {
-          width: 180px;
+          width: 120px;
         }
       }
       .leftContainer__dataContainer {
