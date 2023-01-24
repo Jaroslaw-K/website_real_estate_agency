@@ -12,7 +12,7 @@ const ContactDesktop = () => {
   const darkMode = useSelector((state) => state.darkMode); // RESPONSIBLE FOR WEBSITE COLORS - DARK OR BRIGHT WEBSITE, BY DEFAULT IS BRIGHT
   const languagePrimary = useSelector((state) => state.languagePrimary); // RESPONSIBLE FOR WEBSITE LANGUAGE - ENGLISH OR POLISH
   return (
-    <div className={darkMode ? "contactDesktop contactDesktop--dark" : "contactDesktop contactDesktop--bright"}>
+    <div className={darkMode ? "contactDesktop contactDesktop--styling contactDesktop--dark" : "contactDesktop contactDesktop--styling contactDesktop--bright"}>
       <div className="contactDesktop__background">
         <ContactForm headerText={languagePrimary ? "SKONTAKTUJ SIĘ Z NAMI" : "CONTACT US"} placeholderMessage={languagePrimary ? "Wiadomość..." : "Message..."} />
         <div className="background__bottom">
