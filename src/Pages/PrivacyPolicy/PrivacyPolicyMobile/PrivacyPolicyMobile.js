@@ -5,7 +5,7 @@ const PrivacyPolicyMobile = () => {
   const darkMode = useSelector((state) => state.darkMode); // RESPONSIBLE FOR WEBSITE COLORS - DARK OR BRIGHT WEBSITE, BY DEFAULT IS BRIGHT
   const languagePrimary = useSelector((state) => state.languagePrimary); // RESPONSIBLE FOR WEBSITE LANGUAGE - ENGLISH OR POLISH
   return (
-    <section className={darkMode ? "privacyPolicyMobile privacyPolicyMobile--dark" : "privacyPolicyMobile privacyPolicyMobile--bright"}>
+    <section className={darkMode ? "privacyPolicyMobile privacyPolicyMobile--styling privacyPolicyMobile--dark" : "privacyPolicyMobile privacyPolicyMobile--styling privacyPolicyMobile--bright"}>
       <div className="privacyPolicyMobile__container">
         <h1 className="container__header">{languagePrimary ? "Polityka RODO" : "Privacy Policy"}</h1>
         <p className="container__paragraph">
