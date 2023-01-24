@@ -1,4 +1,5 @@
-import { BrowserView, MobileView } from "react-device-detect";
+import { useMediaQuery } from "react-responsive";
+import { breaktPoint_1200 } from "../../data/variables";
 // COMPONENTS
 import Slider from "../../Components/Slider/Slider";
 import SellRentDesktop from "./SellRentDesktop/SellRentDesktop";
@@ -13,12 +14,8 @@ const Contact = () => {
   return (
     <main className="contact">
       <Slider moveSlider={moveSlider} slidesArray={autoMoveSliderData} />
-      <MobileView>
-        <SellRentMobile />
-      </MobileView>
-      <BrowserView>
-        <SellRentDesktop />
-      </BrowserView>
+      {useMediaQuery({ maxWidth: breaktPoint_1200 }) && <SellRentMobile />}
+      {!useMediaQuery({ maxWidth: breaktPoint_1200 }) && <SellRentDesktop />}
     </main>
   );
 };
