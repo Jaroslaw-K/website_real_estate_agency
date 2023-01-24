@@ -1,18 +1,29 @@
 @import "../../../scss/variables/variables.scss";
 // STYLING
-.privacyPolicyDesktop--bright {
-  background-color: $color2;
+.privacyPolicyDesktop--styling {
   .privacyPolicyDesktop__textContainer {
-    .textContainer__header {
-      color: $color3;
-    }
     .textContainer__paragraph {
-      color: $color3;
+      text-align: left;
+      line-height: 22px;
       font-size: 14px;
     }
   }
   .privacyPolicyDesktop__decoration {
     background-color: $color3;
+  }
+}
+// STYLING DIVIDED INTO BRIGHT AND DARK WEBSITE MODE
+// BRIGHT
+.privacyPolicyDesktop--bright {
+  background-color: $color2;
+  .privacyPolicyDesktop__textContainer {
+    background-color: $color2;
+    .textContainer__header {
+      color: $color3;
+    }
+    .textContainer__paragraph {
+      color: $color3;
+    }
   }
 }
 .privacyPolicyDesktop--dark {
@@ -24,11 +35,7 @@
     }
     .textContainer__paragraph {
       color: $color2;
-      font-size: 14px;
     }
-  }
-  .privacyPolicyDesktop__decoration {
-    background-color: $color3;
   }
 }
 // LAYOUT
@@ -44,10 +51,12 @@
       margin-bottom: 50px;
     }
     .textContainer__paragraph {
-      text-align: left;
       margin-left: 220px;
       margin-right: 150px;
-      line-height: 22px;
+      @media screen and (max-width: 1600px) {
+        margin-left: 120px;
+        margin-right: 50px;
+      }
     }
     .textContainer__paragraph:nth-last-of-type(1) {
       margin-bottom: 100px;

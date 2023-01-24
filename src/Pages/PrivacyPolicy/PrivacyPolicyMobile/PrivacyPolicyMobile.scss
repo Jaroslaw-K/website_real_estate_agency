@@ -1,35 +1,43 @@
 @import "../../../scss/variables/variables.scss";
 // STYLING
-.privacyPolicyMobile--bright {
-  background-color: $color2;
+.privacyPolicyMobile--styling {
   .privacyPolicyMobile__container {
     border: 5px solid $color3;
-    background-color: $color2;
     .container__header {
-      font-size: 18px;
-      color: $color3;
+      .container__header {
+        font-size: 18px;
+      }
     }
     .container__paragraph {
       font-size: 14px;
       line-height: 16px;
       text-align: left;
+    }
+  }
+}
+// STYLING DIVIDED INTO BRIGHT AND DARK WEBSITE MODE
+// BRIGHT
+.privacyPolicyMobile--bright {
+  background-color: $color2;
+  .privacyPolicyMobile__container {
+    background-color: $color2;
+    .container__header {
+      color: $color3;
+    }
+    .container__paragraph {
       color: $color3;
     }
   }
 }
+// DARK
 .privacyPolicyMobile--dark {
   background-color: $color4;
   .privacyPolicyMobile__container {
-    border: 5px solid $color3;
     background-color: $color3;
     .container__header {
-      font-size: 18px;
       color: $color2;
     }
     .container__paragraph {
-      font-size: 14px;
-      line-height: 16px;
-      text-align: left;
       color: $color2;
     }
   }
@@ -46,10 +54,7 @@
       text-align: center;
     }
     .container__paragraph {
-      font-size: 14px;
-      line-height: 16px;
       padding: 0px 20px 0 20px;
-      text-align: left;
     }
   }
 }
