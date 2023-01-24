@@ -1,5 +1,17 @@
 @import "../../../scss/variables/variables.scss";
 // STYLING
+.aboutUsDesktop--styling {
+  .aboutUsDesktop__textContainer {
+    .textContainer__paragraph {
+      font-size: 14px;
+    }
+  }
+  .aboutUsDesktop__decoration {
+    background-color: $color3;
+  }
+}
+// STYLING DIVIDED INTO BRIGHT AND DARK WEBSITE MODE
+// BRIGHT
 .aboutUsDesktop--bright {
   background-color: $color2;
   .aboutUsDesktop__textContainer {
@@ -8,7 +20,6 @@
     }
     .textContainer__paragraph {
       color: $color3;
-      font-size: 14px;
     }
     .textContainer__logoContainer {
       .logoContainer__logo {
@@ -16,10 +27,8 @@
       }
     }
   }
-  .aboutUsDesktop__decoration {
-    background-color: $color3;
-  }
 }
+// DARK
 .aboutUsDesktop--dark {
   background-color: $color4;
   .aboutUsDesktop__textContainer {
@@ -28,16 +37,12 @@
     }
     .textContainer__paragraph {
       color: $color2;
-      font-size: 14px;
     }
     .textContainer__logoContainer {
       .logoContainer__logo {
         background: rgba(255, 255, 255, 0.7);
       }
     }
-  }
-  .aboutUsDesktop__decoration {
-    background-color: $color3;
   }
 }
 // LAYOUT
@@ -60,6 +65,10 @@
       margin-left: 220px;
       margin-right: 150px;
       line-height: 22px;
+      @media screen and (max-width: 1600px) {
+        margin-left: 120px;
+        margin-right: 50px;
+      }
       .paragraph__img {
         width: 500px;
         float: left;
@@ -72,6 +81,10 @@
       margin-bottom: 100px;
       margin-left: 220px;
       margin-right: 150px;
+      @media screen and (max-width: 1600px) {
+        margin-left: 120px;
+        margin-right: 50px;
+      }
       .logoContainer__logo {
         width: 250px;
       }
