@@ -1,6 +1,19 @@
 // STYLING
-.contactDesktop--bright {
+.contactDesktop--styling {
   background-image: url(../../../assets/images/2251247.jpg);
+  .contactDesktop__background {
+    .background__bottom {
+      .bottom__header {
+        align-self: center;
+        font-weight: 500;
+        font-size: 20px;
+      }
+    }
+  }
+}
+// STYLING DIVIDED INTO BRIGHT AND DARK WEBSITE MODE
+// BRIGHT
+.contactDesktop--bright {
   .contactDesktop__background {
     background-color: rgba(255, 255, 255, 0.75);
     .background__bottom {
@@ -8,8 +21,8 @@
     }
   }
 }
+// DARK
 .contactDesktop--dark {
-  background-image: url(../../../assets/images/2251247.jpg);
   .contactDesktop__background {
     background-color: rgba(0, 0, 0, 0.75);
     .background__bottom {
@@ -33,11 +46,6 @@
       height: 330px;
       display: flex;
       flex-direction: column;
-      .bottom__header {
-        align-self: center;
-        font-weight: 500;
-        font-size: 20px;
-      }
       .bottom__specialisationsContainer {
         display: flex;
         width: 100%;
