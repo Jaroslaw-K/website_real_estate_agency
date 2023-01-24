@@ -1,6 +1,18 @@
 // STYLING
-.sellRentDesktop--bright {
+.sellRentDesktop--styling {
   background-image: url(../../../assets/images/2251247.jpg);
+  .sellRentDesktop__background {
+    .background__bottom {
+      .bottom__header {
+        font-weight: 500;
+        font-size: 20px;
+      }
+    }
+  }
+}
+// STYLING DIVIDED INTO BRIGHT AND DARK WEBSITE MODE
+// BRIGHT
+.sellRentDesktop--bright {
   .sellRentDesktop__background {
     background-color: rgba(255, 255, 255, 0.75);
     .background__bottom {
@@ -8,8 +20,8 @@
     }
   }
 }
+// DARK
 .sellRentDesktop--dark {
-  background-image: url(../../../assets/images/2251247.jpg);
   .sellRentDesktop__background {
     background-color: rgba(0, 0, 0, 0.75);
     .background__bottom {
@@ -35,8 +47,6 @@
       flex-direction: column;
       .bottom__header {
         align-self: center;
-        font-weight: 500;
-        font-size: 20px;
       }
       .bottom__specialisationsContainer {
         display: flex;
