@@ -1,0 +1,150 @@
+@import "../../../../scss/variables/variables.scss";
+// STYLING
+.offersWindowDesktop--bright {
+  background-color: $color3;
+  .offersWindowDesktop__container {
+    background-color: $color2;
+    .container__top {
+      background-color: $color3;
+      .top__left {
+        background-color: $color2;
+        .left__text {
+          font-size: 18px;
+          font-weight: 500;
+          color: $color1;
+        }
+        .left__list {
+          background-color: $color4;
+          .list__text {
+            color: $color2;
+          }
+          .list__icon {
+            color: $color2;
+          }
+        }
+      }
+      .top__right {
+        background-color: $color3;
+        .right__icon {
+          color: $color2;
+        }
+        .right__icon--1 {
+          font-size: 25px;
+        }
+        .right__icon--2 {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+.offersWindowDesktop--dark {
+  background-color: $color3;
+  .offersWindowDesktop__container {
+    background-color: $color1;
+    .container__top {
+      background-color: $color3;
+      .top__left {
+        background-color: $color1;
+        .left__text {
+          font-size: 18px;
+          font-weight: 500;
+          color: $color2;
+        }
+        .left__list {
+          background-color: $color5;
+          .list__text {
+            color: $color2;
+          }
+          .list__icon {
+            color: $color2;
+          }
+        }
+      }
+      .top__right {
+        background-color: $color3;
+        .right__icon {
+          color: $color2;
+        }
+        .right__icon--1 {
+          font-size: 25px;
+        }
+        .right__icon--2 {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+// LAYOUT
+.offersWindowDesktop {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .offersWindowDesktop__container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 85vw;
+    height: 90%;
+    .container__top {
+      width: 100%;
+      height: 40px;
+      display: flex;
+      .top__left {
+        height: 100%;
+        width: 35%;
+        clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        .left__text {
+          margin-left: 20px;
+        }
+        .left__list {
+          height: 65%;
+          width: 30%;
+          margin-left: 10px;
+          display: flex;
+          align-items: center;
+          position: relative;
+
+          .list__text {
+            position: absolute;
+            display: inline-block;
+            left: 50%;
+            transform: translate(-50%, 0);
+          }
+          .list__icon {
+            position: absolute;
+            right: 10px;
+          }
+        }
+      }
+      .top__right {
+        height: 100%;
+        width: 65%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        .right__icon {
+          position: absolute;
+        }
+        .right__icon--1 {
+          right: 10px;
+          top: 7px;
+        }
+        .right__icon--2 {
+          right: 40px;
+        }
+      }
+    }
+    .container__bottom {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+  }
+}
