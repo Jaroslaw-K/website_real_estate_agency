@@ -1,0 +1,166 @@
+@import "../../../../scss/variables/variables.scss";
+
+// STYLING
+.singleOfferSmall--bright {
+  box-shadow: 8px 8px 24px 0px rgba(120, 120, 120, 1);
+  .singleOfferSmall__containerTop {
+    .containerTop__containerLeft {
+      background-color: $color3;
+      color: $color2;
+      .containerLeft__text {
+        font-size: 0.8vw;
+      }
+    }
+    .containerTop__containerRight {
+      background-color: rgba(255, 255, 255, 0.8);
+      .containerRight__text {
+        font-size: 0.8vw;
+        color: $color1;
+      }
+    }
+  }
+  .singleOfferSmall__containerMiddle {
+  }
+  .singleOfferSmall__containerBottom {
+    .containerBottom__containerLeft {
+      background-color: rgba(255, 255, 255, 0.8);
+      .containerLeft__text {
+        font-size: 0.6vw;
+        color: $color1;
+        line-height: 1.5vw;
+      }
+    }
+    .containerBottom__containerRight {
+      background-color: $color3;
+      .containerRight__text {
+        line-height: 0;
+        font-size: 0.6vw;
+        color: $color2;
+      }
+    }
+  }
+}
+.singleOfferSmall--dark {
+  box-shadow: 8px 8px 24px 0px rgba(10, 10, 10, 1);
+  .singleOfferSmall__containerTop {
+    .containerTop__containerLeft {
+      background-color: $color3;
+      color: $color2;
+      .containerLeft__text {
+        font-size: 0.8vw;
+      }
+    }
+    .containerTop__containerRight {
+      background-color: rgba(0, 0, 0, 0.8);
+      .containerRight__text {
+        font-size: 0.8vw;
+        color: $color2;
+      }
+    }
+  }
+  .singleOfferSmall__containerMiddle {
+  }
+  .singleOfferSmall__containerBottom {
+    .containerBottom__containerLeft {
+      background-color: rgba(0, 0, 0, 0.8);
+      .containerLeft__text {
+        font-size: 0.6vw;
+        color: $color2;
+        line-height: 1.5vw;
+      }
+    }
+    .containerBottom__containerRight {
+      background-color: $color3;
+      .containerRight__text {
+        line-height: 0;
+        font-size: 0.6vw;
+        color: $color2;
+      }
+    }
+  }
+}
+// LAYOUT
+.singleOfferSmall {
+  display: inline-block;
+  height: 350px;
+  width: 350px;
+  margin: 20px;
+  background-image: url(../../../../assets/images/1438834.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .singleOfferSmall__containerTop {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    position: relative;
+    .containerTop__containerLeft {
+      height: 100%;
+      width: 40%;
+      clip-path: polygon(0 0, 100% 0, 65% 100%, 0% 100%);
+      position: absolute;
+      left: 0;
+      z-index: 2;
+      .containerLeft__text {
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+    }
+    .containerTop__containerRight {
+      height: 100%;
+      width: 75%;
+      position: absolute;
+      right: 0;
+      .containerRight__text {
+        position: absolute;
+        left: 100px;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+    }
+  }
+  .singleOfferSmall__containerMiddle {
+    width: 100%;
+    height: 45%;
+    background-image: url(../../../../assets/images/1438834.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .singleOfferSmall__containerBottom {
+    width: 100%;
+    height: 35%;
+    display: flex;
+    position: relative;
+    .containerBottom__containerLeft {
+      height: 100%;
+      width: 80%;
+      position: absolute;
+      left: 0;
+      overflow: hidden;
+      .containerLeft__text {
+        text-align: left;
+        margin: 0 90px 0 10px;
+        padding: 10px;
+      }
+    }
+    .containerBottom__containerRight {
+      height: 100%;
+      width: 38%;
+      position: absolute;
+      right: 0;
+      clip-path: polygon(45% 0, 100% 0%, 100% 100%, 0% 100%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      .containerRight__text {
+        margin-left: 40%;
+        margin-bottom: 10%;
+      }
+    }
+  }
+}
