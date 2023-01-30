@@ -13,15 +13,24 @@ import Footer from "./Components/Footer/Footer";
 
 // IMAGES FOR PRELOADMEDIA
 const media = [
-  { type: MediaType.Image, url: "./assets/images/34753.jpg" },
+  { type: MediaType.Image, url: "./assets/images/7009484.jpg" },
   { type: MediaType.Image, url: "./assets/images/186077.jpg" },
-  { type: MediaType.Image, url: "./assets/images/259588.jpg" },
+  { type: MediaType.Image, url: "./assets/images/1438832.jpg" },
   { type: MediaType.Image, url: "./assets/images/1438834.jpg" },
   { type: MediaType.Image, url: "./assets/images/2251247.jpg" },
-  { type: MediaType.Image, url: "./assets/imagesSlider/280222.jpg" },
+  { type: MediaType.Image, url: "./assets/imagesSlider/1438832.jpg" },
   { type: MediaType.Image, url: "./assets/imagesSlider/5502227.jpg" },
   { type: MediaType.Image, url: "./assets/imagesSlider/5524205.jpg" },
   { type: MediaType.Image, url: "./assets/imagesSlider/7031408.jpg" },
+  { type: MediaType.Image, url: "./assets/aboutUs/934591.jpg" },
+  { type: MediaType.Image, url: "./assets/aboutUs/1928739.jpg" },
+  { type: MediaType.Image, url: "./assets/aboutUs/4065191.jpg" },
+  { type: MediaType.Image, url: "./assets/aboutUs/5823879.jpg" },
+  { type: MediaType.Image, url: "./assets/aboutUs/6794920.jpg" },
+  { type: MediaType.Image, url: "./assets/aboutUs/6899397.jpg" },
+  { type: MediaType.Image, url: "./assets/specialisations/3760069.jpg" },
+  { type: MediaType.Image, url: "./assets/specialisations/7176319.jpg" },
+  { type: MediaType.Image, url: "./assets/specialisations/8112172.jpg" },
   { type: MediaType.Image, url: "./assets/logo.svg" },
 ];
 
