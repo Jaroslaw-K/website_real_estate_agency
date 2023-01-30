@@ -1,7 +1,7 @@
 import image0_mainSlider from "../assets/images/imagesSlider/7031408.jpg";
 import image1_mainSlider from "../assets//images/imagesSlider/5502227.jpg";
 import image2_mainSlider from "../assets/images/imagesSlider/5524205.jpg";
-import image3_mainSlider from "../assets/images/imagesSlider/280222.jpg";
+import image3_mainSlider from "../assets/images/imagesSlider/1438832.jpg";
 
 import image0_aboutUsDesktop from "../assets/images/aboutUs/934591.jpg";
 import image1_aboutUsDesktop from "../assets/images/aboutUs/6899397.jpg";
