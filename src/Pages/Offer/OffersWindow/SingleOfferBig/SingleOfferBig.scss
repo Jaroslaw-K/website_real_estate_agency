@@ -1,0 +1,96 @@
+@import "../../../../scss/variables/variables.scss";
+// STYLING
+.singleOfferBig--bright {
+  box-shadow: 8px 8px 24px 0px rgba(120, 120, 120, 1);
+  .singleOfferBig__containerRight {
+    .containerRight__containerLeft {
+      background-color: rgba(255, 255, 255, 0.8);
+      .containerLeft__text {
+        color: $color1;
+        font-size: 0.8vw;
+        line-height: 1.5vw;
+      }
+    }
+    .containerRight__containerRight {
+      background-color: $color3;
+      .containerRight__textContainer {
+        .textContainer__text {
+          color: $color2;
+          font-size: 0.7vw;
+        }
+      }
+    }
+  }
+}
+.singleOfferBig--dark {
+  box-shadow: 8px 8px 24px 0px rgba(10, 10, 10, 1);
+  .singleOfferBig__containerRight {
+    .containerRight__containerLeft {
+      background-color: rgba(0, 0, 0, 0.8);
+      .containerLeft__text {
+        color: $color2;
+        font-size: 0.8vw;
+        line-height: 1.5vw;
+      }
+    }
+    .containerRight__containerRight {
+      background-color: $color3;
+      .containerRight__textContainer {
+        .textContainer__text {
+          color: $color2;
+          font-size: 0.7vw;
+        }
+      }
+    }
+  }
+}
+// LAYOUT
+.singleOfferBig {
+  height: 20vw;
+  width: 100%;
+  margin: 30px;
+  display: flex;
+  .singleOfferBig__containerLeft {
+    height: 100%;
+    width: 45%;
+    background-image: url(../../../../assets/images/1438834.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .singleOfferBig__containerRight {
+    height: 100%;
+    width: 55%;
+    background-image: url(../../../../assets/images/1438834.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    position: relative;
+    .containerRight__containerLeft {
+      height: 100%;
+      width: 70%;
+      position: absolute;
+      left: 0;
+      overflow: hidden;
+      .containerLeft__text {
+        margin-right: 80px;
+        margin-left: 20px;
+        padding-top: 20px;
+      }
+    }
+    .containerRight__containerRight {
+      height: 100%;
+      width: 40%;
+      clip-path: polygon(25% 0%, 100% 0, 100% 100%, 0% 100%);
+      position: absolute;
+      right: 0;
+      .containerRight__textContainer {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
