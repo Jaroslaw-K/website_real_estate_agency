@@ -6,7 +6,7 @@ import Specialsation from "../../../Components/Specialisation/Specialisation";
 // Images
 import image1 from "../../../assets/images/specialisations/8112172.jpg";
 import image2 from "../../../assets/images/specialisations/7176319.jpg";
-import image3 from "../../../assets/images/specialisations/261621.jpg";
+import image3 from "../../../assets/images/specialisations/3760069.jpg";
 
 const SellRentDesktop = () => {
   const darkMode = useSelector((state) => state.darkMode); // RESPONSIBLE FOR WEBSITE COLORS - DARK OR BRIGHT WEBSITE, BY DEFAULT IS BRIGHT
