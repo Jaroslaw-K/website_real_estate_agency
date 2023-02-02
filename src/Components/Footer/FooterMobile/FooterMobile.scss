@@ -143,6 +143,8 @@
       height: 98.5%;
       width: 100%;
       position: absolute;
+      background-repeat: no-repeat;
+      background-position: center;
     }
     .topContainer__leftContainer--show {
       animation-name: mapLeftContainerShow;

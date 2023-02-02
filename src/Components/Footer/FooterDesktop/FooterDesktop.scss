@@ -149,6 +149,8 @@
     justify-content: center;
     align-items: center;
     transition: ease-in-out;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   .footerDesktop__topContainer--show {
     animation-name: desktopShowMap;
