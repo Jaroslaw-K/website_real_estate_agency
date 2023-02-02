@@ -382,6 +382,4 @@ PROJECT CREATED BASED ON SOURCES BELOW:
       https://www.pexels.com/pl-pl/zdjecie/osoba-w-czarnym-garniturze-zatrudnila-pracownika-3760069/
       https://www.pexels.com/pl-pl/zdjecie/notatnik-biuro-kobiety-bez-twarzy-7176319/
       https://www.pexels.com/pl-pl/zdjecie/umowa-prawnik-klient-uscisk-dloni-8112172/
-      
-17. Website was created using Google Maps (https://www.google.pl/maps).
 
