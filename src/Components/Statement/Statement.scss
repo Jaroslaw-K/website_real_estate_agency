@@ -1,0 +1,24 @@
+// STYLING
+.statement--styling {
+  background-image: url(../../assets/images/186077.jpg);
+  .statement__background {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+}
+// LAYOUT
+.statement {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .statement__background {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+}
