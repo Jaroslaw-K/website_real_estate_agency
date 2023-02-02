@@ -1,0 +1,48 @@
+@import "../../../scss/variables/variables.scss";
+// STYLING
+.statementForm--styling {
+  background-color: white;
+  .statementForm__text {
+    text-align: justify;
+    font-size: 12px;
+    @media screen and (min-width: $breaktPoint_1200) {
+      font-size: 14px;
+    }
+  }
+  .statementForm__button {
+    font-size: 12px;
+    @media screen and (min-width: $breaktPoint_1200) {
+      font-size: 14px;
+    }
+
+    background-color: rgba(60, 0, 0, 1);
+    border: none;
+    padding: 5px 15px 5px 15px;
+    color: white;
+    border: 2px solid rgba(60, 0, 0, 0.2);
+  }
+}
+// LAYOUT
+.statementForm {
+  width: 80vw;
+  @media screen and (min-width: $breaktPoint_600) {
+    width: 60vw;
+  }
+  @media screen and (min-width: $breaktPoint_1200) {
+    width: 40vw;
+  }
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 15px;
+  .statementForm__button {
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+}
