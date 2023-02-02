@@ -1,8 +1,10 @@
 import "./FooterMobile.scss";
 import { useState, useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
-// COMPONENTS
+// ASSETS
 import Logo from "../../../assets/logo.svg";
+import mapEN from "../../../assets/images/map/mapEN.jpg";
+import mapPL from "../../../assets/images/map/mapPL.jpg";
 
 const FooterMobile = () => {
   const darkMode = useSelector((state) => state.darkMode);
@@ -27,8 +29,7 @@ const FooterMobile = () => {
   return (
     <footer className={darkMode ? "footerMobile footerMobile--styling footerMobile--dark" : "footerMobile footerMobile--styling footerMobile--bright"}>
       <div className="footerMobile__topContainer">
-        <iframe className="topContainer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5035856.899819962!2d19.134378599999998!3d51.953750549999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47009964a4640bbb%3A0x97573ca49cc55ea!2sPolska!5e0!3m2!1spl!2spl!4v1660920589679!5m2!1spl!2spl" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="map" />
-
+        <iframe className="topContainer__map" src="" allowFullScreen="" loading="lazy" title="map" style={{ backgroundImage: languagePrimary ? `url(${mapPL})` : `url(${mapEN})` }} /> {/* IN SRC PLACE FOR ADDRESS*/}
         <div ref={mapLeftContainer} className="topContainer__leftContainer">
           <div className="leftContainer__containerBackground">
             <div className="containerBackground__text">
