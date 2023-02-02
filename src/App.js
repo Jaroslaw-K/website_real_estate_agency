@@ -1,6 +1,7 @@
-import React, { Fragment, useReducer } from "react";
+import React, { Fragment, useReducer, useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { PreloadMedia, MediaType } from "react-preload-media";
+import "./App.scss";
 
 // COMPONENTS
 import Header from "./Components/Header/Header";
@@ -10,6 +11,7 @@ import Offer from "./Pages/Offer/Offer";
 import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy";
 import SellRent from "./Pages/SellRent/SellRent";
 import Footer from "./Components/Footer/Footer";
+import Statement from "./Components/Statement/Statement";
 
 // IMAGES FOR PRELOADMEDIA
 const media = [
@@ -46,20 +48,34 @@ export const App = () => {
 };
 
 const AppLoaded = () => {
-  return (
-    <div className="app">
-      <Header />
-      <Routes>
-        <Route path="/*" element={<Navigate to="/offer" />} /> {/* IF ADDRESS IS INCORRECT PAGE WILL BE REDIRECT IT INTO OFFER PAGE */}
-        <Route path="/offer" element={<Offer />} />
-        <Route path="/sell-or-rent" element={<SellRent />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      <Footer />
-    </div>
-  );
+  const [statementAccepted, setStatementAccepted] = useState(false);
+  const statementAcceptedHandler = () => {
+    setStatementAccepted((previousState) => !previousState);
+  };
+  let content;
+  if (statementAccepted === false) {
+    content = (
+      <div className="app--statement">
+        <Statement statementAcceptedHandler={statementAcceptedHandler} />;
+      </div>
+    );
+  } else if (statementAccepted === true) {
+    content = (
+      <div className="app">
+        <Header />
+        <Routes>
+          <Route path="/*" element={<Navigate to="/offer" />} /> {/* IF ADDRESS IS INCORRECT PAGE WILL BE REDIRECT IT INTO OFFER PAGE */}
+          <Route path="/offer" element={<Offer />} />
+          <Route path="/sell-or-rent" element={<SellRent />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
+      </div>
+    );
+  }
+  return <>{content}</>;
 };
 
 export default App;
