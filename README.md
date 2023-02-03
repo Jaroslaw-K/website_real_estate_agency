@@ -1,6 +1,6 @@
 # PROJECT OF REAL ESTATE AGENCY WEBSITE
 
-This project of website use local storage for store data about website language and it colors, by downloading or using this project you agree for storing data on your device.
+This website use local storage for store data about website language and it colors. By downloading or using this project of website you agree for store data on your device related to mentioned purpouse. This Website is a demonstraction version and the information contained therein may be incorrect.
 Project created based on sources which references are located in file sources.txt :
 (https://github.com/Jaroslaw-K/website_real_estate_agency/blob/main/sources.txt)
 
